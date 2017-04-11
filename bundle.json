@@ -3,7 +3,7 @@
    "dependencies": [ ],
    "icon": "",
    "icon_color": "#999999",
-   "id": "dev.component_examples",
+   "id": "ds.component_examples",
    "page_banner": "",
    "parametrics_form": "",
    "platform_version": "",
@@ -11,6 +11,6 @@
    "shell_layout": "",
    "theme": "",
    "title": "Component Examples",
-   "vendor": "dev",
+   "vendor": "ds",
    "version": "0.1.0"
 }
