@@ -1,0 +1,90 @@
+<!DOCTYPE f8component>
+
+<definition>
+	{
+		id: "my_full_component",
+		label: "Example - My Full Component",
+		className: "MyFullComponentServer",
+		renderable: "true"
+	}
+</definition>
+
+<attributes>
+	[{
+		name: "rows",
+		label: "Number of rows",
+		type: "integer",
+		attributes: {
+			default: "4"
+		}
+	},
+	{
+		name: "show_header",
+		label: "Show header",
+		type: "boolean",
+		attributes: {
+			default: "true"
+		}
+	},
+	{
+		name: "header",
+		label: "Header",
+		type: "string"
+	}]
+</attributes>
+
+<attributes_layout>
+	[
+		"rows",
+		"show_header",
+		"header"
+	]
+</attributes_layout>
+
+<attributes_display_rules>
+[
+	{
+		"slot": "header",
+		"conditions": {
+			"hidden": ['show_header', 'eq', 'false']
+		}
+	}
+]
+</attributes_display_rules>
+
+<style>
+	div.myFullComponentHeader {
+		padding: 4px;
+	}
+
+	div.myFullComponentHeader > h2 {
+		font-size: 1.5em;
+	}
+
+	div.myFullComponentMessage {
+		padding: 8px;
+	}
+</style>
+
+<template name="header">
+	<div class="myFullComponentHeader"><h2><%= data.header %></h2></div>
+</template>
+
+<template name="message">
+	<div class="myFullComponentMessage"><%= data.message %></div>
+</template>
+
+<script>
+	exports.component = ComponentUI.create({
+		onRender: function(container, data, attributes) {
+			for(var i = 0; i < attributes.rows; i++) {
+				if (Object.isTrue(attributes.show_header))
+					Templates.evalAndAppend('my_full_component/header', container, { header: attributes.header || "The Header" });
+
+				Templates.evalAndAppend('my_full_component/message', container, { message: data.serverMessage || "The Message" });
+			}
+		},
+
+		className: "MyFullComponentClient"
+	});
+</script>

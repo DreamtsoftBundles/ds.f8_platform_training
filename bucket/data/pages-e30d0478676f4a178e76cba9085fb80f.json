@@ -13,7 +13,7 @@
             "page_loading": false,
             "needs_subpage_target": false,
             "attributes": {
-              "markdown": "# Custom components\n\n This bundle provides examples of custom page components and widget components\n \n \n * [First custom page component](example_one)\n * [Second custom page component](two_one)",
+              "markdown": "# Custom components\n\n This bundle provides examples of custom page components and widget components\n \n \n * [First custom page component](example_one)\n * [Second custom page component](example_two)\n * [Third custom page component](example_three)",
               "component": "markup",
               "id": "04e9c70bdd1a9560712ecea2b0a113d0",
               "type": "markdown"
