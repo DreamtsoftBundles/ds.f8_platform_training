@@ -1,0 +1,16 @@
+{
+   "bundle_name": "component_examples",
+   "dependencies": [ ],
+   "icon": "",
+   "icon_color": "#999999",
+   "id": "dev.component_examples",
+   "page_banner": "",
+   "parametrics_form": "",
+   "platform_version": "",
+   "schema_version": "0",
+   "shell_layout": "",
+   "theme": "",
+   "title": "Component Examples",
+   "vendor": "dev",
+   "version": "0.1.0"
+}
