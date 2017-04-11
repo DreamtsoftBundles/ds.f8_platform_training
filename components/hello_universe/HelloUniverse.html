@@ -1,0 +1,56 @@
+<!DOCTYPE f8component>
+
+<definition>
+{
+  id: "hello_universe",
+  label: "Example - Hello Universe",
+  className: "HelloUniverseServer",
+  renderable: "true"
+}
+</definition>
+
+<attributes>
+	[{
+	  name: "specify_message",
+	  label: "Specify hello message",
+	  type: "boolean",
+	  attributes: {
+	  	default: false
+	  }
+	},{
+          name: "hello_message",
+          label: "Hello message",
+          type: "string",
+          attributes: {
+                placeholder_text: "Hello message"
+          }
+        }]
+</attributes>
+
+<attributes_layout>
+	[
+		"specify_message",
+		"hello_message"
+	]
+</attributes_layout>
+
+<attributes_display_rules>
+[
+	{
+		"slot": "hello_message",
+		"conditions": {
+			"hidden": ['specify_message', 'eq', 'false']
+		}
+	}
+]
+</attributes_display_rules>
+
+<script>
+	exports.component = ComponentUI.create({
+		onRender: function(container, data, attributes) {
+			container.html("Message from server: " + data.message);
+		},
+
+		className: "HelloWorldClient"
+	});
+</script>

@@ -1,0 +1,57 @@
+{
+  "bucket_data": {
+    "pages": {
+      "855dd90b2bb94e6eb334d04143e21839": {
+        "created": "1491939257884",
+        "id": "855dd90b2bb94e6eb334d04143e21839",
+        "layout": {
+          "component_1770f91be8aaea5e521162bfcfbbf0df": {
+            "type": "component",
+            "component": "hello_world",
+            "id": "component_1770f91be8aaea5e521162bfcfbbf0df",
+            "name": "component_1770f91be8aaea5e521162bfcfbbf0df",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "component": "hello_world"
+            },
+            "w": "100%",
+            "h": "76%"
+          },
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
+              "component_1c53f5503a970d7ca738afb558d2e364",
+              "component_1770f91be8aaea5e521162bfcfbbf0df"
+            ],
+            "layout_type": "page_components"
+          },
+          "component_1c53f5503a970d7ca738afb558d2e364": {
+            "type": "component",
+            "component": "markup",
+            "id": "component_1c53f5503a970d7ca738afb558d2e364",
+            "name": "component_1c53f5503a970d7ca738afb558d2e364",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "markdown": "## Example:  HelloWorld (page component)",
+              "component": "markup",
+              "type": "markdown",
+              "id": "ef92ceb6a589a8fcba32669bfe4711cc"
+            },
+            "w": "100%",
+            "h": "24%"
+          }
+        },
+        "name": "example_one",
+        "owner": "b98385a88d374f5d9a187c820a3e32a0",
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "template": ""
+      }
+    }
+  }
+}

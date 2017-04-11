@@ -1,0 +1,20 @@
+<!DOCTYPE f8component>
+
+<definition>
+{
+  id: "hello_world",
+  label: "Example - Hello World",
+  className: "HelloWorldServer",
+  renderable: "true"
+}
+</definition>
+
+<script>
+	exports.component = ComponentUI.create({
+		onRender: function(container, data, attributes) {
+			container.html("Message from server: " + data.message);
+		},
+
+		className: "HelloWorldClient"
+	});
+</script>

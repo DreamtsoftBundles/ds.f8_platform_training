@@ -1,0 +1,59 @@
+{
+  "bucket_data": {
+    "pages": {
+      "8e9c4846ae964392bbefbd2068e4b7e8": {
+        "created": "1491940409060",
+        "id": "8e9c4846ae964392bbefbd2068e4b7e8",
+        "layout": {
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
+              "component_37bed63031cfcb4a6575dcc9ff4627b0",
+              "component_f24c52291c572c00f855cc53027ac648"
+            ],
+            "layout_type": "page_components"
+          },
+          "component_37bed63031cfcb4a6575dcc9ff4627b0": {
+            "type": "component",
+            "component": "markup",
+            "id": "component_37bed63031cfcb4a6575dcc9ff4627b0",
+            "name": "component_37bed63031cfcb4a6575dcc9ff4627b0",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "component": "markup",
+              "type": "markdown",
+              "markdown": "## Example:  HelloUniverse (page component)"
+            },
+            "w": "100%",
+            "h": "50%"
+          },
+          "component_f24c52291c572c00f855cc53027ac648": {
+            "type": "component",
+            "component": "hello_universe",
+            "id": "component_f24c52291c572c00f855cc53027ac648",
+            "name": "component_f24c52291c572c00f855cc53027ac648",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "specify_message": true,
+              "component": "hello_universe",
+              "id": "86740007d2770423231ede408ae1349d",
+              "hello_message": "Message here"
+            },
+            "w": "100%",
+            "h": "50%"
+          }
+        },
+        "name": "two_one",
+        "owner": "b98385a88d374f5d9a187c820a3e32a0",
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "template": ""
+      }
+    }
+  }
+}

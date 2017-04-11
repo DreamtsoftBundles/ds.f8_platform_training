@@ -1,7 +1,12 @@
 {
    "bundle_name": "component_examples",
-   "dependencies": [ ],
-   "icon": "",
+   "dependencies": [
+      {
+         "id": "ds.base",
+         "version": "0.1.0"
+      }
+   ],
+   "icon": "fontawesome:connectdevelop",
    "icon_color": "#999999",
    "id": "ds.component_examples",
    "page_banner": "",
