@@ -1,0 +1,120 @@
+<!DOCTYPE f8component>
+
+<definition>
+{
+  id: "component_with_widgets",
+  label: "Example - Component with widgets",
+  className: "ComponentWithWidgetsServer",
+  renderable: "true"
+}
+</definition>
+
+<style>
+	.table_container {
+		padding: 6px;
+	}
+
+	.value_button {
+		margin-top: 16px;
+		margin-left: 16px;
+	}
+</style>
+
+<template name="my_table">
+	<div class="table_container">
+		<h2>My table</h2>
+
+		<table id="mytable">
+			<tr>
+			<td>Row1:</td>
+			<td id="row1">
+			</td>
+			</tr>
+			<tr>
+			<td>Row2:</td>
+			<td id="row2">
+			</td>
+			</tr>
+			<tr>
+			<td>Row3:</td>
+			<td id="row3">
+			</td>
+			</tr>
+		</table>
+
+		<span class="btn btn-default value_button">show values</span>
+	</div>
+</template>
+
+<script>
+	exports.component = ComponentUI.create({
+		onRender: function(container, data, attributes) {
+			this.componentWidgetManager = new WidgetManager();
+			this.componentWidgetManager.addGlobalChangeListener($.proxy(this._widgetChanged, this));
+
+			Templates.evalAndAppend('component_with_widgets/my_table', container, {});
+
+			this._loadWidget1(container);
+			this._loadWidget2(container);
+			this._loadWidget3(container);
+
+			container.find('.value_button').on('click', $.proxy(this._showValues, this));
+		},
+
+		onUnloaded: function() {
+			if (this.componentWidgetManager)
+				this.componentWidgetManager.unload();
+		},
+
+		_loadWidget1: function(container) {
+			var row1 = container.find("#row1");
+
+			var cb = this.componentWidgetManager.newWidget({
+				name: "first_widget",
+				type: 'widget_simple',
+				attributes: {}
+			}, "");
+			
+			cb.load(row1);
+		},
+
+		_loadWidget2: function(container) {
+			var row2 = container.find("#row2");
+
+			var cb = this.componentWidgetManager.newWidget({
+				name: "second_widget",
+				type: 'info_widget',
+				attributes: {}
+			}, "");
+			
+			cb.load(row2);
+		},
+
+		_loadWidget3: function(container) {
+			var row3 = container.find("#row3");
+
+			var cb = this.componentWidgetManager.newWidget({
+				name: "third_widget",
+				type: 'boolean',
+				attributes: {
+					use_choice: "true"
+				}
+			}, "0");
+			
+			cb.load(row3);
+		},
+
+		_widgetChanged: function(widgetManager, widget) {
+			var name = widget.getName();
+			var value = widgetManager.getValue(name);
+
+			console.log("widget changed: " + name + " value=" + value);
+		},
+
+		_showValues: function() {
+			alert('Values: ' + JSON.stringify(this.componentWidgetManager.toValueMap(), undefined, 4));
+		},
+
+		className: "ComponentWithWidgetsClient"
+	});
+</script>
