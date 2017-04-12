@@ -1,0 +1,92 @@
+{
+  "bucket_data": {
+    "pages": {
+      "71d3e759b75d4f46a6dc02cb9ad80823": {
+        "created": "1491971539851",
+        "id": "71d3e759b75d4f46a6dc02cb9ad80823",
+        "layout": {
+          "component_0762b995f1fa963f0ac2267abf62f649": {
+            "type": "component",
+            "component": "form",
+            "id": "component_0762b995f1fa963f0ac2267abf62f649",
+            "name": "component_0762b995f1fa963f0ac2267abf62f649",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "layout": {
+                "slots": {
+                  "info": {
+                    "type": "info_widget",
+                    "attributes": { },
+                    "labels": {
+                      "label": "Info",
+                      "labelp": "Infos"
+                    },
+                    "name": "info",
+                    "bundle": "ds.component_examples"
+                  }
+                },
+                "slotsChanged": true,
+                "layout": {
+                  "version": 1,
+                  "layout": [
+                    {
+                      "type": "section",
+                      "colData": [ ],
+                      "cols": [
+                        [
+                          {
+                            "type": "slot",
+                            "name": "info"
+                          }
+                        ]
+                      ],
+                      "guid": "236a1f19d1338156d020cf2fb62eb290"
+                    }
+                  ],
+                  "pageData": { }
+                },
+                "display_rules": [ ]
+              },
+              "component": "form",
+              "id": "8ca69b88ae0cfa01532448329ca105f7"
+            },
+            "w": "100%",
+            "h": "50%"
+          },
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
+              "component_3375a9f5027fb7f42d9fe6f2c20344c0",
+              "component_0762b995f1fa963f0ac2267abf62f649"
+            ],
+            "layout_type": "page_components"
+          },
+          "component_3375a9f5027fb7f42d9fe6f2c20344c0": {
+            "type": "component",
+            "component": "markup",
+            "id": "component_3375a9f5027fb7f42d9fe6f2c20344c0",
+            "name": "component_3375a9f5027fb7f42d9fe6f2c20344c0",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "component": "markup",
+              "type": "markdown",
+              "markdown": "## Example:  WidgetExampleOne (widget component)"
+            },
+            "w": "100%",
+            "h": "50%"
+          }
+        },
+        "name": "example_five",
+        "owner": "b98385a88d374f5d9a187c820a3e32a0",
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "template": ""
+      }
+    }
+  }
+}

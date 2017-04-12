@@ -1,0 +1,92 @@
+{
+  "bucket_data": {
+    "pages": {
+      "13227fb593b7499681f1f29af5a40294": {
+        "created": "1491971252842",
+        "id": "13227fb593b7499681f1f29af5a40294",
+        "layout": {
+          "component_56927a4ece00b2d8323abb5852d3d029": {
+            "type": "component",
+            "component": "markup",
+            "id": "component_56927a4ece00b2d8323abb5852d3d029",
+            "name": "component_56927a4ece00b2d8323abb5852d3d029",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "markdown": "## Example:  WidgetSimple (widget component)",
+              "component": "markup",
+              "type": "markdown",
+              "id": "461c57ce14ed7397b49031feaf34fe6b"
+            },
+            "w": "100%",
+            "h": "50%"
+          },
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
+              "component_56927a4ece00b2d8323abb5852d3d029",
+              "component_4e29437cca7af07aa22079a8cdf432ae"
+            ],
+            "layout_type": "page_components"
+          },
+          "component_4e29437cca7af07aa22079a8cdf432ae": {
+            "type": "component",
+            "component": "form",
+            "id": "component_4e29437cca7af07aa22079a8cdf432ae",
+            "name": "component_4e29437cca7af07aa22079a8cdf432ae",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "component": "form",
+              "layout": {
+                "slots": {
+                  "simple_widget": {
+                    "type": "widget_simple",
+                    "attributes": { },
+                    "labels": {
+                      "label": "Simple widget",
+                      "labelp": "Simple widgets"
+                    },
+                    "name": "simple_widget",
+                    "bundle": "ds.component_examples"
+                  }
+                },
+                "slotsChanged": true,
+                "layout": {
+                  "version": 1,
+                  "layout": [
+                    {
+                      "type": "section",
+                      "colData": [ ],
+                      "cols": [
+                        [
+                          {
+                            "type": "slot",
+                            "name": "simple_widget"
+                          }
+                        ]
+                      ],
+                      "guid": "bd9db581f0f6ed9686fa019a46d134d4"
+                    }
+                  ],
+                  "pageData": { }
+                },
+                "display_rules": [ ]
+              }
+            },
+            "w": "100%",
+            "h": "50%"
+          }
+        },
+        "name": "example_four",
+        "owner": "b98385a88d374f5d9a187c820a3e32a0",
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "template": ""
+      }
+    }
+  }
+}

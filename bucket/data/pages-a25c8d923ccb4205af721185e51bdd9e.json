@@ -5,6 +5,16 @@
         "created": "1491952548111",
         "id": "a25c8d923ccb4205af721185e51bdd9e",
         "layout": {
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
+              "component_8e52b216010934c5ca3f0ae533fd6bfb",
+              "component_38fbfc3c215024972ff3e2839294859f"
+            ],
+            "layout_type": "page_components"
+          },
           "component_38fbfc3c215024972ff3e2839294859f": {
             "type": "component",
             "component": "my_full_component",
@@ -20,16 +30,23 @@
               "rows": 6
             },
             "w": "100%",
-            "h": "100%"
+            "h": "50%"
           },
-          "__start__": {
-            "type": "container",
+          "component_8e52b216010934c5ca3f0ae533fd6bfb": {
+            "type": "component",
+            "component": "markup",
+            "id": "component_8e52b216010934c5ca3f0ae533fd6bfb",
+            "name": "component_8e52b216010934c5ca3f0ae533fd6bfb",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "markdown": "## Example:  MyFullComponent (page component)\n\n---",
+              "component": "markup",
+              "id": "06b3f383daef2c2fa1e7bb880ef6f3a7",
+              "type": "markdown"
+            },
             "w": "100%",
-            "h": "100%",
-            "contains": [
-              "component_38fbfc3c215024972ff3e2839294859f"
-            ],
-            "layout_type": "page_components"
+            "h": "50%"
           }
         },
         "name": "example_three",

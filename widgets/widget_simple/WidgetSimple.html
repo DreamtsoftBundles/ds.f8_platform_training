@@ -1,0 +1,35 @@
+<!DOCTYPE f8widget>
+
+<type>
+{
+	name: "widget_simple",
+	label: "Simple widget",
+	extend: "string"
+}
+</type>
+
+<script>
+	exports.widget = Widgets.create({
+		toWidget: function(value, displayValue) {
+			this.displayInput = $('<input/>', {
+				"type": "text",
+				"value": value,
+				"class": "form-control"
+			});
+			
+			this.displayInput.on("change", $.proxy(this.changed, this));
+			this.container.append(this.displayInput);
+			this.loaded();
+		},
+		
+		_setValue: function(value, displayValue) {
+			this.displayInput.val(value);
+		},
+		
+		toValue: function() {
+			return this.displayInput.val();
+		},
+	
+		className: "WidgetSimple"
+	});
+</script>

@@ -1,0 +1,58 @@
+<!DOCTYPE f8widget>
+
+<type>
+{
+	name: "info_widget",
+	label: "Info widget",
+	extend: "string"
+}
+</type>
+
+<attributes>
+	[{
+	  name: "use_large",
+	  label: "Use large",
+	  type: "boolean",
+	  attributes: {
+	  	default: false
+	  }
+	}]
+</attributes>
+
+<attributes_layout>
+	[
+		"use_large"
+	]
+</attributes_layout>
+
+<template name="widget.template">
+	<div class="form-inline input-group">
+		<div id='widgetBox' class="form-control"></div>
+		<span id='searcher' class="input-group-addon btn btn-default">
+			<span class="fa fa-dashboard"></span>
+		</span>
+	</div>
+</template>
+
+<script>
+	exports.widget = Widgets.create({
+		toWidget: function(value, displayValue) {
+			Templates.evalAndAppend('info_widget/widget.template', this.container, { });
+			this.container.find('#searcher').on('click', $.proxy(this._searcher, this));
+			this.loaded();
+		},
+		
+		_searcher: function() {
+			this.container.find('#widgetBox').html("abc123");
+			this.currentValue = 'abc123';
+			this.changed();
+		},
+
+		toValue: function() {
+			return this.currentValue;
+		},
+	
+		className: "WidgetInfo"
+	});
+</script>
+
