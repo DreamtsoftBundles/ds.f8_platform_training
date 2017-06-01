@@ -1,5 +1,5 @@
 {
-   "bundle_name": "component_examples",
+   "bundle_name": "f8_platform_training",
    "dependencies": [
       {
          "id": "ds.base",
@@ -8,14 +8,14 @@
    ],
    "icon": "fontawesome:connectdevelop",
    "icon_color": "#999999",
-   "id": "ds.component_examples",
+   "id": "ds.f8_platform_training",
    "page_banner": "",
    "parametrics_form": "",
    "platform_version": "",
    "schema_version": "0",
    "shell_layout": "",
    "theme": "",
-   "title": "Component Examples",
+   "title": "Platform Training",
    "vendor": "ds",
    "version": "0.1.0"
 }
