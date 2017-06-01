@@ -23,7 +23,7 @@
                       "labelp": "Infos"
                     },
                     "name": "info",
-                    "bundle": "ds.component_examples"
+                    "bundle": "ds.f8_platform_training"
                   }
                 },
                 "slotsChanged": true,
