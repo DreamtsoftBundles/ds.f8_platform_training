@@ -1,0 +1,42 @@
+{
+  "bucket_data": {
+    "pages": {
+      "fdd0fb205f2946f5bf21ac90e6f31b2a": {
+        "created": "1496357444032",
+        "id": "fdd0fb205f2946f5bf21ac90e6f31b2a",
+        "layout": {
+          "component_a5a6d08a6b293e6e10ae8fad5ac63492": {
+            "type": "component",
+            "component": "tiles",
+            "id": "component_a5a6d08a6b293e6e10ae8fad5ac63492",
+            "name": "component_a5a6d08a6b293e6e10ae8fad5ac63492",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "component": "tiles",
+              "tiles_per_row": 4,
+              "id": "4d3b05616ad7e871d44d84d453376442",
+              "tile_group": "944f930da3164de890d761aa18ba77bc"
+            },
+            "w": "100%",
+            "h": "100%"
+          },
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
+              "component_a5a6d08a6b293e6e10ae8fad5ac63492"
+            ],
+            "layout_type": "page_components"
+          }
+        },
+        "name": "home",
+        "owner": "1d193579a6d1458f9f0ac49f8cb96687",
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0"
+      }
+    }
+  }
+}

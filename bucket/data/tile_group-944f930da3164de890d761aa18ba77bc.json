@@ -1,0 +1,24 @@
+{
+  "bucket_data": {
+    "tile_group": {
+      "944f930da3164de890d761aa18ba77bc": {
+        "bucket": "",
+        "colors": "",
+        "condition": "[]",
+        "created": "1496357021234",
+        "description_slot": "",
+        "dynamic": "0",
+        "icon_slot": "",
+        "id": "944f930da3164de890d761aa18ba77bc",
+        "image_slot": "",
+        "name": "Platform Training Home",
+        "owner": "1d193579a6d1458f9f0ac49f8cb96687",
+        "schema_version": "0",
+        "subtitle_slot": "",
+        "system_updated": "0",
+        "title_slot": "",
+        "url": ""
+      }
+    }
+  }
+}

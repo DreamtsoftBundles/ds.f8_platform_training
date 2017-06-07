@@ -31,12 +31,11 @@
             "layout_type": "page_components"
           }
         },
-        "name": "home",
+        "name": "components",
         "owner": "b98385a88d374f5d9a187c820a3e32a0",
         "public": "0",
         "schema_version": "0",
-        "system_updated": "0",
-        "template": ""
+        "system_updated": "0"
       }
     }
   }

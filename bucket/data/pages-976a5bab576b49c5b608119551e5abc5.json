@@ -1,0 +1,46 @@
+{
+  "bucket_data": {
+    "pages": {
+      "976a5bab576b49c5b608119551e5abc5": {
+        "created": "1496424857238",
+        "id": "976a5bab576b49c5b608119551e5abc5",
+        "layout": {
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
+              "component_dcff963d267fdebb002a75eedab4800b"
+            ],
+            "layout_type": "page_components"
+          },
+          "component_dcff963d267fdebb002a75eedab4800b": {
+            "type": "component",
+            "component": "tree_bucket",
+            "id": "component_dcff963d267fdebb002a75eedab4800b",
+            "name": "component_dcff963d267fdebb002a75eedab4800b",
+            "page_loading": false,
+            "needs_subpage_target": true,
+            "attributes": {
+              "bucket": "third_party_license",
+              "instructions": "<html>\n<div class=\"containerWrapperTitle\" style=\"height: 100%\">\n      <div class=\"containerTitleHeaderLabel\">\n         <div>Spaces</div>\n      </div>\n   </div>\n</html>",
+              "tree_renderer": "d3",
+              "component": "tree_bucket",
+              "show_tree_lines": false,
+              "dnd": "0",
+              "id": "b12cfa027c618b24af878558153ca560",
+              "tree_definition": "{\n   \"tree\": [{\n      \"type\": \"bucket\",\n      \"label\": \"%{$record.name}\",\n      \"open\": true,\n      \"condition\": [\"id\", \"eq\", \"custom://7b7026efc9084708affe9f6d0afccfb3\"],\n      \"async\": false,\n      \"sort_by\": \"tenant\",\n      \"drag\": false,\n      \"page\": \"\",\n      \"clusterId\": \"tenant\",\n      \"children\": [{\n         \"type\": \"related\",\n         \"bucket_node\": false,\n         \"child\": \"space.parent\",\n         \"condition\": \"\",\n         \"open\": true,\n         \"async\": false,\n         \"drag\": false,\n         \"recurse\": true,\n         \"page\": \"\",\n         \"clusterId\": \"tenant\",\n         \"sort_by\": \"tenant\",\n         \"children\": []\n      }]\n   }]\n}"
+            },
+            "w": "100%",
+            "h": "100%"
+          }
+        },
+        "name": "tenancy",
+        "owner": "1d193579a6d1458f9f0ac49f8cb96687",
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0"
+      }
+    }
+  }
+}
