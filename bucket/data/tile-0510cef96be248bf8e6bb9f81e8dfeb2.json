@@ -1,0 +1,25 @@
+{
+  "bucket_data" : {
+    "tile" : {
+      "0510cef96be248bf8e6bb9f81e8dfeb2" : {
+        "active" : "1",
+        "color" : "#231f20",
+        "created" : "1496951055965",
+        "description" : "separate_file://bucket/data/tile-0510cef96be248bf8e6bb9f81e8dfeb2-description.html",
+        "icon" : "fontawesome:puzzle-piece",
+        "id" : "0510cef96be248bf8e6bb9f81e8dfeb2",
+        "image" : "",
+        "order" : "100",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "schema_version" : "0",
+        "script" : "separate_file://bucket/data/tile-0510cef96be248bf8e6bb9f81e8dfeb2-script.js",
+        "spaces" : "2",
+        "subtitle" : "separate_file://bucket/data/tile-0510cef96be248bf8e6bb9f81e8dfeb2-subtitle.html",
+        "system_updated" : "0",
+        "tile_group" : "34e584883be64c259a04314e5c0b2c65",
+        "title" : "separate_file://bucket/data/tile-0510cef96be248bf8e6bb9f81e8dfeb2-title.html",
+        "url" : "#/ds.f8_platform_training/ui_components"
+      }
+    }
+  }
+}

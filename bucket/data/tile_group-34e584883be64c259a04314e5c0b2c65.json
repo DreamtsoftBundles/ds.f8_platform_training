@@ -1,0 +1,24 @@
+{
+  "bucket_data" : {
+    "tile_group" : {
+      "34e584883be64c259a04314e5c0b2c65" : {
+        "bucket" : "",
+        "colors" : "",
+        "condition" : "[]",
+        "created" : "1496951032206",
+        "description_slot" : "",
+        "dynamic" : "0",
+        "icon_slot" : "",
+        "id" : "34e584883be64c259a04314e5c0b2c65",
+        "image_slot" : "",
+        "name" : "UI Home",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "schema_version" : "0",
+        "subtitle_slot" : "",
+        "system_updated" : "0",
+        "title_slot" : "",
+        "url" : ""
+      }
+    }
+  }
+}

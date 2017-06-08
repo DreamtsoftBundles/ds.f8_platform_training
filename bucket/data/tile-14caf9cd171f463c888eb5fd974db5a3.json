@@ -1,0 +1,25 @@
+{
+  "bucket_data" : {
+    "tile" : {
+      "14caf9cd171f463c888eb5fd974db5a3" : {
+        "active" : "1",
+        "color" : "#FFAD00",
+        "created" : "1496951221619",
+        "description" : "separate_file://bucket/data/tile-14caf9cd171f463c888eb5fd974db5a3-description.html",
+        "icon" : "fontawesome:map",
+        "id" : "14caf9cd171f463c888eb5fd974db5a3",
+        "image" : "",
+        "order" : "300",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "schema_version" : "0",
+        "script" : "separate_file://bucket/data/tile-14caf9cd171f463c888eb5fd974db5a3-script.js",
+        "spaces" : "2",
+        "subtitle" : "separate_file://bucket/data/tile-14caf9cd171f463c888eb5fd974db5a3-subtitle.html",
+        "system_updated" : "0",
+        "tile_group" : "34e584883be64c259a04314e5c0b2c65",
+        "title" : "separate_file://bucket/data/tile-14caf9cd171f463c888eb5fd974db5a3-title.html",
+        "url" : "#/ds.f8_platform_training/ui_navigation"
+      }
+    }
+  }
+}

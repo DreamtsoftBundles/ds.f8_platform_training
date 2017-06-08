@@ -1,0 +1,41 @@
+{
+  "bucket_data" : {
+    "pages" : {
+      "2a6be0021d80402f8ed5fdaba2061574" : {
+        "created" : "1496952334656",
+        "id" : "2a6be0021d80402f8ed5fdaba2061574",
+        "layout" : {
+          "__start__" : {
+            "type" : "container",
+            "w" : "100%",
+            "h" : "100%",
+            "contains" : [
+              "component_9fc0bc6a8ec5153ba9c9ce30f0e7f264"
+            ],
+            "layout_type" : "page_components"
+          },
+          "component_9fc0bc6a8ec5153ba9c9ce30f0e7f264" : {
+            "type" : "component",
+            "component" : "markup",
+            "id" : "component_9fc0bc6a8ec5153ba9c9ce30f0e7f264",
+            "name" : "component_9fc0bc6a8ec5153ba9c9ce30f0e7f264",
+            "page_loading" : false,
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "markup",
+              "type" : "html",
+              "html" : "<html>\n\t<div style=\"text-align: center;\">\n\t\t<iframe width=\"600\" height=\"600\" src=\"https://www.youtube.com/embed/XGSy3_Czz8k?autoplay=1\">\n\t\t</iframe>\n\t</div>\n</html>"
+            },
+            "w" : "100%",
+            "h" : "100%"
+          }
+        },
+        "name" : "introduction",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "public" : "0",
+        "schema_version" : "0",
+        "system_updated" : "0"
+      }
+    }
+  }
+}

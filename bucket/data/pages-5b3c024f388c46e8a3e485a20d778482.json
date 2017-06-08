@@ -1,0 +1,64 @@
+{
+  "bucket_data" : {
+    "pages" : {
+      "5b3c024f388c46e8a3e485a20d778482" : {
+        "created" : "1496951553865",
+        "id" : "5b3c024f388c46e8a3e485a20d778482",
+        "layout" : {
+          "__start__" : {
+            "type" : "container",
+            "w" : "100%",
+            "h" : "100%",
+            "contains" : [
+              "component_56593a57b10c89e70f65207a1207d77d",
+              "component_9a1fe4203e92180989c61435c1e3738c"
+            ],
+            "layout_type" : "page_components"
+          },
+          "component_56593a57b10c89e70f65207a1207d77d" : {
+            "type" : "component",
+            "component" : "navigator",
+            "id" : "component_56593a57b10c89e70f65207a1207d77d",
+            "name" : "component_56593a57b10c89e70f65207a1207d77d",
+            "page_loading" : false,
+            "needs_subpage_target" : true,
+            "attributes" : {
+              "component" : "navigator",
+              "button_width" : 100,
+              "menu_icon" : "",
+              "button_height" : 60,
+              "name" : "",
+              "navigator" : "0424e5ebe72c4f6fa9bc719b86b530bd",
+              "event_name" : "",
+              "id" : "6bb95996ddf2e153fb6fe703ae81eb97",
+              "type" : "horizontal-tabs",
+              "menu_width" : 300
+            },
+            "w" : "100%",
+            "h" : "50%"
+          },
+          "component_9a1fe4203e92180989c61435c1e3738c" : {
+            "type" : "component",
+            "component" : "markup",
+            "id" : "component_9a1fe4203e92180989c61435c1e3738c",
+            "name" : "component_9a1fe4203e92180989c61435c1e3738c",
+            "page_loading" : false,
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "markup",
+              "type" : "html",
+              "html" : "<html>\n\t<div style=\"text-align: center;\">\n\t\t<iframe width=\"600\" height=\"600\" src=\"https://www.youtube.com/embed/XGSy3_Czz8k?autoplay=1\">\n\t\t</iframe>\n\t</div>\n</html>"
+            },
+            "w" : "100%",
+            "h" : "50%"
+          }
+        },
+        "name" : "ui_pages",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "public" : "0",
+        "schema_version" : "0",
+        "system_updated" : "0"
+      }
+    }
+  }
+}
