@@ -23,10 +23,11 @@
             "page_loading" : false,
             "needs_subpage_target" : false,
             "attributes" : {
+              "markdown" : "<html>\n\t<div id=\"3\" class=\"training\">\n\t\t3\n\t</div>\n</html>\n\n<style>\n\t.training {\n\t\twidth: 100%;\n\t\tborder:4px solid black;\n\t\ttext-align: center;\n\t\tfont-size: 5em;\n\t}\n</style>\n\n<script>\n\tvar thisDiv = document.getElementById(\"3\");\n\tthisDiv.style.height = $(document).height()/2 + \"px\";\n</script>",
               "component" : "markup",
-              "type" : "markdown",
               "html" : "",
-              "markdown" : "<html>\n\t<div class=\"training\">\n\t\t3\n\t</div>\n</html>\n\n<style>\n\t.training {\n    border:4px solid black;\n    text-align: center;\n\tfont-size: 5em;\n}\n</style>"
+              "id" : "154ae2949b2350e1e198818145993a80",
+              "type" : "markdown"
             },
             "w" : "100%",
             "h" : "50%"
@@ -39,10 +40,11 @@
             "page_loading" : false,
             "needs_subpage_target" : false,
             "attributes" : {
+              "markdown" : "<html>\n\t<div id=\"2\" class=\"training\">\n\t\t2\n\t</div>\n</html>\n\n<style>\n\t.training {\n\t\twidth: 100%;\n\t\tborder:4px solid black;\n\t\ttext-align: center;\n\t\tfont-size: 5em;\n\t}\n</style>\n\n<script>\n\tvar thisDiv = document.getElementById(\"2\");\n\tthisDiv.style.height = $(document).height()/2 + \"px\";\n</script>",
               "component" : "markup",
-              "type" : "markdown",
               "html" : "",
-              "markdown" : "<html>\n\t<div class=\"training\">\n\t\t2\n\t</div>\n</html>\n\n<style>\n\t.training {\n    border:4px solid black;\n    text-align: center;\n\tfont-size: 5em;\n}\n</style>"
+              "id" : "23e462760c2d786b4ffa74bd34fc2c40",
+              "type" : "markdown"
             },
             "h" : "50%",
             "w" : "100%"
@@ -66,7 +68,7 @@
             "attributes" : {
               "markdown" : "",
               "component" : "markup",
-              "html" : "<html>\n\t<div class=\"training\">\n\t\t1\n\t</div>\n</html>\n\n<style>\n\t.training {\n\t\theight: $(document).height();\n\t\twidth: 100%;\n\t\tborder:4px solid black;\n\t\ttext-align: center;\n\t\tfont-size: 5em;\n\t}\n</style>\n\n<script>\n\talert($(document).height())\n</script>",
+              "html" : "<html>\n\t<div id=\"1\" class=\"training\">\n\t\t1\n\t</div>\n</html>\n\n<style>\n\t.training {\n\t\twidth: 100%;\n\t\tborder:4px solid black;\n\t\ttext-align: center;\n\t\tfont-size: 5em;\n\t}\n</style>\n\n<script>\n\tvar thisDiv = document.getElementById(\"1\");\n\tthisDiv.style.height = $(document).height() + \"px\";\n</script>",
               "id" : "dd307d1a4a7dfebf7efa1c3bac0a122d",
               "type" : "html"
             },

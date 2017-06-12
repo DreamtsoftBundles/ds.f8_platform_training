@@ -23,8 +23,9 @@
             "needs_subpage_target" : false,
             "attributes" : {
               "component" : "markup",
-              "type" : "html",
-              "html" : "<html>\n\t<div style=\"text-align: center;\">\n\t\t<iframe width=\"600\" height=\"600\" src=\"https://www.youtube.com/embed/XGSy3_Czz8k?autoplay=1\">\n\t\t</iframe>\n\t</div>\n</html>"
+              "html" : "<html>\n\t<div style=\"text-align: center;\">\n\t\t<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Nd91yW1e2k8?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\n\t</div>\n</html>",
+              "id" : "74bfb36fdc67bf71159ae62c12ef3fa1",
+              "type" : "html"
             },
             "w" : "100%",
             "h" : "100%"
