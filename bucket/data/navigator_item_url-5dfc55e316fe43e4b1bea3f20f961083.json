@@ -1,0 +1,18 @@
+{
+  "bucket_data" : {
+    "navigator_item_url" : {
+      "5dfc55e316fe43e4b1bea3f20f961083" : {
+        "created" : "1497306912313",
+        "icon" : "",
+        "id" : "5dfc55e316fe43e4b1bea3f20f961083",
+        "label" : "Hello Universe",
+        "order" : "1",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "parent" : "69edf6f5f7c140698a18959f5ad26847",
+        "schema_version" : "0",
+        "system_updated" : "0",
+        "url" : "hello_universe"
+      }
+    }
+  }
+}

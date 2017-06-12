@@ -1,0 +1,18 @@
+{
+  "bucket_data" : {
+    "navigator_item_url" : {
+      "d3a8825055724043a8ca60264dc73906" : {
+        "created" : "1497306912431",
+        "icon" : "",
+        "id" : "d3a8825055724043a8ca60264dc73906",
+        "label" : "My Full Component",
+        "order" : "3",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "parent" : "69edf6f5f7c140698a18959f5ad26847",
+        "schema_version" : "0",
+        "system_updated" : "0",
+        "url" : "my_full_component"
+      }
+    }
+  }
+}

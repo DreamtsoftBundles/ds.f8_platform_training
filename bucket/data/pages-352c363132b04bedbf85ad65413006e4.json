@@ -1,0 +1,66 @@
+{
+  "bucket_data" : {
+    "pages" : {
+      "352c363132b04bedbf85ad65413006e4" : {
+        "created" : "1497290844374",
+        "id" : "352c363132b04bedbf85ad65413006e4",
+        "layout" : {
+          "__start__" : {
+            "type" : "container",
+            "w" : "100%",
+            "h" : "100%",
+            "contains" : [
+              "component_cd01d81849356f1fd125b1e871fd7ba5",
+              "component_3ea0c2d59e0f0e8b9b9f98ca21c2d25b"
+            ],
+            "layout_type" : "page_components"
+          },
+          "component_cd01d81849356f1fd125b1e871fd7ba5" : {
+            "type" : "component",
+            "component" : "navigator",
+            "id" : "component_cd01d81849356f1fd125b1e871fd7ba5",
+            "name" : "component_cd01d81849356f1fd125b1e871fd7ba5",
+            "page_loading" : false,
+            "needs_subpage_target" : true,
+            "attributes" : {
+              "component" : "navigator",
+              "button_width" : 100,
+              "menu_icon" : "",
+              "button_height" : 60,
+              "name" : "",
+              "navigator" : "7f2f2692baf743059642bfaac918b7d9",
+              "event_name" : "",
+              "type" : "menu",
+              "menu_width" : 300,
+              "id" : "6a46bcccf6cd6413dea69d12bb359ec8"
+            },
+            "w" : "20%",
+            "h" : "100%"
+          },
+          "component_3ea0c2d59e0f0e8b9b9f98ca21c2d25b" : {
+            "type" : "component",
+            "component" : "markup",
+            "id" : "component_3ea0c2d59e0f0e8b9b9f98ca21c2d25b",
+            "name" : "component_3ea0c2d59e0f0e8b9b9f98ca21c2d25b",
+            "page_loading" : false,
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "markdown" : "test",
+              "component" : "markup",
+              "html" : "<html>\n\t<div style=\"text-align: center;\">\n\t\t<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Nd91yW1e2k8?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\n\t</div>\n</html>",
+              "id" : "3ab5b06c422bc1d1af23b97658133e94",
+              "type" : "html"
+            },
+            "h" : "100%",
+            "w" : "80%"
+          }
+        },
+        "name" : "ui_components",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "public" : "0",
+        "schema_version" : "0",
+        "system_updated" : "0"
+      }
+    }
+  }
+}

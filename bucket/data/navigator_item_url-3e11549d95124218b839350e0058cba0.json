@@ -1,0 +1,18 @@
+{
+  "bucket_data" : {
+    "navigator_item_url" : {
+      "3e11549d95124218b839350e0058cba0" : {
+        "created" : "1497306912226",
+        "icon" : "",
+        "id" : "3e11549d95124218b839350e0058cba0",
+        "label" : "Hello World",
+        "order" : "0",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "parent" : "69edf6f5f7c140698a18959f5ad26847",
+        "schema_version" : "0",
+        "system_updated" : "0",
+        "url" : "hello_world"
+      }
+    }
+  }
+}

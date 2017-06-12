@@ -1,0 +1,291 @@
+{
+  "bucket_data" : {
+    "pages" : {
+      "485e2f93edb2431a9c32ce197cdef8c3" : {
+        "created" : "1497291156673",
+        "id" : "485e2f93edb2431a9c32ce197cdef8c3",
+        "layout" : {
+          "component_1da8557946f0555ca220e7e0d7ba8657" : {
+            "type" : "component",
+            "component" : "form",
+            "id" : "component_1da8557946f0555ca220e7e0d7ba8657",
+            "name" : "component_1da8557946f0555ca220e7e0d7ba8657",
+            "page_loading" : false,
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "layout" : {
+                "slots" : {
+                  "string_slot" : {
+                    "type" : "string",
+                    "attributes" : { },
+                    "labels" : {
+                      "label" : "String slot",
+                      "labelp" : "String slots"
+                    },
+                    "name" : "string_slot",
+                    "bundle" : "ds.f8_platform_training"
+                  },
+                  "boolean_slot" : {
+                    "type" : "boolean",
+                    "attributes" : { },
+                    "labels" : {
+                      "label" : "Boolean slot",
+                      "labelp" : "Boolean slots"
+                    },
+                    "name" : "boolean_slot",
+                    "bundle" : "ds.f8_platform_training"
+                  },
+                  "big_slot" : {
+                    "type" : "big_string",
+                    "attributes" : { },
+                    "labels" : {
+                      "label" : "Big slot",
+                      "labelp" : "Big slots"
+                    },
+                    "name" : "big_slot",
+                    "bundle" : "ds.f8_platform_training"
+                  }
+                },
+                "slotsChanged" : false,
+                "layout" : {
+                  "version" : 1,
+                  "layout" : [
+                    {
+                      "type" : "section",
+                      "colData" : [
+                        {
+                          "column" : 0
+                        },
+                        {
+                          "column" : 1
+                        }
+                      ],
+                      "cols" : [
+                        [
+                          {
+                            "type" : "slot",
+                            "name" : "string_slot"
+                          }
+                        ],
+                        [
+                          {
+                            "type" : "slot",
+                            "name" : "boolean_slot"
+                          }
+                        ]
+                      ],
+                      "guid" : "e8wuso",
+                      "columns" : 2
+                    },
+                    {
+                      "type" : "section",
+                      "colData" : [
+                        {
+                          "column" : 0
+                        }
+                      ],
+                      "cols" : [
+                        [
+                          {
+                            "type" : "slot",
+                            "name" : "big_slot"
+                          }
+                        ]
+                      ],
+                      "guid" : "865029531b8c251c9e13e1f167fcb097",
+                      "columns" : 1
+                    }
+                  ],
+                  "pageData" : {
+                    "title" : "Form Component"
+                  }
+                },
+                "display_rules" : [ ]
+              },
+              "component" : "form",
+              "id" : "30bfe6e3948a524307ac9bd9b49e6e5c"
+            },
+            "h" : "25%",
+            "w" : "100%"
+          },
+          "component_dce18dabcb3d6d7ca6dc7053acf79e6a" : {
+            "type" : "component",
+            "component" : "chart",
+            "id" : "component_dce18dabcb3d6d7ca6dc7053acf79e6a",
+            "name" : "component_dce18dabcb3d6d7ca6dc7053acf79e6a",
+            "page_loading" : false,
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "yaxis_range" : false,
+              "stacked" : "0",
+              "show_points" : "true",
+              "tooltip_format_for_dates" : "",
+              "yaxis_range_max" : 100,
+              "chart_title" : "Users by Gender",
+              "bar_height" : "98%",
+              "show_legend" : "top",
+              "dynamic_dataset" : false,
+              "datasets" : [
+                {
+                  "2" : "average",
+                  "8" : "bar",
+                  "id" : "5e154ef55a6633a0502dc806a308ed2e",
+                  "parent_type" : "pie",
+                  "value_type" : "count",
+                  "display_as" : "bar",
+                  "condition" : "[]",
+                  "bucket" : "user",
+                  "label_slot" : "gender",
+                  "value_slot" : "active",
+                  "title" : "Users"
+                }
+              ],
+              "type" : "pie",
+              "yAxisFormatRight" : "",
+              "yAxisFormat" : "",
+              "gauge_label_format" : "",
+              "pie_size" : "50%",
+              "show_xaxis" : true,
+              "yaxis_range_min" : 0,
+              "component" : "chart",
+              "show_title" : "top",
+              "show_tooltips" : true,
+              "maximum_value" : "100",
+              "show_yaxis" : true,
+              "height" : "350",
+              "id" : "443bc34ff6b9b51631515f1be2e0a7fd"
+            },
+            "w" : "100%",
+            "h" : "25%"
+          },
+          "container_279f1cb7438db2d774c75e8e13d625ca" : {
+            "type" : "container",
+            "w" : "50%",
+            "h" : "100%",
+            "contains" : [
+              "component_1da8557946f0555ca220e7e0d7ba8657",
+              "component_8c269f6f900a014b9e2189bf4d618076",
+              "component_440589ffe6c9658a4a0367f7ca319b91",
+              "component_dce18dabcb3d6d7ca6dc7053acf79e6a"
+            ]
+          },
+          "__start__" : {
+            "type" : "container",
+            "w" : "100%",
+            "h" : "100%",
+            "contains" : [
+              "container_0aee8884e9010288944f7f1cc02fc882",
+              "container_279f1cb7438db2d774c75e8e13d625ca"
+            ],
+            "layout_type" : "page_components"
+          },
+          "component_c0be76aabe78b82765fbe5006b2466dd" : {
+            "type" : "component",
+            "component" : "markup",
+            "id" : "component_c0be76aabe78b82765fbe5006b2466dd",
+            "name" : "component_c0be76aabe78b82765fbe5006b2466dd",
+            "page_loading" : false,
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "markup",
+              "type" : "markdown",
+              "html" : "",
+              "markdown" : "This is a **Markdown** component!"
+            },
+            "w" : "100%",
+            "h" : "33%"
+          },
+          "component_8c269f6f900a014b9e2189bf4d618076" : {
+            "type" : "component",
+            "component" : "speaks",
+            "id" : "component_8c269f6f900a014b9e2189bf4d618076",
+            "name" : "component_8c269f6f900a014b9e2189bf4d618076",
+            "page_loading" : false,
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "speaks",
+              "source" : "document",
+              "bucket" : ""
+            },
+            "w" : "100%",
+            "h" : "25%"
+          },
+          "component_2446dc97fee8f850da49e99106440cf9" : {
+            "type" : "component",
+            "component" : "list",
+            "id" : "component_2446dc97fee8f850da49e99106440cf9",
+            "name" : "component_2446dc97fee8f850da49e99106440cf9",
+            "page_loading" : false,
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "list",
+              "bucket" : "user",
+              "force_condition" : "[]",
+              "inline_details" : false,
+              "columns" : [
+                "first_name",
+                "last_name",
+                "created"
+              ],
+              "list_spacing" : "",
+              "allow_sorting" : "true",
+              "height_option" : "",
+              "height" : 300
+            },
+            "w" : "100%",
+            "h" : "33%"
+          },
+          "component_24dd5c490b5634601c367943054798e6" : {
+            "type" : "component",
+            "component" : "tree_bucket",
+            "id" : "component_24dd5c490b5634601c367943054798e6",
+            "name" : "component_24dd5c490b5634601c367943054798e6",
+            "page_loading" : false,
+            "needs_subpage_target" : true,
+            "attributes" : {
+              "bucket" : "user",
+              "instructions" : "<html>\n\t<!--- code goes here -->\n</html>",
+              "tree_renderer" : "jstree",
+              "component" : "tree_bucket",
+              "show_tree_lines" : false,
+              "dnd" : "0",
+              "id" : "f079bb81235c627c71c4501559d28205",
+              "tree_definition" : "{\n\t\"tree\": [{\n\t\t\"type\": \"bucket\",\n\t\t\"bucket_node\": true,\n\t\t\"label\": \"%{$record.name}\",\n\t\t\"open\": true,\n\t\t\"condition\": \"\",\n\t\t\"sort_by\": \"name\",\n\t\t\"children\": [{ \n\t\t\t\"type\": \"related\",\n\t\t\t\"bucket_node\": true,\n\t\t\t\"async\": true,\n\t\t\t\"label\": \"%{$record.group_id.name}\",\n\t\t\t\"child\": \"user_to_group.user_id\",\n\t\t\t\"condition\": \"\",\n\t\t\t\"children\": []\n\t\t}, {\n\t\t\t\"type\": \"related\",\n\t\t\t\"bucket_node\": true,\n\t\t\t\"async\": true,\n\t\t\t\"child\": \"notification_device.user\",\n\t\t\t\"condition\": \"\",\n\t\t\t\"children\": []\n\t\t}]\n\t}],\n\t\"tags\": {\n\t\t\"folder\": {\n\t\t\t\"bucket\": \"bundle_content\",\n\t\t\t\"condition\": [\"type\",\"eq\",\"folder\"],\n\t\t\t\"icon\": \"fontawesome:folder-o\",\n\t\t\t\"drag\": true,\n\t\t\t\"drop\": [\"folder\",\"system\"]\n\t\t},\n\t\t\"file\": {\n\t\t\t\"bucket\": \"bundle_content\",\n\t\t\t\"condition\": [\"type\",\"eq\",\"file\"],\n\t\t\t\"icon\": \"fontawesome:file-o\",\n\t\t\t\"drag\": true,\n\t\t\t\"drop\": [\"folder\",\"system\"]\n\t\t},\n\t\t\"locked\": {\n\t\t\t\"bucket\": \"bundle_content\",\n\t\t\t\"condition\": [\"type\",\"eq\",\"locked\"],\n\t\t\t\"icon\": \"fontawesome:lock\"\n\t\t},\n\t\t\"system\": {\n\t\t\t\"bucket\": \"bundle_content\",\n\t\t\t\"condition\": [\"type\",\"eq\",\"system\"],\n\t\t\t\"icon\": \"fontawesome:folder\"\n\t\t}\n\t}\n}   "
+            },
+            "w" : "100%",
+            "h" : "34%"
+          },
+          "container_0aee8884e9010288944f7f1cc02fc882" : {
+            "type" : "container",
+            "w" : "50%",
+            "h" : "100%",
+            "contains" : [
+              "component_c0be76aabe78b82765fbe5006b2466dd",
+              "component_2446dc97fee8f850da49e99106440cf9",
+              "component_24dd5c490b5634601c367943054798e6"
+            ]
+          },
+          "component_440589ffe6c9658a4a0367f7ca319b91" : {
+            "type" : "component",
+            "component" : "attachments",
+            "id" : "component_440589ffe6c9658a4a0367f7ca319b91",
+            "name" : "component_440589ffe6c9658a4a0367f7ca319b91",
+            "page_loading" : false,
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "attachments",
+              "images_only" : "0"
+            },
+            "w" : "100%",
+            "h" : "25%"
+          }
+        },
+        "name" : "standard_components",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "public" : "0",
+        "schema_version" : "0",
+        "system_updated" : "0"
+      }
+    }
+  }
+}

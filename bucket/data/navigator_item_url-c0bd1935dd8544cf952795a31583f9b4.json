@@ -1,0 +1,18 @@
+{
+  "bucket_data" : {
+    "navigator_item_url" : {
+      "c0bd1935dd8544cf952795a31583f9b4" : {
+        "created" : "1497306912383",
+        "icon" : "",
+        "id" : "c0bd1935dd8544cf952795a31583f9b4",
+        "label" : "Component with Widgets",
+        "order" : "2",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "parent" : "69edf6f5f7c140698a18959f5ad26847",
+        "schema_version" : "0",
+        "system_updated" : "0",
+        "url" : "component_with_widgets"
+      }
+    }
+  }
+}
