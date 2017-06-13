@@ -5,42 +5,52 @@
         "created" : "1497316501636",
         "id" : "f3151d7cae2d442e82647fb1c886745f",
         "layout" : {
+          "component_2c79c61c71f3b41cdf5fa6d8967812fa" : {
+            "type" : "component",
+            "component" : "navigator",
+            "id" : "component_2c79c61c71f3b41cdf5fa6d8967812fa",
+            "name" : "component_2c79c61c71f3b41cdf5fa6d8967812fa",
+            "page_loading" : false,
+            "needs_subpage_target" : true,
+            "attributes" : {
+              "component" : "navigator",
+              "button_width" : 100,
+              "menu_icon" : "",
+              "button_height" : 60,
+              "name" : "",
+              "navigator" : "3314fef6d35c40ea903505e2e8cb4827",
+              "event_name" : "",
+              "type" : "horizontal-tabs",
+              "menu_width" : 300,
+              "id" : "fdd39613adca10b34d5e4232e38f578f"
+            },
+            "w" : "100%",
+            "h" : "50%"
+          },
+          "component_65462d477b977b4d5f1eedba3967410e" : {
+            "type" : "component",
+            "component" : "markup",
+            "id" : "component_65462d477b977b4d5f1eedba3967410e",
+            "name" : "component_65462d477b977b4d5f1eedba3967410e",
+            "page_loading" : false,
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "markup",
+              "type" : "markdown",
+              "html" : ""
+            },
+            "w" : "100%",
+            "h" : "50%"
+          },
           "__start__" : {
             "type" : "container",
             "w" : "100%",
             "h" : "100%",
             "contains" : [
-              "component_b6f8e8d1c76ae097192d130395467b4f"
+              "component_2c79c61c71f3b41cdf5fa6d8967812fa",
+              "component_65462d477b977b4d5f1eedba3967410e"
             ],
             "layout_type" : "page_components"
-          },
-          "component_b6f8e8d1c76ae097192d130395467b4f" : {
-            "type" : "component",
-            "component" : "list",
-            "id" : "component_b6f8e8d1c76ae097192d130395467b4f",
-            "name" : "component_b6f8e8d1c76ae097192d130395467b4f",
-            "page_loading" : false,
-            "needs_subpage_target" : false,
-            "attributes" : {
-              "component" : "list",
-              "bucket" : "action",
-              "force_condition" : "[]",
-              "inline_details" : false,
-              "columns" : [
-                "name",
-                "bucket",
-                "description",
-                "collection_bucket",
-                "active",
-                "order"
-              ],
-              "list_spacing" : "",
-              "allow_sorting" : "true",
-              "height_option" : "",
-              "height" : 300
-            },
-            "w" : "100%",
-            "h" : "100%"
           }
         },
         "name" : "logic",

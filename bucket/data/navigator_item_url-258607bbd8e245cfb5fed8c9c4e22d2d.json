@@ -1,0 +1,18 @@
+{
+  "bucket_data" : {
+    "navigator_item_url" : {
+      "258607bbd8e245cfb5fed8c9c4e22d2d" : {
+        "created" : "1497381398584",
+        "icon" : "",
+        "id" : "258607bbd8e245cfb5fed8c9c4e22d2d",
+        "label" : "Modules",
+        "order" : "1",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "parent" : "8271f1bdcc014ae4aafe414f448e6962",
+        "schema_version" : "0",
+        "system_updated" : "0",
+        "url" : "logic_modules"
+      }
+    }
+  }
+}

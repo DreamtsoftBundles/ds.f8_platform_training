@@ -1,0 +1,43 @@
+{
+  "bucket_data" : {
+    "pages" : {
+      "933a76d28c2f4b8483e05518aa8029f1" : {
+        "created" : "1497381484950",
+        "id" : "933a76d28c2f4b8483e05518aa8029f1",
+        "layout" : {
+          "component_4976cb4a1a1c4d5c0d77654581e801d1" : {
+            "type" : "component",
+            "component" : "tree_bucket",
+            "id" : "component_4976cb4a1a1c4d5c0d77654581e801d1",
+            "name" : "component_4976cb4a1a1c4d5c0d77654581e801d1",
+            "needs_subpage_target" : true,
+            "attributes" : {
+              "bucket" : "bundle_content",
+              "instructions" : "<html>\n<div class=\"containerWrapperTitle\" style=\"height: 100%\">\n      <div class=\"containerTitleHeaderLabel\">\n         <div>Bundle Content</div>\n      </div>\n   </div>\n</html>",
+              "tree_renderer" : "jstree",
+              "component" : "tree_bucket",
+              "id" : "a49788e61b92bdda383892a7be1c098b",
+              "tree_definition" : "{\n   \"tree\": [{\n      \"type\": \"bucket\",\n      \"label\": \"%{$record.name}\",\n      \"open\": [[\"name\",\"eq\",\"content\"],\"OR\",[\"name\",\"eq\",\"modules\"],\"OR\",[\"name\",\"eq\",\"unload\"]],\n      \"condition\": \"\",\n      \"async\": true,\n      \"sort_by\": \"name\",\n      \"no_children\": [\"type\",\"eq\",\"file\"],\n      \"page\": \"\",\n      \"children\": [{ \n         \"type\": \"related\",\n         \"bucket_node\": false,\n         \"child\": \"bundle_content.parent\",\n         \"condition\": \"\",\n         \"open\": false,\n         \"async\": true,\n         \"recurse\": true,\n\t      \"no_children\": [\"type\",\"eq\",\"file\"],\n\t      \"page\": \"\",\n         \"children\": []\n      }]\n   }],\n   \"tags\": {\n      \"folder\": {\n         \"bucket\": \"bundle_content\",\n         \"condition\": [\"type\",\"eq\",\"folder\"],\n         \"icon\": \"fontawesome:folder-o\",\n         \"drag\": true,\n         \"drop\": [\"folder\",\"system\"]\n      },\n      \"unload\": {\n         \"bucket\": \"bundle_content\",\n         \"condition\": [[\"path\",\"begins\",\"/bucket/unload/\"], [\"type\",\"eq\",\"file\"]],\n         \"icon\": \"fontawesome:file-code-o\"\n      },\n      \"file\": {\n         \"bucket\": \"bundle_content\",\n         \"condition\": [\"type\",\"eq\",\"file\"],\n         \"icon\": \"fontawesome:file-o\",\n         \"drag\": true,\n         \"drop\": [\"folder\",\"system\"]\n      },\n      \"locked\": {\n         \"bucket\": \"bundle_content\",\n         \"condition\": [\"type\",\"eq\",\"locked\"],\n         \"icon\": \"fontawesome:lock\"\n      },\n      \"system\": {\n         \"bucket\": \"bundle_content\",\n         \"condition\": [\"type\",\"eq\",\"system\"],\n         \"icon\": \"fontawesome:folder\"\n      }\n   }\n}",
+              "dnd" : true
+            },
+            "w" : "100%",
+            "h" : "100%"
+          },
+          "__start__" : {
+            "type" : "container",
+            "w" : "100%",
+            "h" : "100%",
+            "contains" : [
+              "component_4976cb4a1a1c4d5c0d77654581e801d1"
+            ]
+          }
+        },
+        "name" : "logic_modules",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "public" : "0",
+        "schema_version" : "0",
+        "system_updated" : "0"
+      }
+    }
+  }
+}

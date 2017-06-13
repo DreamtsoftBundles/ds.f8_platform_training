@@ -1,0 +1,21 @@
+{
+  "bucket_data" : {
+    "navigator_item_list" : {
+      "ecf9456a4b7a41b0b1ec69cc01625531" : {
+        "bucket" : "action",
+        "condition" : "[]",
+        "created" : "1497381455345",
+        "icon" : "",
+        "id" : "ecf9456a4b7a41b0b1ec69cc01625531",
+        "label" : "Actions",
+        "order" : "0",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "parent" : "3314fef6d35c40ea903505e2e8cb4827",
+        "schema_version" : "0",
+        "sort_by" : "",
+        "sort_direction" : "ascending",
+        "system_updated" : "0"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "bucket_data" : {
+    "navigator_item_list" : {
+      "4c7a348aedde42db9daffa5708c01bed" : {
+        "bucket" : "display_rule",
+        "condition" : "[]",
+        "created" : "1497381398650",
+        "icon" : "",
+        "id" : "4c7a348aedde42db9daffa5708c01bed",
+        "label" : "Display Rules",
+        "order" : "2",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "parent" : "8271f1bdcc014ae4aafe414f448e6962",
+        "schema_version" : "0",
+        "sort_by" : "",
+        "sort_direction" : "ascending",
+        "system_updated" : "0"
+      }
+    }
+  }
+}
