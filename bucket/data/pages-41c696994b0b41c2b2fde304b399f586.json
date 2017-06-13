@@ -1,0 +1,342 @@
+{
+  "bucket_data" : {
+    "pages" : {
+      "41c696994b0b41c2b2fde304b399f586" : {
+        "created" : "1497315521706",
+        "id" : "41c696994b0b41c2b2fde304b399f586",
+        "layout" : {
+          "component_2d615224ae0e55257cb0c1c3cadbef01" : {
+            "type" : "component",
+            "component" : "chart",
+            "id" : "component_2d615224ae0e55257cb0c1c3cadbef01",
+            "name" : "component_2d615224ae0e55257cb0c1c3cadbef01",
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "chart",
+              "show_title" : "top",
+              "chart_title" : "by Approval State",
+              "bar_height" : "50%",
+              "show_legend" : "top",
+              "datasets" : [
+                {
+                  "2" : "average",
+                  "8" : "bar",
+                  "id" : "438c5351eb5bdc8dd1c7e916af171d92",
+                  "parent_type" : "bar",
+                  "value_type" : "count",
+                  "display_as" : "bar",
+                  "condition" : "[]",
+                  "bucket" : "zrpplys6",
+                  "label_slot" : "state",
+                  "value_slot" : "created",
+                  "title" : "Approvals"
+                }
+              ],
+              "id" : "382d2d5ad12e40c1d79e0b725d8dac41",
+              "type" : "bar",
+              "pie_size" : "98%",
+              "height" : "350",
+              "stacked" : "0",
+              "yAxisFormat" : "",
+              "yAxisFormatRight" : "",
+              "dynamic_dataset" : false,
+              "show_points" : "true",
+              "tooltip_format_for_dates" : "",
+              "show_xaxis" : true,
+              "show_tooltips" : true,
+              "show_yaxis" : true,
+              "yaxis_range" : false,
+              "yaxis_range_min" : 0,
+              "yaxis_range_max" : 100,
+              "gauge_label_format" : "",
+              "maximum_value" : "100",
+              "csstags" : ""
+            },
+            "w" : "100%",
+            "h" : "33%"
+          },
+          "__start__" : {
+            "type" : "container",
+            "w" : "100%",
+            "h" : "100%",
+            "contains" : [
+              "container_726579429ea35f87670e1a96494f9851",
+              "container_41fe6ff3ea117c23b5dfa0243b1c39c7",
+              "container_35e1b68cdaa52a03fffcdfa14ce8996f"
+            ]
+          },
+          "component_575673058b7e3ba8f3e082835c469207" : {
+            "type" : "component",
+            "component" : "chart",
+            "id" : "component_575673058b7e3ba8f3e082835c469207",
+            "name" : "component_575673058b7e3ba8f3e082835c469207",
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "chart",
+              "show_title" : "top",
+              "chart_title" : "by Assignment Group",
+              "bar_height" : "98%",
+              "show_legend" : "hidden",
+              "datasets" : [
+                {
+                  "2" : "average",
+                  "8" : "bar",
+                  "id" : "7ef021ce44a48d92b6a96c8028b834cb",
+                  "parent_type" : "pie",
+                  "value_type" : "count",
+                  "display_as" : "bar",
+                  "condition" : "[]",
+                  "bucket" : "kmmljprf",
+                  "label_slot" : "assignment_group",
+                  "value_slot" : "actual_cost",
+                  "title" : "Incidents"
+                }
+              ],
+              "id" : "394d08d2fbe6a43c260b448813a7f7a1",
+              "type" : "pie",
+              "pie_size" : "80%"
+            },
+            "w" : "100%",
+            "h" : "34%"
+          },
+          "container_41fe6ff3ea117c23b5dfa0243b1c39c7" : {
+            "type" : "container",
+            "w" : "33%",
+            "h" : "100%",
+            "contains" : [
+              "component_159fd728b897fef52d4387b1b93cc26d",
+              "component_cd5857ccbd3682d1a6227bbb1ce55f69"
+            ]
+          },
+          "container_35e1b68cdaa52a03fffcdfa14ce8996f" : {
+            "type" : "container",
+            "w" : "34%",
+            "h" : "100%",
+            "contains" : [
+              "component_a3a78087c17114b25c9aecec24068ea9",
+              "component_2d615224ae0e55257cb0c1c3cadbef01",
+              "component_575673058b7e3ba8f3e082835c469207"
+            ]
+          },
+          "component_95082f3583c2dd102ea2cadb7a1d007b" : {
+            "type" : "component",
+            "component" : "chart",
+            "id" : "component_95082f3583c2dd102ea2cadb7a1d007b",
+            "name" : "component_95082f3583c2dd102ea2cadb7a1d007b",
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "chart",
+              "show_points" : false,
+              "stacked" : true,
+              "show_title" : "top",
+              "chart_title" : "by Category",
+              "bar_height" : "75%",
+              "show_legend" : "top",
+              "datasets" : [
+                {
+                  "2" : "average",
+                  "8" : "bar",
+                  "id" : "ee59e994b6bde0b004365b7278d9a949",
+                  "parent_type" : "bar",
+                  "value_type" : "count",
+                  "display_as" : "bar",
+                  "condition" : "[[[\"category\",\"ne\",\"\",\"- None -\"]]]",
+                  "bucket" : "kmmljprf",
+                  "value_slot" : "actual_cost",
+                  "label_slot" : "category",
+                  "title" : "Incidents"
+                }
+              ],
+              "id" : "16c34166fc52757222f888c5196515f3",
+              "type" : "bar",
+              "pie_size" : "98%"
+            },
+            "h" : "33%",
+            "w" : "100%"
+          },
+          "component_159fd728b897fef52d4387b1b93cc26d" : {
+            "type" : "component",
+            "component" : "static_html",
+            "id" : "component_159fd728b897fef52d4387b1b93cc26d",
+            "name" : "component_159fd728b897fef52d4387b1b93cc26d",
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "static_html",
+              "html" : "<p style=\"text-align:center;\">\n   <img src=\"images/itil.png\" width=\"600\" alt=\"\" usemap=\"#Map\" />\n<map name=\"Map\" id=\"Map\">\n\t <area alt=\"\" title=\"\" href=\"#/ds.itsm/incident_management\" shape=\"poly\" coords=\"103,168,151,201,214,144,188,91,140,118\" />\n    <area alt=\"\" title=\"\" href=\"#/ds.itsm/problem_management\" shape=\"poly\" coords=\"89,403,141,378,121,293,63,289,65,348\" />\n    <area alt=\"\" title=\"\" href=\"#/ds.itsm/change_management\" shape=\"poly\" coords=\"142,385,90,410,125,463,170,499,201,449\" />\n    <area alt=\"\" title=\"\" href=\"#/ds.itsm/knowledge_management\" shape=\"poly\" coords=\"206,453,176,503,230,527,285,537,287,479\" />\n    <area alt=\"\" title=\"\" href=\"#/ds.itsm/event_management\" shape=\"poly\" coords=\"99,174,148,206,123,285,62,284,72,222\" />\n    <area alt=\"\" title=\"\" href=\"#/ds.itsm/service_level_management\" shape=\"poly\" coords=\"312,62,310,124,392,151,425,99,374,73\" />\n    <area alt=\"\" title=\"\" href=\"#/ds.itsm/service_catalog_management\" shape=\"poly\" coords=\"428,100,396,155,454,218,510,189,477,136\" />\n    <area alt=\"\" title=\"\" href=\"#/ds.itsm/configuration_management\" shape=\"poly\" coords=\"475,308,450,391,501,427,527,377,540,310\" />\n    <area alt=\"\" title=\"\" href=\"#/ds.itsm/release_management\" shape=\"poly\" coords=\"293,477,379,456,408,512,352,534,291,538\" />\n    <area alt=\"\" title=\"\" href=\"#/ds.itsm/home\" shape=\"poly\" coords=\"298,225,256,242,232,274,227,315,244,347,268,362,299,371,334,365,360,340,375,305,367,264,338,235\" />\n   \n</map>\n</p>",
+              "id" : "3c391b7aaaef37a7c545bf8004854b02",
+              "csstags" : "",
+              "_style" : ""
+            },
+            "w" : "100%",
+            "h" : "50%"
+          },
+          "component_cd5857ccbd3682d1a6227bbb1ce55f69" : {
+            "type" : "component",
+            "component" : "chart",
+            "id" : "component_cd5857ccbd3682d1a6227bbb1ce55f69",
+            "name" : "component_cd5857ccbd3682d1a6227bbb1ce55f69",
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "chart",
+              "stacked" : false,
+              "show_title" : "top",
+              "chart_title" : "by Requested For",
+              "bar_height" : "50%",
+              "show_legend" : "bottom",
+              "datasets" : [
+                {
+                  "2" : "average",
+                  "8" : "bar",
+                  "id" : "b83eea983e210fc28b37828f8ea7b02d",
+                  "parent_type" : "bar",
+                  "value_type" : "count",
+                  "display_as" : "area",
+                  "condition" : "[]",
+                  "bucket" : "kmmljprf",
+                  "label_slot" : "requested_for",
+                  "value_slot" : "actual_cost",
+                  "title" : "Incidents"
+                },
+                {
+                  "2" : "average",
+                  "8" : "bar",
+                  "id" : "b995b189c05e6116c1d065954485a8dd",
+                  "parent_type" : "bar",
+                  "value_type" : "count",
+                  "display_as" : "area",
+                  "condition" : "[]",
+                  "bucket" : "2r253q1n",
+                  "label_slot" : "requested_for",
+                  "value_slot" : "actual_cost",
+                  "title" : "Change Requests"
+                }
+              ],
+              "id" : "711c690a66c3ba83892779d2dbad528c",
+              "type" : "bar",
+              "pie_size" : "98%"
+            },
+            "w" : "100%",
+            "h" : "50%"
+          },
+          "container_726579429ea35f87670e1a96494f9851" : {
+            "type" : "container",
+            "w" : "33%",
+            "h" : "100%",
+            "contains" : [
+              "component_95082f3583c2dd102ea2cadb7a1d007b",
+              "component_d7ba4ca72bb7baf3e0803c9bb422f0c4",
+              "component_c4fdc6a4a066798ce6ca06adce5343d0"
+            ]
+          },
+          "component_a3a78087c17114b25c9aecec24068ea9" : {
+            "type" : "component",
+            "component" : "chart",
+            "id" : "component_a3a78087c17114b25c9aecec24068ea9",
+            "name" : "component_a3a78087c17114b25c9aecec24068ea9",
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "chart",
+              "show_title" : "top",
+              "chart_title" : "by Change Type",
+              "bar_height" : "75%",
+              "show_legend" : "top",
+              "datasets" : [
+                {
+                  "2" : "average",
+                  "8" : "bar",
+                  "id" : "f78727f3c986dbc14bc20ec8c349bbb9",
+                  "parent_type" : "bar",
+                  "value_type" : "count",
+                  "display_as" : "bar",
+                  "condition" : "[]",
+                  "bucket" : "2r253q1n",
+                  "label_slot" : "change_type",
+                  "value_slot" : "actual_cost",
+                  "title" : "Change Requests"
+                }
+              ],
+              "id" : "f2a9f940c1bbbffb9bc6a2ac3667ac38",
+              "type" : "bar",
+              "pie_size" : "98%"
+            },
+            "h" : "33%",
+            "w" : "100%"
+          },
+          "component_d7ba4ca72bb7baf3e0803c9bb422f0c4" : {
+            "type" : "component",
+            "component" : "chart",
+            "id" : "component_d7ba4ca72bb7baf3e0803c9bb422f0c4",
+            "name" : "component_d7ba4ca72bb7baf3e0803c9bb422f0c4",
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "chart",
+              "show_title" : "top",
+              "chart_title" : "by Impact/Urgency",
+              "bar_height" : "98%",
+              "show_legend" : "hidden",
+              "datasets" : [
+                {
+                  "2" : "average",
+                  "8" : "bar",
+                  "id" : "71c4e79cc2889d7c2ed488b44cb103b3",
+                  "parent_type" : "pie",
+                  "value_type" : "count",
+                  "display_as" : "bar",
+                  "condition" : "[]",
+                  "bucket" : "kmmljprf",
+                  "label_slot" : "priority",
+                  "value_slot" : "actual_cost",
+                  "title" : "Incidents"
+                }
+              ],
+              "id" : "f7f10f2ce9581fe4bdbad9e3a5d86c8c",
+              "type" : "pie",
+              "pie_size" : "50%"
+            },
+            "w" : "100%",
+            "h" : "33%"
+          },
+          "component_c4fdc6a4a066798ce6ca06adce5343d0" : {
+            "type" : "component",
+            "component" : "chart",
+            "id" : "component_c4fdc6a4a066798ce6ca06adce5343d0",
+            "name" : "component_c4fdc6a4a066798ce6ca06adce5343d0",
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "chart",
+              "show_title" : "top",
+              "bar_height" : "98%",
+              "show_legend" : "top",
+              "datasets" : [
+                {
+                  "2" : "average",
+                  "8" : "bar",
+                  "id" : "7e1ee8b6952b04cb3b78d44a014cb38f",
+                  "parent_type" : "bar",
+                  "value_type" : "count",
+                  "display_as" : "bar",
+                  "condition" : "[]",
+                  "bucket" : "kmmljprf",
+                  "value_slot" : "actual_cost",
+                  "label_slot" : "priority",
+                  "title" : "Incidents"
+                }
+              ],
+              "id" : "7f8aa7dcad341de03728c89be98128a9",
+              "type" : "bar",
+              "pie_size" : "98%",
+              "chart_title" : "by Priority"
+            },
+            "w" : "100%",
+            "h" : "34%"
+          }
+        },
+        "name" : "complex_layout",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "public" : "0",
+        "schema_version" : "0",
+        "system_updated" : "0"
+      }
+    }
+  }
+}

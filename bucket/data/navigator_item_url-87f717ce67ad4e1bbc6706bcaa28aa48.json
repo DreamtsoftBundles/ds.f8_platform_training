@@ -1,0 +1,18 @@
+{
+  "bucket_data" : {
+    "navigator_item_url" : {
+      "87f717ce67ad4e1bbc6706bcaa28aa48" : {
+        "created" : "1497315849911",
+        "icon" : "",
+        "id" : "87f717ce67ad4e1bbc6706bcaa28aa48",
+        "label" : "Sandbox",
+        "order" : "3",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "parent" : "0424e5ebe72c4f6fa9bc719b86b530bd",
+        "schema_version" : "0",
+        "system_updated" : "0",
+        "url" : "sandbox_layout"
+      }
+    }
+  }
+}

@@ -46,8 +46,9 @@
             "needs_subpage_target" : false,
             "attributes" : {
               "component" : "markup",
+              "html" : "",
               "type" : "html",
-              "html" : "<html>\n\t<div style=\"text-align: center;\">\n\t\t<iframe width=\"600\" height=\"600\" src=\"https://www.youtube.com/embed/XGSy3_Czz8k?autoplay=1\">\n\t\t</iframe>\n\t</div>\n</html>"
+              "id" : "96178498c82a25b306b437a00418da77"
             },
             "w" : "100%",
             "h" : "50%"
