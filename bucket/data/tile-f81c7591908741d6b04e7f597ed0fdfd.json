@@ -1,24 +1,24 @@
 {
-  "bucket_data": {
-    "tile": {
-      "f81c7591908741d6b04e7f597ed0fdfd": {
-        "active": "1",
-        "color": "#FFAD00",
-        "created": "1496357265310",
-        "description": "separate_file://bucket/data/tile-f81c7591908741d6b04e7f597ed0fdfd-description.html",
-        "icon": "fontawesome:users",
-        "id": "f81c7591908741d6b04e7f597ed0fdfd",
-        "image": "",
-        "order": "400",
-        "owner": "1d193579a6d1458f9f0ac49f8cb96687",
-        "schema_version": "0",
-        "script": "separate_file://bucket/data/tile-f81c7591908741d6b04e7f597ed0fdfd-script.js",
-        "spaces": "2",
-        "subtitle": "separate_file://bucket/data/tile-f81c7591908741d6b04e7f597ed0fdfd-subtitle.html",
-        "system_updated": "0",
-        "tile_group": "944f930da3164de890d761aa18ba77bc",
-        "title": "separate_file://bucket/data/tile-f81c7591908741d6b04e7f597ed0fdfd-title.html",
-        "url": "#/ds.f8_platform_training/tenancy"
+  "bucket_data" : {
+    "tile" : {
+      "f81c7591908741d6b04e7f597ed0fdfd" : {
+        "active" : "1",
+        "color" : "#FFAD00",
+        "created" : "1496357265310",
+        "description" : "separate_file://bucket/data/tile-f81c7591908741d6b04e7f597ed0fdfd-description.html",
+        "icon" : "fontawesome:users",
+        "id" : "f81c7591908741d6b04e7f597ed0fdfd",
+        "image" : "",
+        "order" : "400",
+        "owner" : "1d193579a6d1458f9f0ac49f8cb96687",
+        "schema_version" : "0",
+        "script" : "separate_file://bucket/data/tile-f81c7591908741d6b04e7f597ed0fdfd-script.js",
+        "spaces" : "2",
+        "subtitle" : "separate_file://bucket/data/tile-f81c7591908741d6b04e7f597ed0fdfd-subtitle.html",
+        "system_updated" : "0",
+        "tile_group" : "944f930da3164de890d761aa18ba77bc",
+        "title" : "separate_file://bucket/data/tile-f81c7591908741d6b04e7f597ed0fdfd-title.html",
+        "url" : "#/ds.f8_platform_training/list.default.space"
       }
     }
   }

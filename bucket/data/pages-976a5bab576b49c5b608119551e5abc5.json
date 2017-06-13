@@ -24,7 +24,7 @@
             "attributes" : {
               "bucket" : "third_party_license",
               "instructions" : "<html>\n<div class=\"containerWrapperTitle\" style=\"height: 100%\">\n      <div class=\"containerTitleHeaderLabel\">\n         <div>Spaces and Tenants</div>\n      </div>\n   </div>\n</html>",
-              "tree_renderer" : "jstree",
+              "tree_renderer" : "d3",
               "component" : "tree_bucket",
               "show_tree_lines" : false,
               "dnd" : "0",

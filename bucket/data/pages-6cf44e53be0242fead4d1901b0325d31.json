@@ -1,0 +1,64 @@
+{
+  "bucket_data" : {
+    "pages" : {
+      "6cf44e53be0242fead4d1901b0325d31" : {
+        "created" : "1497374238885",
+        "id" : "6cf44e53be0242fead4d1901b0325d31",
+        "layout" : {
+          "component_8234b448efb364b1d138ac03c9ab58ba" : {
+            "type" : "component",
+            "component" : "markup",
+            "id" : "component_8234b448efb364b1d138ac03c9ab58ba",
+            "name" : "component_8234b448efb364b1d138ac03c9ab58ba",
+            "page_loading" : false,
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "markup",
+              "html" : "",
+              "type" : "markdown",
+              "id" : "7d70168f324f8d3394c71d4473813cf8",
+              "markdown" : "## Space and Tenant Creator\n\n``` js\nvar tree = {\"name\": \"MSP\", \"tenant\": \"\", \"children\": [\n    {\"name\": \"Audi\", \"tenant\": \"Audi\", \"children\": [\n      {\"name\": \"AudiNA\", \"tenant\": \"Audi\"},\n      {\"name\": \"AudiEMEA\", \"tenant\": \"Audi\", \"children\": [\n         {\"name\": \"AudiAustralia\", \"tenant\": \"Audi\"},\n         {\"name\": \"AudiZambia\", \"tenant\": \"Audi\"},\n         {\"name\": \"AudiDubai\", \"tenant\": \"Audi\"}\n      ]},\n      {\"name\": \"AudiFinance\", \"tenant\": \"AudiFinance\", \"children\": [\n          {\"name\": \"AudiFinanceAustralia\", \"tenant\": \"AudiFinance\"},\n        {\"name\": \"AudiFinanceZambia\", \"tenant\": \"AudiFinance\"},\n        {\"name\": \"AudiFinanceDubai\", \"tenant\": \"AudiFinance\"}\n      ]}\n    ]},\n    {\"name\": \"BMW\", \"tenant\": \"BMW\", \"children\": [\n        {\"name\": \"BMWNA\", \"tenant\": \"BMW\", \"children\": [\n            {\"name\": \"BMWUSA\", \"tenant\": \"BMW\", \"children\": [\n                {\"name\": \"BMWCalifornia\", \"tenant\": \"BMW\", \"children\": [\n                    {\"name\": \"BMWNorCal\", \"tenant\": \"BMW\"},\n                    {\"name\": \"BMWSoCal\", \"tenant\": \"BMW\", \"children\": [\n                        {\"name\": \"BMWSanDiego\", \"tenant\": \"BMW\"},\n                        {\"name\": \"BMWLosAngeles\", \"tenant\": \"BMW\"},\n                        {\"name\": \"BMWInlandEmpire\", \"tenant\": \"BMW\"},\n                        {\"name\": \"BMWPalmSprings\", \"tenant\": \"BMW\"}\n                    ]}\n                ]},\n                {\"name\": \"BMWNewYork\", \"tenant\": \"BMW\"},\n                {\"name\": \"BMWTexas\", \"tenant\": \"BMW\"},\n                {\"name\": \"BMWFlorida\", \"tenant\": \"BMW\"},\n                {\"name\": \"BMWDelaware\", \"tenant\": \"BMW\"}\n            ]},\n            {\"name\": \"BMWCanada\", \"tenant\": \"BMW\"},\n            {\"name\": \"BMWMexico\", \"tenant\": \"BMW\"}\n        ]},\n        {\"name\": \"BMWEU\", \"tenant\": \"BMW\"},\n        {\"name\": \"BMWFinance\", \"tenant\": \"BMWFinance\", \"children\": [\n            {\"name\": \"BMWFinanceNA\", \"tenant\": \"BMWFinance\"},\n            {\"name\": \"BMWFinanceEU\", \"tenant\": \"BMWFinance\"},\n            {\"name\": \"BMWFinanceSA\", \"tenant\": \"BMWFinance\"},\n            {\"name\": \"BMWFinanceME\", \"tenant\": \"BMWFinance\"},\n            {\"name\": \"BMWFinanceAsia\", \"tenant\": \"BMWFinance\"}\n        ]},\n        {\"name\": \"BMWSA\", \"tenant\": \"BMW\"},\n        {\"name\": \"BMWME\", \"tenant\": \"BMW\"},\n        {\"name\": \"BMWAsia\", \"tenant\": \"BMW\"}\n    ]},\n    {\"name\": \"Lexus\", \"tenant\": \"Lexus\", \"children\": [\n        {\"name\": \"LexusNA\", \"tenant\": \"Lexus\", \"children\": [\n            {\"name\": \"LexusUS\", \"tenant\": \"Lexus\"},\n            {\"name\": \"LexusCanada\", \"tenant\": \"Lexus\"},\n            {\"name\": \"LexusMexico\", \"tenant\": \"Lexus\"}\n        ]},\n        {\"name\": \"LexusEMEA\", \"tenant\": \"Lexus\", \"children\": [\n            {\"name\": \"LexusRussia\", \"tenant\": \"Lexus\"},\n            {\"name\": \"LexusItaly\", \"tenant\": \"Lexus\"},\n            {\"name\": \"LexusSpain\", \"tenant\": \"Lexus\"},\n            {\"name\": \"LexusFrance\", \"tenant\": \"Lexus\"},\n            {\"name\": \"LexusSingapore\", \"tenant\": \"Lexus\"},\n            {\"name\": \"LexusJapan\", \"tenant\": \"Lexus\"}\n        ]},\n        {\"name\": \"LexusAntarctica\", \"tenant\": \"Lexus\"}\n    ]},\n    {\"name\": \"Pepsi\", \"tenant\": \"Pepsi\", \"children\": [\n      {\"name\": \"PepsiNA\", \"tenant\": \"Pepsi\"},\n      {\"name\": \"PepsiEMEA\", \"tenant\": \"Pepsi\", \"children\": [\n         {\"name\": \"PepsiAustralia\", \"tenant\": \"Pepsi\"},\n         {\"name\": \"PepsiZambia\", \"tenant\": \"Pepsi\"},\n         {\"name\": \"PepsiDubai\", \"tenant\": \"Pepsi\"}\n      ]},\n      {\"name\": \"PepsiFinance\", \"tenant\": \"PepsiFinance\"}\n    ]},\n    {\"name\": \"Coke\", \"tenant\": \"Coke\", \"children\": [\n        {\"name\": \"CokeNA\", \"tenant\": \"Coke\", \"children\": [\n            {\"name\": \"CokeUS\", \"tenant\": \"Coke\"},\n            {\"name\": \"CokeCanada\", \"tenant\": \"Coke\"},\n            {\"name\": \"CokeMexico\", \"tenant\": \"Coke\"}\n        ]},\n        {\"name\": \"CokeEMEA\", \"tenant\": \"Coke\", \"children\": [\n            {\"name\": \"CokeRussia\", \"tenant\": \"Coke\"},\n            {\"name\": \"CokeItaly\", \"tenant\": \"Coke\"},\n            {\"name\": \"CokeSpain\", \"tenant\": \"Coke\"},\n            {\"name\": \"CokeFrance\", \"tenant\": \"Coke\"},\n            {\"name\": \"CokeSingapore\", \"tenant\": \"Coke\"},\n            {\"name\": \"CokeJapan\", \"tenant\": \"Coke\"}\n        ]},\n        {\"name\": \"CokeAntarctica\", \"tenant\": \"Coke\"}\n    ]}\n]};\n\nvar fr = new FRecord(\"space\");\nfr.api(\"generate_tree\", tree);\n\n```"
+            },
+            "h" : "100%",
+            "w" : "50%"
+          },
+          "__start__" : {
+            "type" : "container",
+            "w" : "100%",
+            "h" : "100%",
+            "contains" : [
+              "component_5a85fe56e7fe5ffb762ab8dc8ebadc22",
+              "component_8234b448efb364b1d138ac03c9ab58ba"
+            ],
+            "layout_type" : "page_components"
+          },
+          "component_5a85fe56e7fe5ffb762ab8dc8ebadc22" : {
+            "type" : "component",
+            "component" : "tree_bucket",
+            "id" : "component_5a85fe56e7fe5ffb762ab8dc8ebadc22",
+            "name" : "component_5a85fe56e7fe5ffb762ab8dc8ebadc22",
+            "needs_subpage_target" : true,
+            "attributes" : {
+              "bucket" : "space",
+              "instructions" : "<html>\n<div class=\"containerWrapperTitle\" style=\"height: 100%\">\n      <div class=\"containerTitleHeaderLabel\">\n         <div>Spaces</div>\n      </div>\n   </div>\n</html>",
+              "tree_renderer" : "d3",
+              "component" : "tree_bucket",
+              "show_tree_lines" : false,
+              "tree_definition" : "{\n   \"tree\": [{\n      \"type\": \"bucket\",\n      \"label\": \"%{$record.name}\",\n      \"open\": true,\n      \"condition\": [\"id\", \"eq\", \"custom://7b7026efc9084708affe9f6d0afccfb3\"],\n      \"async\": false,\n      \"sort_by\": \"tenant\",\n      \"page\": \"\",\n      \"clusterId\": \"tenant\",\n      \"children\": [{\n         \"type\": \"related\",\n         \"bucket_node\": false,\n         \"child\": \"space.parent\",\n         \"condition\": \"\",\n         \"open\": true,\n         \"async\": false,\n         \"recurse\": true,\n         \"page\": \"\",\n         \"clusterId\": \"tenant\",\n         \"sort_by\": \"tenant\",\n         \"children\": []\n      }]\n   }]\n}",
+              "id" : "2255697ff63813247b84be1b57014675",
+              "dnd" : true,
+              "csstags" : ""
+            },
+            "w" : "50%",
+            "h" : "100%"
+          }
+        },
+        "name" : "list.default.space",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "public" : "0",
+        "schema_version" : "0",
+        "system_updated" : "0"
+      }
+    }
+  }
+}
