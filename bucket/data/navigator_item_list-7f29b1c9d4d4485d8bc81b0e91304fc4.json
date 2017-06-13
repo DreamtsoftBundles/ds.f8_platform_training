@@ -1,0 +1,21 @@
+{
+  "bucket_data" : {
+    "navigator_item_list" : {
+      "7f29b1c9d4d4485d8bc81b0e91304fc4" : {
+        "bucket" : "script_mapper",
+        "condition" : "[]",
+        "created" : "1497374863994",
+        "icon" : "",
+        "id" : "7f29b1c9d4d4485d8bc81b0e91304fc4",
+        "label" : "Script Mappers",
+        "order" : "3",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "parent" : "9f50e13c882242ff93db747f7d8f39ee",
+        "schema_version" : "0",
+        "sort_by" : "",
+        "sort_direction" : "ascending",
+        "system_updated" : "0"
+      }
+    }
+  }
+}

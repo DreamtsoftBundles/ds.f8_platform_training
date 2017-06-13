@@ -1,0 +1,20 @@
+{
+  "bucket_data" : {
+    "slots" : {
+      "w8pl3km7.first_name" : {
+        "attributes" : { },
+        "bucket" : "w8pl3km7",
+        "created" : "1497375023993",
+        "labels" : {
+          "label" : "First name",
+          "labelp" : "First names"
+        },
+        "name" : "first_name",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "schema_version" : "0",
+        "system_updated" : "0",
+        "type" : "string"
+      }
+    }
+  }
+}

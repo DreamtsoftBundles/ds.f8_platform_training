@@ -5,6 +5,10 @@
       {
          "id" : "ds.base",
          "version" : "0.1.0"
+      },
+      {
+         "id" : "ds.work",
+         "version" : "0.1.0"
       }
    ],
    "icon" : "fontawesome:graduation-cap",

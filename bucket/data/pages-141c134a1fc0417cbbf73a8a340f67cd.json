@@ -1,0 +1,64 @@
+{
+  "bucket_data" : {
+    "pages" : {
+      "141c134a1fc0417cbbf73a8a340f67cd" : {
+        "created" : "1497374864051",
+        "id" : "141c134a1fc0417cbbf73a8a340f67cd",
+        "layout" : {
+          "component_608b0a66b096b6f5a3298417f04bf714" : {
+            "type" : "component",
+            "component" : "navigator",
+            "id" : "component_608b0a66b096b6f5a3298417f04bf714",
+            "name" : "component_608b0a66b096b6f5a3298417f04bf714",
+            "page_loading" : false,
+            "needs_subpage_target" : true,
+            "attributes" : {
+              "component" : "navigator",
+              "button_width" : 100,
+              "menu_icon" : "",
+              "button_height" : 60,
+              "name" : "",
+              "navigator" : "9f50e13c882242ff93db747f7d8f39ee",
+              "event_name" : "",
+              "id" : "8c1c7800bc0e69b3da9897062043fa3b",
+              "type" : "menu",
+              "menu_width" : 300
+            },
+            "w" : "20%",
+            "h" : "100%"
+          },
+          "component_972f6080087dcf55dc70b15cfa912f69" : {
+            "type" : "component",
+            "component" : "markup",
+            "id" : "component_972f6080087dcf55dc70b15cfa912f69",
+            "name" : "component_972f6080087dcf55dc70b15cfa912f69",
+            "page_loading" : false,
+            "needs_subpage_target" : false,
+            "attributes" : {
+              "component" : "markup",
+              "type" : "markdown",
+              "html" : ""
+            },
+            "h" : "100%",
+            "w" : "80%"
+          },
+          "__start__" : {
+            "type" : "container",
+            "w" : "100%",
+            "h" : "100%",
+            "contains" : [
+              "component_608b0a66b096b6f5a3298417f04bf714",
+              "component_972f6080087dcf55dc70b15cfa912f69"
+            ],
+            "layout_type" : "page_components"
+          }
+        },
+        "name" : "data_service",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "public" : "0",
+        "schema_version" : "0",
+        "system_updated" : "0"
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "bucket_data" : {
+    "slots" : {
+      "w8pl3km7.email" : {
+        "attributes" : { },
+        "bucket" : "w8pl3km7",
+        "created" : "1497375046616",
+        "labels" : {
+          "label" : "Email",
+          "labelp" : "Emails"
+        },
+        "name" : "email",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "schema_version" : "0",
+        "system_updated" : "0",
+        "type" : "string"
+      }
+    }
+  }
+}

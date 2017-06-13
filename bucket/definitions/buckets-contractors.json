@@ -1,0 +1,21 @@
+{
+  "bucket_data" : {
+    "buckets" : {
+      "w8pl3km7" : {
+        "attributes" : {
+          "mapper" : "GoogleSpreadsheetMapper",
+          "table" : "1SHu_Ljssh2nc3ivcQInissd7n2B1yQxDuo2H7hhEmqw"
+        },
+        "created" : "1497374881394",
+        "id" : "w8pl3km7",
+        "labels" : {
+          "label" : "Contractors",
+          "labelp" : "Contractors"
+        },
+        "name" : "contractors",
+        "system_updated" : "0",
+        "type" : "script"
+      }
+    }
+  }
+}
