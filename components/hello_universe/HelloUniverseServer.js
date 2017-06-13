@@ -1,6 +1,6 @@
 var PageComponent = require("ds.base/PageComponent");
 
-var HelloWorldServer = PageComponent.create({
+var HelloUniverseServer = PageComponent.create({
 	data: function(attributes, vars) {
                 var helloMessage = "Hello my universe";
 
@@ -13,7 +13,7 @@ var HelloWorldServer = PageComponent.create({
                 });
 	},
 	
-	type: "HelloWorldServer"
+	type: "HelloUniverseServer"
 });
 
-module.exports = HelloWorldServer;
+module.exports = HelloUniverseServer;

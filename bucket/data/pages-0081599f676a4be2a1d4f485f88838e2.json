@@ -30,8 +30,11 @@
             "page_loading" : false,
             "needs_subpage_target" : false,
             "attributes" : {
+              "google_maps_api_key" : "",
               "component" : "google_map",
-              "google_maps_api_key" : ""
+              "geolocate" : false,
+              "starting_address" : "",
+              "id" : "7b96057135ca55934ef149f5122368bf"
             },
             "w" : "100%",
             "h" : "50%"
