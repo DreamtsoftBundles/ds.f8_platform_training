@@ -1,0 +1,127 @@
+{
+  "bucket_data" : {
+    "action_browser" : {
+      "8c3fe10531164e64b3e73d464b626281" : {
+        "activate_behavior" : "show_hide",
+        "activate_condition" : "[]",
+        "active" : "1",
+        "bucket" : "w8pl3km7",
+        "component" : "details",
+        "condition" : "",
+        "created" : "1497377488333",
+        "description" : "",
+        "details_activate_when" : "always",
+        "details_only_show_if" : "existing_record||details",
+        "enabled_condition" : "",
+        "enabled_when" : "",
+        "existing_record" : "1",
+        "flow" : [
+          {
+            "data" : { },
+            "output" : { },
+            "type" : "box",
+            "id" : "start",
+            "static_routes" : true,
+            "text" : "Start",
+            "left" : 0,
+            "top" : 0,
+            "stuck" : true,
+            "width" : 100,
+            "height" : 34,
+            "routes" : [
+              {
+                "text" : "Always",
+                "condition" : "",
+                "order" : 0,
+                "type" : "always",
+                "to" : "f2a42b5c169894ece11f087da57e840e"
+              }
+            ]
+          },
+          {
+            "data" : {
+              "name" : "Call API",
+              "script" : "var apiFr = $record.api('get_url', {});\n\napiFr.next();\n\n$flow.urlVar = apiFr.url;",
+              "obj_name" : "Call API",
+              "obj_type" : "script"
+            },
+            "output" : { },
+            "name" : "script",
+            "value" : "script",
+            "label" : "Run Script",
+            "type" : "script",
+            "text" : "Call API",
+            "left" : 150,
+            "top" : 52,
+            "id" : "f2a42b5c169894ece11f087da57e840e",
+            "width" : 100,
+            "height" : 34,
+            "routes" : [
+              {
+                "text" : "Success",
+                "condition" : "success:eq:1:true",
+                "order" : 0,
+                "type" : "success",
+                "to" : "262e5ca3b7f8ddc6067528c880ca44b3"
+              },
+              {
+                "text" : "Failure",
+                "condition" : "success:eq:0:false",
+                "order" : 1,
+                "type" : "error"
+              }
+            ]
+          },
+          {
+            "data" : {
+              "growl_type" : "success",
+              "name" : "Growl the URL",
+              "send_growl" : true,
+              "growl_message" : "URL from API: %{$flow.urlVar}",
+              "obj_name" : "Alert the URL",
+              "obj_type" : "send_notification"
+            },
+            "output" : { },
+            "name" : "send_notification",
+            "value" : "send_notification",
+            "label" : "Notification",
+            "type" : "send_notification",
+            "text" : "Growl the URL",
+            "left" : 343,
+            "top" : 55,
+            "id" : "262e5ca3b7f8ddc6067528c880ca44b3",
+            "width" : 100,
+            "height" : 34,
+            "routes" : [
+              {
+                "text" : "Always",
+                "condition" : "success:eq:1:true",
+                "order" : 0,
+                "type" : "ok"
+              }
+            ]
+          }
+        ],
+        "group_name" : "",
+        "icon" : "fontawesome:chrome",
+        "id" : "8c3fe10531164e64b3e73d464b626281",
+        "key_sequence" : "",
+        "label" : "Get Google URL",
+        "list_activate_when" : "always",
+        "list_only_show_if" : "list",
+        "name" : "Get Google URL",
+        "new_record" : "1",
+        "order" : "0",
+        "owner" : "660abd5d94af4330aa41bd763bcae970",
+        "requires_write" : "0",
+        "schema_version" : "2.00",
+        "scope" : "",
+        "symbol" : "0",
+        "system_updated" : "0",
+        "trigger_from_button" : "1",
+        "trigger_from_key" : "0",
+        "where" : "middle"
+      }
+    }
+  }
+}
