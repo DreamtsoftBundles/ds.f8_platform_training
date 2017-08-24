@@ -1,17 +1,18 @@
 {
-  "bucket_data" : {
-    "navigator_item_seperator" : {
-      "9d63ddcf48034eff95edaaa50a1603a0" : {
-        "collapsible" : "",
-        "created" : "1497290991132",
-        "icon" : "",
-        "id" : "9d63ddcf48034eff95edaaa50a1603a0",
-        "label" : "Components",
-        "order" : "0",
-        "owner" : "660abd5d94af4330aa41bd763bcae970",
-        "parent" : "7f2f2692baf743059642bfaac918b7d9",
-        "schema_version" : "0",
-        "system_updated" : "0"
+  "bucket_data": {
+    "navigator_item_seperator": {
+      "9d63ddcf48034eff95edaaa50a1603a0": {
+        "collapsible": "",
+        "created": "1497290991132",
+        "icon": "",
+        "id": "9d63ddcf48034eff95edaaa50a1603a0",
+        "label": "Components",
+        "order": "0",
+        "owner": "660abd5d94af4330aa41bd763bcae970",
+        "parent": "7f2f2692baf743059642bfaac918b7d9",
+        "schema_version": "0",
+        "submenu": "0",
+        "system_updated": "0"
       }
     }
   }

@@ -1,13 +1,13 @@
 {
-  "bucket_data" : {
-    "navigator" : {
-      "69edf6f5f7c140698a18959f5ad26847" : {
-        "created" : "1497306912169",
-        "id" : "69edf6f5f7c140698a18959f5ad26847",
-        "name" : "",
-        "owner" : "660abd5d94af4330aa41bd763bcae970",
-        "schema_version" : "0",
-        "system_updated" : "0"
+  "bucket_data": {
+    "navigator": {
+      "69edf6f5f7c140698a18959f5ad26847": {
+        "created": "1497306912169",
+        "id": "69edf6f5f7c140698a18959f5ad26847",
+        "name": "",
+        "owner": "660abd5d94af4330aa41bd763bcae970",
+        "schema_version": "0",
+        "system_updated": "0"
       }
     }
   }

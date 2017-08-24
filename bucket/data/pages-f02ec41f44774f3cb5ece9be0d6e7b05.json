@@ -1,63 +1,49 @@
 {
-  "bucket_data" : {
-    "pages" : {
-      "f02ec41f44774f3cb5ece9be0d6e7b05" : {
-        "created" : "1497296362803",
-        "id" : "f02ec41f44774f3cb5ece9be0d6e7b05",
-        "layout" : {
-          "component_1e6cddb7e7c9892491f39d1e1fe67833" : {
-            "type" : "component",
-            "component" : "markup",
-            "id" : "component_1e6cddb7e7c9892491f39d1e1fe67833",
-            "name" : "component_1e6cddb7e7c9892491f39d1e1fe67833",
-            "page_loading" : false,
-            "needs_subpage_target" : false,
-            "attributes" : {
-              "component" : "markup",
-              "type" : "markdown",
-              "html" : ""
+  "bucket_data": {
+    "pages": {
+      "f02ec41f44774f3cb5ece9be0d6e7b05": {
+        "created": "1497296362803",
+        "id": "f02ec41f44774f3cb5ece9be0d6e7b05",
+        "layout": {
+          "component_10177fbc2fc24cd130fb4457cdcdd429": {
+            "type": "component",
+            "component": "navigator",
+            "id": "component_10177fbc2fc24cd130fb4457cdcdd429",
+            "name": "component_10177fbc2fc24cd130fb4457cdcdd429",
+            "needs_subpage_target": true,
+            "attributes": {
+              "component": "navigator",
+              "button_width": 100,
+              "menu_icon": "",
+              "button_height": 60,
+              "button_sizing": "specify",
+              "name": "",
+              "navigator": "69edf6f5f7c140698a18959f5ad26847",
+              "event_name": "",
+              "id": "b19ec07218212be1c05d79016835943e",
+              "type": "circles",
+              "menu_width": 300
             },
-            "w" : "100%",
-            "h" : "50%"
+            "w": "100%",
+            "h": "100%",
+            "page_loading": true
           },
-          "__start__" : {
-            "type" : "container",
-            "w" : "100%",
-            "h" : "100%",
-            "contains" : [
-              "component_10177fbc2fc24cd130fb4457cdcdd429",
-              "component_1e6cddb7e7c9892491f39d1e1fe67833"
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
+              "component_10177fbc2fc24cd130fb4457cdcdd429"
             ],
-            "layout_type" : "page_components"
-          },
-          "component_10177fbc2fc24cd130fb4457cdcdd429" : {
-            "type" : "component",
-            "component" : "navigator",
-            "id" : "component_10177fbc2fc24cd130fb4457cdcdd429",
-            "name" : "component_10177fbc2fc24cd130fb4457cdcdd429",
-            "page_loading" : false,
-            "needs_subpage_target" : true,
-            "attributes" : {
-              "component" : "navigator",
-              "button_width" : 100,
-              "menu_icon" : "",
-              "button_height" : 60,
-              "name" : "",
-              "navigator" : "69edf6f5f7c140698a18959f5ad26847",
-              "event_name" : "",
-              "type" : "horizontal-tabs",
-              "menu_width" : 300,
-              "id" : "b19ec07218212be1c05d79016835943e"
-            },
-            "w" : "100%",
-            "h" : "50%"
+            "layout_type": "page_components"
           }
         },
-        "name" : "custom_components",
-        "owner" : "660abd5d94af4330aa41bd763bcae970",
-        "public" : "0",
-        "schema_version" : "0",
-        "system_updated" : "0"
+        "name": "custom_components",
+        "owner": "660abd5d94af4330aa41bd763bcae970",
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "title": "Custom components"
       }
     }
   }

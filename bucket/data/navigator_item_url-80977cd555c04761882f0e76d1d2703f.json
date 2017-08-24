@@ -1,17 +1,17 @@
 {
-  "bucket_data" : {
-    "navigator_item_url" : {
-      "80977cd555c04761882f0e76d1d2703f" : {
-        "created" : "1497314540954",
-        "icon" : "",
-        "id" : "80977cd555c04761882f0e76d1d2703f",
-        "label" : "Standard",
-        "order" : "5",
-        "owner" : "660abd5d94af4330aa41bd763bcae970",
-        "parent" : "7f2f2692baf743059642bfaac918b7d9",
-        "schema_version" : "0",
-        "system_updated" : "0",
-        "url" : "standard_widgets"
+  "bucket_data": {
+    "navigator_item_url": {
+      "80977cd555c04761882f0e76d1d2703f": {
+        "created": "1497314540954",
+        "icon": "",
+        "id": "80977cd555c04761882f0e76d1d2703f",
+        "label": "Standard",
+        "order": "5",
+        "owner": "660abd5d94af4330aa41bd763bcae970",
+        "parent": "7f2f2692baf743059642bfaac918b7d9",
+        "schema_version": "0",
+        "system_updated": "0",
+        "url": "standard_widgets"
       }
     }
   }

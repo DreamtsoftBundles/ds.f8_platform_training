@@ -1,77 +1,78 @@
 {
-  "bucket_data" : {
-    "pages" : {
-      "d0f8a828c64a40f2bc45b5a4adadd1c7" : {
-        "created" : "1497307152628",
-        "id" : "d0f8a828c64a40f2bc45b5a4adadd1c7",
-        "layout" : {
-          "__start__" : {
-            "type" : "container",
-            "w" : "100%",
-            "h" : "100%",
-            "contains" : [
+  "bucket_data": {
+    "pages": {
+      "d0f8a828c64a40f2bc45b5a4adadd1c7": {
+        "created": "1497307152628",
+        "id": "d0f8a828c64a40f2bc45b5a4adadd1c7",
+        "layout": {
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
               "component_9e06a25cc2f765d3323904c8b4a5fcbd",
               "component_ac5583ee87c6be7d2c5a8dc0421144c8",
               "component_633d1652976a821926c8efd32779d294"
             ],
-            "layout_type" : "page_components"
+            "layout_type": "page_components"
           },
-          "component_9e06a25cc2f765d3323904c8b4a5fcbd" : {
-            "type" : "component",
-            "component" : "my_full_component",
-            "id" : "component_9e06a25cc2f765d3323904c8b4a5fcbd",
-            "name" : "component_9e06a25cc2f765d3323904c8b4a5fcbd",
-            "page_loading" : false,
-            "needs_subpage_target" : false,
-            "attributes" : {
-              "show_header" : "true",
-              "header" : "This is me typing",
-              "component" : "my_full_component",
-              "rows" : 2,
-              "id" : "066b5ced9126b47f7123357446cbcb19"
+          "component_9e06a25cc2f765d3323904c8b4a5fcbd": {
+            "type": "component",
+            "component": "my_full_component",
+            "id": "component_9e06a25cc2f765d3323904c8b4a5fcbd",
+            "name": "component_9e06a25cc2f765d3323904c8b4a5fcbd",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "show_header": "true",
+              "header": "This is me typing",
+              "component": "my_full_component",
+              "rows": 2,
+              "id": "066b5ced9126b47f7123357446cbcb19"
             },
-            "w" : "100%",
-            "h" : "33%"
+            "w": "100%",
+            "h": "33%"
           },
-          "component_ac5583ee87c6be7d2c5a8dc0421144c8" : {
-            "type" : "component",
-            "component" : "markup",
-            "id" : "component_ac5583ee87c6be7d2c5a8dc0421144c8",
-            "name" : "component_ac5583ee87c6be7d2c5a8dc0421144c8",
-            "page_loading" : false,
-            "needs_subpage_target" : false,
-            "attributes" : {
-              "markdown" : "## MyFullComponentClient\n\n``` js\n<definition>\n\t{\n\t\tid: \"my_full_component\",\n\t\tlabel: \"Example - My Full Component\",\n\t\tclassName: \"MyFullComponentServer\",\n\t\trenderable: \"true\"\n\t}\n</definition>\n\n<attributes>\n\t[{\n\t\tname: \"rows\",\n\t\tlabel: \"Number of rows\",\n\t\ttype: \"integer\",\n\t\tattributes: {\n\t\t\tdefault: \"4\"\n\t\t}\n\t},\n\t{\n\t\tname: \"show_header\",\n\t\tlabel: \"Show header\",\n\t\ttype: \"boolean\",\n\t\tattributes: {\n\t\t\tdefault: \"true\"\n\t\t}\n\t},\n\t{\n\t\tname: \"header\",\n\t\tlabel: \"Header\",\n\t\ttype: \"string\"\n\t}]\n</attributes>\n\n<attributes_layout>\n\t[\n\t\t\"rows\",\n\t\t\"show_header\",\n\t\t\"header\"\n\t]\n</attributes_layout>\n\n<attributes_display_rules>\n[\n\t{\n\t\t\"slot\": \"header\",\n\t\t\"conditions\": {\n\t\t\t\"hidden\": ['show_header', 'eq', 'false']\n\t\t}\n\t}\n]\n</attributes_display_rules>\n\n<style>\n\tdiv.myFullComponentHeader {\n\t\tpadding: 4px;\n\t}\n\n\tdiv.myFullComponentHeader > h2 {\n\t\tfont-size: 1.5em;\n\t}\n\n\tdiv.myFullComponentMessage {\n\t\tpadding: 8px;\n\t}\n</style>\n\n<template name=\"header\">\n\t<div class=\"myFullComponentHeader\"><h2><%= data.header %></h2></div>\n</template>\n\n<template name=\"message\">\n\t<div class=\"myFullComponentMessage\"><%= data.message %></div>\n</template>\n\n<script>\n\texports.component = ComponentUI.create({\n\t\tonRender: function(container, data, attributes) {\n\t\t\tfor(var i = 0; i < attributes.rows; i++) {\n\t\t\t\tif (Object.isTrue(attributes.show_header))\n\t\t\t\t\tTemplates.evalAndAppend('my_full_component/header', container, { header: attributes.header || \"The Header\" });\n\n\t\t\t\tTemplates.evalAndAppend('my_full_component/message', container, { message: data.serverMessage || \"The Message\" });\n\t\t\t}\n\t\t},\n\n\t\tclassName: \"MyFullComponentClient\"\n\t});\n</script>\n\n\n```",
-              "component" : "markup",
-              "html" : "",
-              "type" : "markdown",
-              "id" : "79430c98bd178e852c0006b14a09c5ac"
+          "component_ac5583ee87c6be7d2c5a8dc0421144c8": {
+            "type": "component",
+            "component": "markup",
+            "id": "component_ac5583ee87c6be7d2c5a8dc0421144c8",
+            "name": "component_ac5583ee87c6be7d2c5a8dc0421144c8",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "markdown": "## MyFullComponentClient\n\n``` js\n<definition>\n\t{\n\t\tid: \"my_full_component\",\n\t\tlabel: \"Example - My Full Component\",\n\t\tclassName: \"MyFullComponentServer\",\n\t\trenderable: \"true\"\n\t}\n</definition>\n\n<attributes>\n\t[{\n\t\tname: \"rows\",\n\t\tlabel: \"Number of rows\",\n\t\ttype: \"integer\",\n\t\tattributes: {\n\t\t\tdefault: \"4\"\n\t\t}\n\t},\n\t{\n\t\tname: \"show_header\",\n\t\tlabel: \"Show header\",\n\t\ttype: \"boolean\",\n\t\tattributes: {\n\t\t\tdefault: \"true\"\n\t\t}\n\t},\n\t{\n\t\tname: \"header\",\n\t\tlabel: \"Header\",\n\t\ttype: \"string\"\n\t}]\n</attributes>\n\n<attributes_layout>\n\t[\n\t\t\"rows\",\n\t\t\"show_header\",\n\t\t\"header\"\n\t]\n</attributes_layout>\n\n<attributes_display_rules>\n[\n\t{\n\t\t\"slot\": \"header\",\n\t\t\"conditions\": {\n\t\t\t\"hidden\": ['show_header', 'eq', 'false']\n\t\t}\n\t}\n]\n</attributes_display_rules>\n\n<style>\n\tdiv.myFullComponentHeader {\n\t\tpadding: 4px;\n\t}\n\n\tdiv.myFullComponentHeader > h2 {\n\t\tfont-size: 1.5em;\n\t}\n\n\tdiv.myFullComponentMessage {\n\t\tpadding: 8px;\n\t}\n</style>\n\n<template name=\"header\">\n\t<div class=\"myFullComponentHeader\"><h2><%= data.header %></h2></div>\n</template>\n\n<template name=\"message\">\n\t<div class=\"myFullComponentMessage\"><%= data.message %></div>\n</template>\n\n<script>\n\texports.component = ComponentUI.create({\n\t\tonRender: function(container, data, attributes) {\n\t\t\tfor(var i = 0; i < attributes.rows; i++) {\n\t\t\t\tif (Object.isTrue(attributes.show_header))\n\t\t\t\t\tTemplates.evalAndAppend('my_full_component/header', container, { header: attributes.header || \"The Header\" });\n\n\t\t\t\tTemplates.evalAndAppend('my_full_component/message', container, { message: data.serverMessage || \"The Message\" });\n\t\t\t}\n\t\t},\n\n\t\tclassName: \"MyFullComponentClient\"\n\t});\n</script>\n\n\n```",
+              "component": "markup",
+              "html": "",
+              "type": "markdown",
+              "id": "79430c98bd178e852c0006b14a09c5ac"
             },
-            "w" : "100%",
-            "h" : "33%"
+            "w": "100%",
+            "h": "33%"
           },
-          "component_633d1652976a821926c8efd32779d294" : {
-            "type" : "component",
-            "component" : "markup",
-            "id" : "component_633d1652976a821926c8efd32779d294",
-            "name" : "component_633d1652976a821926c8efd32779d294",
-            "page_loading" : false,
-            "needs_subpage_target" : false,
-            "attributes" : {
-              "component" : "markup",
-              "type" : "markdown",
-              "html" : "",
-              "markdown" : "## MyFullComponentServer\n\n``` js\nvar PageComponent = require(\"ds.base/PageComponent\");\n\nvar MyFullComponentServer = PageComponent.create({\n\tdata: function(attributes, vars) {\n\t\tvar message;\n\n\t\tif (Object.isTrue(attributes.show_header)) {\n\t\t\tmessage = \"Hello with header\";\n\t\t} else {\n\t\t\tmessage = \"Hello without header\";\n\t\t}\n\n                return new StatusResponse('good', {\n                        serverMessage: message\n                });\n\t},\n\t\n\ttype: \"MyFullComponentServer\"\n});\n\nmodule.exports = MyFullComponentServer;\n\n```"
+          "component_633d1652976a821926c8efd32779d294": {
+            "type": "component",
+            "component": "markup",
+            "id": "component_633d1652976a821926c8efd32779d294",
+            "name": "component_633d1652976a821926c8efd32779d294",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "component": "markup",
+              "type": "markdown",
+              "html": "",
+              "markdown": "## MyFullComponentServer\n\n``` js\nvar PageComponent = require(\"ds.base/PageComponent\");\n\nvar MyFullComponentServer = PageComponent.create({\n\tdata: function(attributes, vars) {\n\t\tvar message;\n\n\t\tif (Object.isTrue(attributes.show_header)) {\n\t\t\tmessage = \"Hello with header\";\n\t\t} else {\n\t\t\tmessage = \"Hello without header\";\n\t\t}\n\n                return new StatusResponse('good', {\n                        serverMessage: message\n                });\n\t},\n\t\n\ttype: \"MyFullComponentServer\"\n});\n\nmodule.exports = MyFullComponentServer;\n\n```"
             },
-            "w" : "100%",
-            "h" : "34%"
+            "w": "100%",
+            "h": "34%"
           }
         },
-        "name" : "my_full_component",
-        "owner" : "660abd5d94af4330aa41bd763bcae970",
-        "public" : "0",
-        "schema_version" : "0",
-        "system_updated" : "0"
+        "name": "my_full_component",
+        "owner": "660abd5d94af4330aa41bd763bcae970",
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "title": "Full component"
       }
     }
   }

@@ -1,73 +1,74 @@
 {
-  "bucket_data" : {
-    "pages" : {
-      "367fddeb6b0242a5910b27c54ed5b374" : {
-        "created" : "1497307142157",
-        "id" : "367fddeb6b0242a5910b27c54ed5b374",
-        "layout" : {
-          "component_8288733301113e26cd5cfb7a06f4292e" : {
-            "type" : "component",
-            "component" : "markup",
-            "id" : "component_8288733301113e26cd5cfb7a06f4292e",
-            "name" : "component_8288733301113e26cd5cfb7a06f4292e",
-            "page_loading" : false,
-            "needs_subpage_target" : false,
-            "attributes" : {
-              "markdown" : "## ComponentWithWidgetsClient\n\n``` js\n<definition>\n{\n  id: \"component_with_widgets\",\n  label: \"Example - Component with widgets\",\n  className: \"ComponentWithWidgetsServer\",\n  renderable: \"true\"\n}\n</definition>\n\n<style>\n\t.table_container {\n\t\tpadding: 6px;\n\t}\n\n\t.value_button {\n\t\tmargin-top: 16px;\n\t\tmargin-left: 16px;\n\t}\n</style>\n\n<template name=\"my_table\">\n\t<div class=\"table_container\">\n\t\t<h2>My table</h2>\n\n\t\t<table id=\"mytable\">\n\t\t\t<tr>\n\t\t\t<td>Row1:</td>\n\t\t\t<td id=\"row1\">\n\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t<td>Row2:</td>\n\t\t\t<td id=\"row2\">\n\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t<td>Row3:</td>\n\t\t\t<td id=\"row3\">\n\t\t\t</td>\n\t\t\t</tr>\n\t\t</table>\n\n\t\t<span class=\"btn btn-default value_button\">show values</span>\n\t</div>\n</template>\n\n<script>\n\texports.component = ComponentUI.create({\n\t\tonRender: function(container, data, attributes) {\n\t\t\tthis.componentWidgetManager = new WidgetManager();\n\t\t\tthis.componentWidgetManager.addGlobalChangeListener($.proxy(this._widgetChanged, this));\n\n\t\t\tTemplates.evalAndAppend('component_with_widgets/my_table', container, {});\n\n\t\t\tthis._loadWidget1(container);\n\t\t\tthis._loadWidget2(container);\n\t\t\tthis._loadWidget3(container);\n\n\t\t\tcontainer.find('.value_button').on('click', $.proxy(this._showValues, this));\n\t\t},\n\n\t\tonUnloaded: function() {\n\t\t\tif (this.componentWidgetManager)\n\t\t\t\tthis.componentWidgetManager.unload();\n\t\t},\n\n\t\t_loadWidget1: function(container) {\n\t\t\tvar row1 = container.find(\"#row1\");\n\n\t\t\tvar cb = this.componentWidgetManager.newWidget({\n\t\t\t\tname: \"first_widget\",\n\t\t\t\ttype: 'widget_simple',\n\t\t\t\tattributes: {}\n\t\t\t}, \"\");\n\t\t\t\n\t\t\tcb.load(row1);\n\t\t},\n\n\t\t_loadWidget2: function(container) {\n\t\t\tvar row2 = container.find(\"#row2\");\n\n\t\t\tvar cb = this.componentWidgetManager.newWidget({\n\t\t\t\tname: \"second_widget\",\n\t\t\t\ttype: 'info_widget',\n\t\t\t\tattributes: {}\n\t\t\t}, \"\");\n\t\t\t\n\t\t\tcb.load(row2);\n\t\t},\n\n\t\t_loadWidget3: function(container) {\n\t\t\tvar row3 = container.find(\"#row3\");\n\n\t\t\tvar cb = this.componentWidgetManager.newWidget({\n\t\t\t\tname: \"third_widget\",\n\t\t\t\ttype: 'boolean',\n\t\t\t\tattributes: {\n\t\t\t\t\tuse_choice: \"true\"\n\t\t\t\t}\n\t\t\t}, \"0\");\n\t\t\t\n\t\t\tcb.load(row3);\n\t\t},\n\n\t\t_widgetChanged: function(widgetManager, widget) {\n\t\t\tvar name = widget.getName();\n\t\t\tvar value = widgetManager.getValue(name);\n\n\t\t\tconsole.log(\"widget changed: \" + name + \" value=\" + value);\n\t\t},\n\n\t\t_showValues: function() {\n\t\t\talert('Values: ' + JSON.stringify(this.componentWidgetManager.toValueMap(), undefined, 4));\n\t\t},\n\n\t\tclassName: \"ComponentWithWidgetsClient\"\n\t});\n</script>\n\n\n```",
-              "component" : "markup",
-              "html" : "",
-              "type" : "markdown",
-              "id" : "097f2004928aaf507ade85af8c29f37b"
+  "bucket_data": {
+    "pages": {
+      "367fddeb6b0242a5910b27c54ed5b374": {
+        "created": "1497307142157",
+        "id": "367fddeb6b0242a5910b27c54ed5b374",
+        "layout": {
+          "component_8288733301113e26cd5cfb7a06f4292e": {
+            "type": "component",
+            "component": "markup",
+            "id": "component_8288733301113e26cd5cfb7a06f4292e",
+            "name": "component_8288733301113e26cd5cfb7a06f4292e",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "markdown": "## ComponentWithWidgetsClient\n\n``` js\n<definition>\n{\n  id: \"component_with_widgets\",\n  label: \"Example - Component with widgets\",\n  className: \"ComponentWithWidgetsServer\",\n  renderable: \"true\"\n}\n</definition>\n\n<style>\n\t.table_container {\n\t\tpadding: 6px;\n\t}\n\n\t.value_button {\n\t\tmargin-top: 16px;\n\t\tmargin-left: 16px;\n\t}\n</style>\n\n<template name=\"my_table\">\n\t<div class=\"table_container\">\n\t\t<h2>My table</h2>\n\n\t\t<table id=\"mytable\">\n\t\t\t<tr>\n\t\t\t<td>Row1:</td>\n\t\t\t<td id=\"row1\">\n\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t<td>Row2:</td>\n\t\t\t<td id=\"row2\">\n\t\t\t</td>\n\t\t\t</tr>\n\t\t\t<tr>\n\t\t\t<td>Row3:</td>\n\t\t\t<td id=\"row3\">\n\t\t\t</td>\n\t\t\t</tr>\n\t\t</table>\n\n\t\t<span class=\"btn btn-default value_button\">show values</span>\n\t</div>\n</template>\n\n<script>\n\texports.component = ComponentUI.create({\n\t\tonRender: function(container, data, attributes) {\n\t\t\tthis.componentWidgetManager = new WidgetManager();\n\t\t\tthis.componentWidgetManager.addGlobalChangeListener($.proxy(this._widgetChanged, this));\n\n\t\t\tTemplates.evalAndAppend('component_with_widgets/my_table', container, {});\n\n\t\t\tthis._loadWidget1(container);\n\t\t\tthis._loadWidget2(container);\n\t\t\tthis._loadWidget3(container);\n\n\t\t\tcontainer.find('.value_button').on('click', $.proxy(this._showValues, this));\n\t\t},\n\n\t\tonUnloaded: function() {\n\t\t\tif (this.componentWidgetManager)\n\t\t\t\tthis.componentWidgetManager.unload();\n\t\t},\n\n\t\t_loadWidget1: function(container) {\n\t\t\tvar row1 = container.find(\"#row1\");\n\n\t\t\tvar cb = this.componentWidgetManager.newWidget({\n\t\t\t\tname: \"first_widget\",\n\t\t\t\ttype: 'widget_simple',\n\t\t\t\tattributes: {}\n\t\t\t}, \"\");\n\t\t\t\n\t\t\tcb.load(row1);\n\t\t},\n\n\t\t_loadWidget2: function(container) {\n\t\t\tvar row2 = container.find(\"#row2\");\n\n\t\t\tvar cb = this.componentWidgetManager.newWidget({\n\t\t\t\tname: \"second_widget\",\n\t\t\t\ttype: 'info_widget',\n\t\t\t\tattributes: {}\n\t\t\t}, \"\");\n\t\t\t\n\t\t\tcb.load(row2);\n\t\t},\n\n\t\t_loadWidget3: function(container) {\n\t\t\tvar row3 = container.find(\"#row3\");\n\n\t\t\tvar cb = this.componentWidgetManager.newWidget({\n\t\t\t\tname: \"third_widget\",\n\t\t\t\ttype: 'boolean',\n\t\t\t\tattributes: {\n\t\t\t\t\tuse_choice: \"true\"\n\t\t\t\t}\n\t\t\t}, \"0\");\n\t\t\t\n\t\t\tcb.load(row3);\n\t\t},\n\n\t\t_widgetChanged: function(widgetManager, widget) {\n\t\t\tvar name = widget.getName();\n\t\t\tvar value = widgetManager.getValue(name);\n\n\t\t\tconsole.log(\"widget changed: \" + name + \" value=\" + value);\n\t\t},\n\n\t\t_showValues: function() {\n\t\t\talert('Values: ' + JSON.stringify(this.componentWidgetManager.toValueMap(), undefined, 4));\n\t\t},\n\n\t\tclassName: \"ComponentWithWidgetsClient\"\n\t});\n</script>\n\n\n```",
+              "component": "markup",
+              "html": "",
+              "type": "markdown",
+              "id": "097f2004928aaf507ade85af8c29f37b"
             },
-            "w" : "100%",
-            "h" : "33%"
+            "w": "100%",
+            "h": "33%"
           },
-          "__start__" : {
-            "type" : "container",
-            "w" : "100%",
-            "h" : "100%",
-            "contains" : [
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
               "component_3a576153c4242ae83e523c90492df802",
               "component_8288733301113e26cd5cfb7a06f4292e",
               "component_2f84148647cc140c9bd65f64122d0814"
             ],
-            "layout_type" : "page_components"
+            "layout_type": "page_components"
           },
-          "component_2f84148647cc140c9bd65f64122d0814" : {
-            "type" : "component",
-            "component" : "markup",
-            "id" : "component_2f84148647cc140c9bd65f64122d0814",
-            "name" : "component_2f84148647cc140c9bd65f64122d0814",
-            "page_loading" : false,
-            "needs_subpage_target" : false,
-            "attributes" : {
-              "component" : "markup",
-              "type" : "markdown",
-              "html" : "",
-              "markdown" : "## ComponentWithWidgetsServer\n\n``` js\nvar PageComponent = require(\"ds.base/PageComponent\");\n\nvar ComponentWithWidgetsServer = PageComponent.create({\n        data: function(attributes, vars) {\n                return new StatusResponse('good', { });\n        },\n        \n        type: \"ComponentWithWidgetsServer\"\n});\n\nmodule.exports = ComponentWithWidgetsServer;\n\n```"
+          "component_2f84148647cc140c9bd65f64122d0814": {
+            "type": "component",
+            "component": "markup",
+            "id": "component_2f84148647cc140c9bd65f64122d0814",
+            "name": "component_2f84148647cc140c9bd65f64122d0814",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "component": "markup",
+              "type": "markdown",
+              "html": "",
+              "markdown": "## ComponentWithWidgetsServer\n\n``` js\nvar PageComponent = require(\"ds.base/PageComponent\");\n\nvar ComponentWithWidgetsServer = PageComponent.create({\n        data: function(attributes, vars) {\n                return new StatusResponse('good', { });\n        },\n        \n        type: \"ComponentWithWidgetsServer\"\n});\n\nmodule.exports = ComponentWithWidgetsServer;\n\n```"
             },
-            "w" : "100%",
-            "h" : "34%"
+            "w": "100%",
+            "h": "34%"
           },
-          "component_3a576153c4242ae83e523c90492df802" : {
-            "type" : "component",
-            "component" : "component_with_widgets",
-            "id" : "component_3a576153c4242ae83e523c90492df802",
-            "name" : "component_3a576153c4242ae83e523c90492df802",
-            "page_loading" : false,
-            "needs_subpage_target" : false,
-            "attributes" : {
-              "component" : "component_with_widgets"
+          "component_3a576153c4242ae83e523c90492df802": {
+            "type": "component",
+            "component": "component_with_widgets",
+            "id": "component_3a576153c4242ae83e523c90492df802",
+            "name": "component_3a576153c4242ae83e523c90492df802",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "component": "component_with_widgets"
             },
-            "w" : "100%",
-            "h" : "33%"
+            "w": "100%",
+            "h": "33%"
           }
         },
-        "name" : "component_with_widgets",
-        "owner" : "660abd5d94af4330aa41bd763bcae970",
-        "public" : "0",
-        "schema_version" : "0",
-        "system_updated" : "0"
+        "name": "component_with_widgets",
+        "owner": "660abd5d94af4330aa41bd763bcae970",
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "title": "Component with widgets"
       }
     }
   }

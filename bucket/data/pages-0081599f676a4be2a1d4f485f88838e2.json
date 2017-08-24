@@ -1,60 +1,61 @@
 {
-  "bucket_data" : {
-    "pages" : {
-      "0081599f676a4be2a1d4f485f88838e2" : {
-        "created" : "1497296292605",
-        "id" : "0081599f676a4be2a1d4f485f88838e2",
-        "layout" : {
-          "component_b081970dc6b0caa357eaf8dad7f0866a" : {
-            "type" : "component",
-            "component" : "image_slider",
-            "id" : "component_b081970dc6b0caa357eaf8dad7f0866a",
-            "name" : "component_b081970dc6b0caa357eaf8dad7f0866a",
-            "page_loading" : false,
-            "needs_subpage_target" : false,
-            "attributes" : {
-              "bucket" : "upload",
-              "component" : "image_slider",
-              "id" : "40d5b0bdd9887b9ac09a090c05cfff7e",
-              "suffix" : "all",
-              "demo_mode" : true
+  "bucket_data": {
+    "pages": {
+      "0081599f676a4be2a1d4f485f88838e2": {
+        "created": "1497296292605",
+        "id": "0081599f676a4be2a1d4f485f88838e2",
+        "layout": {
+          "component_b081970dc6b0caa357eaf8dad7f0866a": {
+            "type": "component",
+            "component": "image_slider",
+            "id": "component_b081970dc6b0caa357eaf8dad7f0866a",
+            "name": "component_b081970dc6b0caa357eaf8dad7f0866a",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "bucket": "upload",
+              "component": "image_slider",
+              "id": "40d5b0bdd9887b9ac09a090c05cfff7e",
+              "suffix": "all",
+              "demo_mode": true
             },
-            "w" : "100%",
-            "h" : "50%"
+            "w": "100%",
+            "h": "50%"
           },
-          "component_e80ffa55344927d1d90657832a3e0573" : {
-            "type" : "component",
-            "component" : "google_map",
-            "id" : "component_e80ffa55344927d1d90657832a3e0573",
-            "name" : "component_e80ffa55344927d1d90657832a3e0573",
-            "page_loading" : false,
-            "needs_subpage_target" : false,
-            "attributes" : {
-              "google_maps_api_key" : "",
-              "component" : "google_map",
-              "geolocate" : false,
-              "starting_address" : "",
-              "id" : "7b96057135ca55934ef149f5122368bf"
+          "component_e80ffa55344927d1d90657832a3e0573": {
+            "type": "component",
+            "component": "google_map",
+            "id": "component_e80ffa55344927d1d90657832a3e0573",
+            "name": "component_e80ffa55344927d1d90657832a3e0573",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "google_maps_api_key": "",
+              "component": "google_map",
+              "geolocate": false,
+              "starting_address": "",
+              "id": "7b96057135ca55934ef149f5122368bf"
             },
-            "w" : "100%",
-            "h" : "50%"
+            "w": "100%",
+            "h": "50%"
           },
-          "__start__" : {
-            "type" : "container",
-            "w" : "100%",
-            "h" : "100%",
-            "contains" : [
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
               "component_e80ffa55344927d1d90657832a3e0573",
               "component_b081970dc6b0caa357eaf8dad7f0866a"
             ],
-            "layout_type" : "page_components"
+            "layout_type": "page_components"
           }
         },
-        "name" : "unique_components",
-        "owner" : "660abd5d94af4330aa41bd763bcae970",
-        "public" : "0",
-        "schema_version" : "0",
-        "system_updated" : "0"
+        "name": "unique_components",
+        "owner": "660abd5d94af4330aa41bd763bcae970",
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "title": "Unique components"
       }
     }
   }
