@@ -76,12 +76,12 @@
 
 <script>
 	exports.component = ComponentUI.create({
-		onRender: function(container, data, attributes) {
-			for(var i = 0; i < attributes.rows; i++) {
-				if (Object.isTrue(attributes.show_header))
-					Templates.evalAndAppend('my_full_component/header', container, { header: attributes.header || "The Header" });
+		onLoad: function(data) {
+			for(var i = 0; i < this.attributes.rows; i++) {
+				if (Object.isTrue(this.attributes.show_header))
+					this.template('header', this.container, { header: this.attributes.header || "The Header" });
 
-				Templates.evalAndAppend('my_full_component/message', container, { message: data.serverMessage || "The Message" });
+				this.template('message', this.container, { message: data.serverMessage || "The Message" });
 			}
 		},
 

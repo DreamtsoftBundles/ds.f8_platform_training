@@ -39,10 +39,11 @@
             "page_loading": false,
             "needs_subpage_target": false,
             "attributes": {
+              "markdown": "## HelloUniverseServer\n\n``` js\nvar PageComponent = require(\"ds.base/PageComponent\");\n\nvar HelloUniverseServer = PageComponent.create({\n\t\"/\": function(attributes, vars) {\n                var helloMessage = \"Hello my universe\";\n\n                if (Object.isTrue(attributes.specify_message)) {\n                        helloMessage = attributes.hello_message;\n                }\n\n                return new StatusResponse('good', {\n                        message: helloMessage\n                });\n\t},\n\t\n\ttype: \"HelloUniverseServer\"\n});\n\nmodule.exports = HelloUniverseServer;\n\n\n```",
               "component": "markup",
-              "type": "markdown",
               "html": "",
-              "markdown": "## HelloUniverseServer\n\n``` js\nvar PageComponent = require(\"ds.base/PageComponent\");\n\nvar HelloUniverseServer = PageComponent.create({\n\tdata: function(attributes, vars) {\n                var helloMessage = \"Hello my universe\";\n\n                if (Object.isTrue(attributes.specify_message)) {\n                        helloMessage = attributes.hello_message;\n                }\n\n                return new StatusResponse('good', {\n                        message: helloMessage\n                });\n\t},\n\t\n\ttype: \"HelloUniverseServer\"\n});\n\nmodule.exports = HelloUniverseServer;\n\n\n```"
+              "type": "markdown",
+              "id": "5f32ab533d6ceaf33f0589a581da12fb"
             },
             "w": "100%",
             "h": "34%"
@@ -55,11 +56,11 @@
             "page_loading": false,
             "needs_subpage_target": false,
             "attributes": {
-              "markdown": "## HelloUniverseClient\n\n``` js\n\n<definition>\n{\n  id: \"hello_universe\",\n  label: \"Example - Hello Universe\",\n  className: \"HelloUniverseServer\",\n  renderable: \"true\"\n}\n</definition>\n\n<attributes>\n\t[{\n\t  name: \"specify_message\",\n\t  label: \"Specify hello message\",\n\t  type: \"boolean\",\n\t  attributes: {\n\t  \tdefault: false\n\t  }\n\t},{\n          name: \"hello_message\",\n          label: \"Hello message\",\n          type: \"string\",\n          attributes: {\n                placeholder_text: \"Hello message\"\n          }\n        }]\n</attributes>\n\n<attributes_layout>\n\t[\n\t\t\"specify_message\",\n\t\t\"hello_message\"\n\t]\n</attributes_layout>\n\n<attributes_display_rules>\n[\n\t{\n\t\t\"slot\": \"hello_message\",\n\t\t\"conditions\": {\n\t\t\t\"hidden\": ['specify_message', 'eq', 'false']\n\t\t}\n\t}\n]\n</attributes_display_rules>\n\n<script>\n\texports.component = ComponentUI.create({\n\t\tonRender: function(container, data, attributes) {\n\t\t\tcontainer.html(\"Message from server: \" + data.message);\n\t\t},\n\n\t\tclassName: \"HelloWorldClient\"\n\t});\n</script>\n\n\n```",
+              "markdown": "## HelloUniverseClient\n\n``` js\n<!DOCTYPE f8component>\n\n<definition>\n{\n  id: \"hello_universe\",\n  label: \"Example - Hello Universe\",\n  className: \"HelloUniverseServer\",\n  renderable: \"true\"\n}\n</definition>\n\n<attributes>\n\t[{\n\t  name: \"specify_message\",\n\t  label: \"Specify hello message\",\n\t  type: \"boolean\",\n\t  attributes: {\n\t  \tdefault: false\n\t  }\n\t},{\n          name: \"hello_message\",\n          label: \"Hello message\",\n          type: \"string\",\n          attributes: {\n                placeholder_text: \"Hello message\"\n          }\n        }]\n</attributes>\n\n<attributes_layout>\n\t[\n\t\t\"specify_message\",\n\t\t\"hello_message\"\n\t]\n</attributes_layout>\n\n<attributes_display_rules>\n[\n\t{\n\t\t\"slot\": \"hello_message\",\n\t\t\"conditions\": {\n\t\t\t\"hidden\": ['specify_message', 'eq', 'false']\n\t\t}\n\t}\n]\n</attributes_display_rules>\n\n<script>\n\texports.component = ComponentUI.create({\n\t\tonLoad: function(data) {\n\t\t\tthis.container.html(\"Message from server HelloUniverseServer: \" + data.message);\n\t\t},\n\n\t\tclassName: \"HelloUniverseClient\"\n\t});\n</script>\n\n\n```",
               "component": "markup",
               "html": "",
-              "type": "markdown",
-              "id": "8a87dd0d34cde3c240d3afdca967e445"
+              "id": "8a87dd0d34cde3c240d3afdca967e445",
+              "type": "markdown"
             },
             "w": "100%",
             "h": "33%"
@@ -67,6 +68,37 @@
         },
         "name": "hello_universe",
         "owner": "660abd5d94af4330aa41bd763bcae970",
+        "page_vars": {
+          "layout": {
+            "version": 1,
+            "layout": [
+              {
+                "type": "section",
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "type": "slot",
+                      "name": "q"
+                    }
+                  ]
+                ]
+              }
+            ],
+            "pageData": { }
+          },
+          "slots": {
+            "q": {
+              "type": "string",
+              "attributes": { },
+              "name": "q",
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              }
+            }
+          }
+        },
         "public": "0",
         "schema_version": "0",
         "system_updated": "0",

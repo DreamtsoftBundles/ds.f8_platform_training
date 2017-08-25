@@ -11,8 +11,8 @@
 
 <script>
 	exports.component = ComponentUI.create({
-		onRender: function(container, data, attributes) {
-			container.html("Message from server: " + data.message);
+		onLoad: function(data) {
+			this.container.html("Message from HelloWorldServer: " + data.message);
 		},
 
 		className: "HelloWorldClient"

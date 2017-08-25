@@ -24,10 +24,11 @@
             "page_loading": false,
             "needs_subpage_target": false,
             "attributes": {
+              "markdown": "## HelloWorldServer\n\n``` js\n\nvar HelloWorldServer = PageComponent.create({\n        \"/\": function(attributes, vars) {\n                return new StatusResponse('good', {\n                        message: \"Hello my world\"\n                });\n        },\n\n        type: \"HelloWorldServer\"\n});\n\nmodule.exports = HelloWorldServer;\n\n```",
               "component": "markup",
-              "type": "markdown",
               "html": "",
-              "markdown": "## HelloWorldServer\n\n``` js\nvar PageComponent = require(\"ds.base/PageComponent\");\n\nvar HelloWorldServer = PageComponent.create({\n\tdata: function(attributes, vars) {\n\t\treturn new StatusResponse('good', {\n\t\t\tmessage: \"Hello my world\"\n\t\t});\n\t},\n\t\n\ttype: \"HelloWorldServer\"\n});\n\nmodule.exports = HelloWorldServer;\n\n\n```"
+              "type": "markdown",
+              "id": "c2964ab9951625aa994b2440226c5254"
             },
             "w": "100%",
             "h": "34%"
@@ -53,7 +54,7 @@
             "page_loading": false,
             "needs_subpage_target": false,
             "attributes": {
-              "markdown": "## HelloWorldClient\n\n``` js\n<definition>\n{\n  id: \"hello_world\",\n  label: \"Example - Hello World\",\n  className: \"HelloWorldServer\",\n  renderable: \"true\"\n}\n</definition>\n\n<script>\n\texports.component = ComponentUI.create({\n\t\tonRender: function(container, data, attributes) {\n\t\t\tcontainer.html(\"Message from server: \" + data.message);\n\t\t},\n\n\t\tclassName: \"HelloWorldClient\"\n\t});\n</script>\n\n```",
+              "markdown": "## HelloWorldClient\n\n``` js\n<!DOCTYPE f8component>\n\n<definition>\n{\n  id: \"hello_world\",\n  label: \"Example - Hello World\",\n  className: \"HelloWorldServer\",\n  renderable: \"true\"\n}\n</definition>\n\n<script>\n\texports.component = ComponentUI.create({\n\t\tonLoad: function(data) {\n\t\t\tthis.container.html(\"Message from HelloWorldServer: \" + data.message);\n\t\t},\n\n\t\tclassName: \"HelloWorldClient\"\n\t});\n</script>\n\n```",
               "component": "markup",
               "html": "",
               "id": "46d83a7d972c6ec0803f104a0cde50a3",
@@ -65,6 +66,37 @@
         },
         "name": "hello_world",
         "owner": "660abd5d94af4330aa41bd763bcae970",
+        "page_vars": {
+          "layout": {
+            "version": 1,
+            "layout": [
+              {
+                "type": "section",
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "type": "slot",
+                      "name": "q"
+                    }
+                  ]
+                ]
+              }
+            ],
+            "pageData": { }
+          },
+          "slots": {
+            "q": {
+              "type": "string",
+              "attributes": { },
+              "name": "q",
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              }
+            }
+          }
+        },
         "public": "0",
         "schema_version": "0",
         "system_updated": "0",

@@ -1,7 +1,7 @@
 var PageComponent = require("ds.base/PageComponent");
 
 var HelloUniverseServer = PageComponent.create({
-	data: function(attributes, vars) {
+	"/": function(attributes, vars) {
                 var helloMessage = "Hello my universe";
 
                 if (Object.isTrue(attributes.specify_message)) {

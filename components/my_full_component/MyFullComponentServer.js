@@ -1,7 +1,7 @@
 var PageComponent = require("ds.base/PageComponent");
 
 var MyFullComponentServer = PageComponent.create({
-	data: function(attributes, vars) {
+	"/": function(attributes, vars) {
 		var message;
 
 		if (Object.isTrue(attributes.show_header)) {
