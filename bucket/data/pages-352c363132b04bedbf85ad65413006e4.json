@@ -32,8 +32,9 @@
             "page_loading": false,
             "needs_subpage_target": false,
             "attributes": {
+              "include_bundle": true,
               "component": "navigation_path",
-              "include_bundle": "0"
+              "id": "37f31f6ea8048e65079d74a6fde6d17a"
             },
             "w": "100%",
             "h": "10%"

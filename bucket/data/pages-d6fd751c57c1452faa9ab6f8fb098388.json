@@ -1,0 +1,42 @@
+{
+  "bucket_data": {
+    "pages": {
+      "d6fd751c57c1452faa9ab6f8fb098388": {
+        "created": "1503607729122",
+        "id": "d6fd751c57c1452faa9ab6f8fb098388",
+        "layout": {
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
+              "component_b7ebfd2951b55bed079092f618889faf"
+            ],
+            "layout_type": "page_components"
+          },
+          "component_b7ebfd2951b55bed079092f618889faf": {
+            "type": "component",
+            "component": "angular_example",
+            "id": "component_b7ebfd2951b55bed079092f618889faf",
+            "name": "component_b7ebfd2951b55bed079092f618889faf",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "component": "angular_example",
+              "specify_message": false,
+              "hello_message": ""
+            },
+            "w": "100%",
+            "h": "100%"
+          }
+        },
+        "name": "",
+        "owner": "c2021f6f7b1f44e89fad7c76730cb671",
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "title": "Angular example"
+      }
+    }
+  }
+}

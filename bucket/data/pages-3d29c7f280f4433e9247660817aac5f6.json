@@ -1,0 +1,49 @@
+{
+  "bucket_data": {
+    "pages": {
+      "3d29c7f280f4433e9247660817aac5f6": {
+        "created": "1503607646329",
+        "id": "3d29c7f280f4433e9247660817aac5f6",
+        "layout": {
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
+              "component_f440a1565861c20196eb01d6f631468b"
+            ],
+            "layout_type": "page_components"
+          },
+          "component_f440a1565861c20196eb01d6f631468b": {
+            "type": "component",
+            "component": "navigator",
+            "id": "component_f440a1565861c20196eb01d6f631468b",
+            "name": "component_f440a1565861c20196eb01d6f631468b",
+            "page_loading": false,
+            "needs_subpage_target": true,
+            "attributes": {
+              "component": "navigator",
+              "button_width": 100,
+              "button_height": 60,
+              "button_sizing": "specify",
+              "name": "",
+              "navigator": "2bb1d8f8ff4c4cb5ba654103dc82c432",
+              "event_name": "",
+              "id": "8a75ebf856a92689364151b718a45487",
+              "type": "circles",
+              "menu_width": 300
+            },
+            "w": "100%",
+            "h": "100%"
+          }
+        },
+        "name": "advanced_components",
+        "owner": "c2021f6f7b1f44e89fad7c76730cb671",
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "title": "Advanced components"
+      }
+    }
+  }
+}

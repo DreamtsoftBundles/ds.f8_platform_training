@@ -1,0 +1,39 @@
+<!DOCTYPE f8component>
+
+<definition>
+{
+  id: "angular_example",
+  label: "Example - Angular Example",
+  className: "AngularExampleServer",
+  renderable: "true"
+}
+</definition>
+
+<template name="angular.test">
+	<p>Try to change the names.</p>
+
+	<div ng-app="myApp" ng-controller="myCtrl">
+		First Name: <input type="text" ng-model="firstName"><br>
+		Last Name: <input type="text" ng-model="lastName"><br>
+		<br>
+		Full Name: {{firstName + " " + lastName}}
+	</div>
+</template>
+
+<script>
+	exports.component = ComponentUI.create({
+		onLoad: function(data) {
+			this.template("angular.test", this.container, data, this.attributes);
+
+			var app = angular.module('myApp', []);
+			app.controller('myCtrl', function($scope) {
+			    $scope.firstName= "John";
+			    $scope.lastName= "Doe";
+			});
+
+			angular.bootstrap(this.container, ['myApp']);
+		},
+
+		className: "AngularExampleClient"
+	});
+</script>
