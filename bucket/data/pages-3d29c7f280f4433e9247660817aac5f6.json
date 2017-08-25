@@ -39,6 +39,37 @@
         },
         "name": "advanced_components",
         "owner": "c2021f6f7b1f44e89fad7c76730cb671",
+        "page_vars": {
+          "layout": {
+            "version": 1,
+            "layout": [
+              {
+                "type": "section",
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "type": "slot",
+                      "name": "q"
+                    }
+                  ]
+                ]
+              }
+            ],
+            "pageData": { }
+          },
+          "slots": {
+            "q": {
+              "type": "string",
+              "attributes": { },
+              "name": "q",
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              }
+            }
+          }
+        },
         "public": "0",
         "schema_version": "0",
         "system_updated": "0",

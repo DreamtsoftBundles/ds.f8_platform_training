@@ -36,8 +36,11 @@
 
 <script>
 	exports.widget = Widgets.create({
-		toWidget: function(value, displayValue) {
-			Templates.evalAndAppend('info_widget/widget.template', this.container, { });
+		onLoad: function(data) {
+			var value = data.value;
+			var displayValue = data.displayValue;
+
+			this.template('widget.template', this.container, { });
 			this.container.find('#searcher').on('click', $.proxy(this._searcher, this));
 			this.loaded();
 		},

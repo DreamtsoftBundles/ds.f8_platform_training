@@ -1,0 +1,19 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "6788be899dde46f59eff1227f1056d42": {
+        "color": "",
+        "created": "1503691808285",
+        "icon": "fontawesome:asterisk",
+        "id": "6788be899dde46f59eff1227f1056d42",
+        "label": "WidgetSimple",
+        "order": "0",
+        "owner": "c2021f6f7b1f44e89fad7c76730cb671",
+        "parent": "b5ed51a68aec466eadf5cbf40a0b9f43",
+        "schema_version": "0",
+        "system_updated": "0",
+        "url": "widget_simple"
+      }
+    }
+  }
+}

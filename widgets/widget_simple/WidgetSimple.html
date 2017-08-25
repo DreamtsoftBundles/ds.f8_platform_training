@@ -10,7 +10,10 @@
 
 <script>
 	exports.widget = Widgets.create({
-		toWidget: function(value, displayValue) {
+		onLoad: function(data) {
+			var value = data.value;
+			var displayValue = data.displayValue;
+
 			this.displayInput = $('<input/>', {
 				"type": "text",
 				"value": value,

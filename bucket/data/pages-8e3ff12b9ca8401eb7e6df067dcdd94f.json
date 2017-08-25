@@ -1,0 +1,124 @@
+{
+  "bucket_data": {
+    "pages": {
+      "8e3ff12b9ca8401eb7e6df067dcdd94f": {
+        "created": "1503691961568",
+        "id": "8e3ff12b9ca8401eb7e6df067dcdd94f",
+        "layout": {
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
+              "component_c2378b53993baa38b387d89a950c6988",
+              "component_7270b01370fcbfc46c840d070ad3d06c"
+            ],
+            "layout_type": "page_components"
+          },
+          "component_c2378b53993baa38b387d89a950c6988": {
+            "type": "component",
+            "component": "form",
+            "id": "component_c2378b53993baa38b387d89a950c6988",
+            "name": "component_c2378b53993baa38b387d89a950c6988",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "component": "form",
+              "layout": {
+                "slots": {
+                  "widget_simple": {
+                    "type": "widget_simple",
+                    "attributes": { },
+                    "labels": {
+                      "label": "Widget simple",
+                      "labelp": "Widget simples"
+                    },
+                    "name": "widget_simple",
+                    "bundle": "ds.f8_platform_training"
+                  }
+                },
+                "slotsChanged": true,
+                "layout": {
+                  "version": 1,
+                  "layout": [
+                    {
+                      "type": "section",
+                      "colData": [ ],
+                      "cols": [
+                        [
+                          {
+                            "type": "slot",
+                            "name": "widget_simple"
+                          }
+                        ]
+                      ],
+                      "guid": "ed8ad4c8488408e7cddd868fe5736a73"
+                    }
+                  ],
+                  "pageData": { }
+                },
+                "display_rules": [ ]
+              }
+            },
+            "w": "100%",
+            "h": "50%"
+          },
+          "component_7270b01370fcbfc46c840d070ad3d06c": {
+            "type": "component",
+            "component": "markup",
+            "id": "component_7270b01370fcbfc46c840d070ad3d06c",
+            "name": "component_7270b01370fcbfc46c840d070ad3d06c",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "markdown": "## WidgetSimple\n\n``` js\n<!DOCTYPE f8widget>\n\n<type>\n{\n\tname: \"widget_simple\",\n\tlabel: \"Simple widget\",\n\textend: \"string\"\n}\n</type>\n\n<script>\n\texports.widget = Widgets.create({\n\t\tonLoad: function(data) {\n\t\t\tvar value = data.value;\n\t\t\tvar displayValue = data.displayValue;\n\n\t\t\tthis.displayInput = $('<input/>', {\n\t\t\t\t\"type\": \"text\",\n\t\t\t\t\"value\": value,\n\t\t\t\t\"class\": \"form-control\"\n\t\t\t});\n\t\t\t\n\t\t\tthis.displayInput.on(\"change\", $.proxy(this.changed, this));\n\t\t\tthis.container.append(this.displayInput);\n\t\t\tthis.loaded();\n\t\t},\n\t\t\n\t\t_setValue: function(value, displayValue) {\n\t\t\tthis.displayInput.val(value);\n\t\t},\n\t\t\n\t\ttoValue: function() {\n\t\t\treturn this.displayInput.val();\n\t\t},\n\t\n\t\tclassName: \"WidgetSimple\"\n\t});\n</script>\n\n```",
+              "component": "markup",
+              "html": "",
+              "type": "markdown",
+              "id": "3300e4cc26c6b18390d50a958820cb28"
+            },
+            "w": "100%",
+            "h": "50%"
+          }
+        },
+        "name": "widget_simple",
+        "owner": "c2021f6f7b1f44e89fad7c76730cb671",
+        "page_vars": {
+          "layout": {
+            "version": 1,
+            "layout": [
+              {
+                "type": "section",
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "type": "slot",
+                      "name": "q"
+                    }
+                  ]
+                ]
+              }
+            ],
+            "pageData": { }
+          },
+          "slots": {
+            "q": {
+              "type": "string",
+              "attributes": { },
+              "name": "q",
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              }
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "title": ""
+      }
+    }
+  }
+}
