@@ -17,6 +17,8 @@
 		Last Name: <input type="text" ng-model="lastName"><br>
 		<br>
 		Full Name: {{firstName + " " + lastName}}
+		<br>
+		My data: {{my_data}}
 	</div>
 </template>
 
@@ -29,6 +31,7 @@
 			app.controller('myCtrl', function($scope) {
 			    $scope.firstName= "John";
 			    $scope.lastName= "Doe";
+			    $scope.my_data = data.my_data;
 			});
 
 			angular.bootstrap(this.container, ['myApp']);
