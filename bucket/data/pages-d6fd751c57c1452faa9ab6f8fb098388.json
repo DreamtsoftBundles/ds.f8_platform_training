@@ -13,7 +13,7 @@
             "page_loading": false,
             "needs_subpage_target": false,
             "attributes": {
-              "markdown": "## AngularExampleServer\n\n``` js\nvar PageComponent = require(\"ds.base/PageComponent\");\n\nvar AngularExampleServer = PageComponent.create({\n        data: function(attributes, vars) {\n                return new StatusResponse('good', {\n                        my_data: \"This is my data\"\n                });\n        },\n        \n        type: \"AngularExampleServer\"\n});\n\nmodule.exports = AngularExampleServer;\n\n\n```",
+              "markdown": "## AngularExampleServer\n\n``` js\nvar PageComponent = require(\"ds.base/PageComponent\");\n\nvar AngularExampleServer = PageComponent.create({\n        \"/\": function(attributes, vars) {\n                return new StatusResponse('good', {\n                        my_data: \"This is my data\"\n                });\n        },\n        \n        type: \"AngularExampleServer\"\n});\n\nmodule.exports = AngularExampleServer;\n\n\n```",
               "component": "markup",
               "html": "",
               "id": "d1c801104efab56459eb9e9b4f6a7121",
