@@ -1,0 +1,19 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "1b43bb7ad4794db1975285d37bc0e1a0": {
+        "color": "",
+        "created": "1507157349602",
+        "icon": "fontawesome:table",
+        "id": "1b43bb7ad4794db1975285d37bc0e1a0",
+        "label": "Widgets",
+        "order": "1",
+        "owner": "3b0921ab64d94b40abc3298579438c87",
+        "parent": "26f6adc3ae9e45d7b033b827e5877724",
+        "schema_version": "0",
+        "system_updated": "0",
+        "url": "ui_widgets"
+      }
+    }
+  }
+}

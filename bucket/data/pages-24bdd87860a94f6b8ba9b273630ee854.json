@@ -1,0 +1,71 @@
+{
+  "bucket_data": {
+    "pages": {
+      "24bdd87860a94f6b8ba9b273630ee854": {
+        "created": "1507140957064",
+        "id": "24bdd87860a94f6b8ba9b273630ee854",
+        "layout": {
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
+              "component_d7e12036680d9cfc19780256310e1246"
+            ],
+            "layout_type": "page_components"
+          },
+          "component_d7e12036680d9cfc19780256310e1246": {
+            "type": "component",
+            "component": "movie_viewer",
+            "id": "component_d7e12036680d9cfc19780256310e1246",
+            "name": "component_d7e12036680d9cfc19780256310e1246",
+            "page_loading": false,
+            "needs_subpage_target": false,
+            "attributes": {
+              "component": "movie_viewer"
+            },
+            "w": "100%",
+            "h": "100%"
+          }
+        },
+        "name": "react_movie_viewer",
+        "owner": "3b0921ab64d94b40abc3298579438c87",
+        "page_vars": {
+          "layout": {
+            "version": 1,
+            "layout": [
+              {
+                "type": "section",
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "type": "slot",
+                      "name": "q"
+                    }
+                  ]
+                ]
+              }
+            ],
+            "pageData": { }
+          },
+          "slots": {
+            "q": {
+              "type": "string",
+              "attributes": { },
+              "name": "q",
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              }
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "title": ""
+      }
+    }
+  }
+}

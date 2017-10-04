@@ -1,0 +1,19 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "8cf759f455a64b98bf036bf9d6a552e2": {
+        "color": "",
+        "created": "1507157696453",
+        "icon": "fontawesome:table",
+        "id": "8cf759f455a64b98bf036bf9d6a552e2",
+        "label": "Custom",
+        "order": "1",
+        "owner": "3b0921ab64d94b40abc3298579438c87",
+        "parent": "ab1096b95a224e3a9caba59ed9cb0a10",
+        "schema_version": "0",
+        "system_updated": "0",
+        "url": "custom_widgets"
+      }
+    }
+  }
+}

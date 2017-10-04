@@ -1,0 +1,79 @@
+{
+  "bucket_data": {
+    "pages": {
+      "8c9061e9194b48ee84b7980e6c0e5638": {
+        "created": "1507157349703",
+        "id": "8c9061e9194b48ee84b7980e6c0e5638",
+        "layout": {
+          "__start__": {
+            "type": "container",
+            "w": "100%",
+            "h": "100%",
+            "contains": [
+              "component_3f2a9780cf6ff402425c918e18182e6e"
+            ],
+            "layout_type": "page_components"
+          },
+          "component_3f2a9780cf6ff402425c918e18182e6e": {
+            "type": "component",
+            "component": "navigator",
+            "id": "component_3f2a9780cf6ff402425c918e18182e6e",
+            "name": "component_3f2a9780cf6ff402425c918e18182e6e",
+            "needs_subpage_target": true,
+            "attributes": {
+              "component": "navigator",
+              "type": "circles",
+              "name": "",
+              "navigator": "26f6adc3ae9e45d7b033b827e5877724",
+              "menu_width": 300,
+              "button_sizing": "specify",
+              "button_width": 100,
+              "button_height": 60,
+              "event_name": ""
+            },
+            "w": "100%",
+            "h": "100%",
+            "page_loading": true
+          }
+        },
+        "name": "ui_components_widgets",
+        "owner": "3b0921ab64d94b40abc3298579438c87",
+        "page_vars": {
+          "layout": {
+            "version": 1,
+            "layout": [
+              {
+                "type": "section",
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "type": "slot",
+                      "name": "q"
+                    }
+                  ]
+                ]
+              }
+            ],
+            "pageData": { }
+          },
+          "slots": {
+            "q": {
+              "type": "string",
+              "attributes": { },
+              "name": "q",
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              }
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "title": "Components & Widgets"
+      }
+    }
+  }
+}

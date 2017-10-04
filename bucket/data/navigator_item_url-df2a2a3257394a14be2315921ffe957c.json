@@ -4,9 +4,9 @@
       "df2a2a3257394a14be2315921ffe957c": {
         "color": "",
         "created": "1503607616758",
-        "icon": "",
+        "icon": "fontawesome:puzzle-piece",
         "id": "df2a2a3257394a14be2315921ffe957c",
-        "label": "Advanced",
+        "label": "External Libraries",
         "order": "3",
         "owner": "c2021f6f7b1f44e89fad7c76730cb671",
         "parent": "7f2f2692baf743059642bfaac918b7d9",

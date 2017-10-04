@@ -1,60 +1,44 @@
 {
   "bucket_data": {
     "pages": {
-      "352c363132b04bedbf85ad65413006e4": {
-        "created": "1497290844374",
-        "id": "352c363132b04bedbf85ad65413006e4",
+      "34ccf8f2e4ed4b68bf6aba353d060d08": {
+        "created": "1507157674853",
+        "id": "34ccf8f2e4ed4b68bf6aba353d060d08",
         "layout": {
           "__start__": {
             "type": "container",
             "w": "100%",
             "h": "100%",
             "contains": [
-              "component_f9c4b83d7e92f9cdc1ae8e24fc8b81bd",
-              "component_cd01d81849356f1fd125b1e871fd7ba5"
+              "component_bf313a0bdc9f1702df183bde6e54a9aa"
             ],
             "layout_type": "page_components"
           },
-          "component_f9c4b83d7e92f9cdc1ae8e24fc8b81bd": {
-            "type": "component",
-            "component": "navigation_path",
-            "id": "component_f9c4b83d7e92f9cdc1ae8e24fc8b81bd",
-            "name": "component_f9c4b83d7e92f9cdc1ae8e24fc8b81bd",
-            "needs_subpage_target": false,
-            "attributes": {
-              "include_bundle": true,
-              "component": "navigation_path",
-              "id": "37f31f6ea8048e65079d74a6fde6d17a"
-            },
-            "w": "100%",
-            "h": "10%"
-          },
-          "component_cd01d81849356f1fd125b1e871fd7ba5": {
+          "component_bf313a0bdc9f1702df183bde6e54a9aa": {
             "type": "component",
             "component": "navigator",
-            "id": "component_cd01d81849356f1fd125b1e871fd7ba5",
-            "name": "component_cd01d81849356f1fd125b1e871fd7ba5",
+            "id": "component_bf313a0bdc9f1702df183bde6e54a9aa",
+            "name": "component_bf313a0bdc9f1702df183bde6e54a9aa",
+            "page_loading": false,
             "needs_subpage_target": true,
             "attributes": {
               "component": "navigator",
               "button_width": 100,
-              "menu_icon": "",
               "button_height": 60,
               "button_sizing": "specify",
               "name": "",
-              "navigator": "7f2f2692baf743059642bfaac918b7d9",
+              "navigator": "ab1096b95a224e3a9caba59ed9cb0a10",
               "event_name": "",
-              "id": "6a46bcccf6cd6413dea69d12bb359ec8",
               "type": "circles",
-              "menu_width": 300
+              "menu_width": 300,
+              "id": "0ec7dc05f7a60dce6cc7f7bfed75de3a"
             },
             "w": "100%",
-            "h": "90%",
-            "page_loading": true
+            "h": "100%"
           }
         },
-        "name": "ui_components",
-        "owner": "660abd5d94af4330aa41bd763bcae970",
+        "name": "ui_widgets",
+        "owner": "3b0921ab64d94b40abc3298579438c87",
         "page_vars": {
           "layout": {
             "version": 1,
@@ -89,7 +73,7 @@
         "public": "0",
         "schema_version": "0",
         "system_updated": "0",
-        "title": "UI Components"
+        "title": ""
       }
     }
   }

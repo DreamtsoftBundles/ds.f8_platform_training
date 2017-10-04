@@ -3,7 +3,7 @@
     "navigator_item_url": {
       "d8c82a187dec43f68fac3346150e0d7b": {
         "created": "1497290991303",
-        "icon": "",
+        "icon": "fontawesome:puzzle-piece",
         "id": "d8c82a187dec43f68fac3346150e0d7b",
         "label": "Custom",
         "order": "2",

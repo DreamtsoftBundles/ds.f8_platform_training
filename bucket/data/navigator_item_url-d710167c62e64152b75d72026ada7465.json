@@ -1,0 +1,19 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "d710167c62e64152b75d72026ada7465": {
+        "color": "",
+        "created": "1507140779872",
+        "icon": "fontawesome:code",
+        "id": "d710167c62e64152b75d72026ada7465",
+        "label": "React Movie Viewer",
+        "order": "1",
+        "owner": "3b0921ab64d94b40abc3298579438c87",
+        "parent": "2bb1d8f8ff4c4cb5ba654103dc82c432",
+        "schema_version": "0",
+        "system_updated": "0",
+        "url": "react_movie_viewer"
+      }
+    }
+  }
+}
