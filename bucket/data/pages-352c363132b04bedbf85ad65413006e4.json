@@ -6,83 +6,94 @@
         "id": "352c363132b04bedbf85ad65413006e4",
         "layout": {
           "__start__": {
-            "type": "container",
-            "w": "100%",
-            "h": "100%",
             "contains": [
-              "component_f9c4b83d7e92f9cdc1ae8e24fc8b81bd",
               "component_cd01d81849356f1fd125b1e871fd7ba5"
             ],
-            "layout_type": "page_components"
-          },
-          "component_f9c4b83d7e92f9cdc1ae8e24fc8b81bd": {
-            "type": "component",
-            "component": "navigation_path",
-            "id": "component_f9c4b83d7e92f9cdc1ae8e24fc8b81bd",
-            "name": "component_f9c4b83d7e92f9cdc1ae8e24fc8b81bd",
-            "needs_subpage_target": false,
-            "attributes": {
-              "include_bundle": true,
-              "component": "navigation_path",
-              "id": "37f31f6ea8048e65079d74a6fde6d17a"
-            },
-            "w": "100%",
-            "h": "10%"
+            "h": "100%",
+            "id": "__start__",
+            "layout_type": "page_components",
+            "type": "container",
+            "w": "100%"
           },
           "component_cd01d81849356f1fd125b1e871fd7ba5": {
-            "type": "component",
+            "attributes": {
+              "button_height": 60,
+              "button_sizing": "specify",
+              "button_width": 100,
+              "component": "navigator",
+              "event_name": "",
+              "id": "6a46bcccf6cd6413dea69d12bb359ec8",
+              "menu_icon": "",
+              "menu_width": 300,
+              "name": "",
+              "navigator": "7f2f2692baf743059642bfaac918b7d9",
+              "type": "circles"
+            },
             "component": "navigator",
+            "h": "100%",
             "id": "component_cd01d81849356f1fd125b1e871fd7ba5",
             "name": "component_cd01d81849356f1fd125b1e871fd7ba5",
             "needs_subpage_target": true,
-            "attributes": {
-              "component": "navigator",
-              "button_width": 100,
-              "menu_icon": "",
-              "button_height": 60,
-              "button_sizing": "specify",
-              "name": "",
-              "navigator": "7f2f2692baf743059642bfaac918b7d9",
-              "event_name": "",
-              "id": "6a46bcccf6cd6413dea69d12bb359ec8",
-              "type": "circles",
-              "menu_width": 300
-            },
-            "w": "100%",
-            "h": "90%",
-            "page_loading": true
+            "page_loading": true,
+            "type": "component",
+            "w": "100%"
           }
         },
         "name": "ui_components",
         "owner": "660abd5d94af4330aa41bd763bcae970",
         "page_vars": {
           "layout": {
-            "version": 1,
             "layout": [
               {
-                "type": "section",
                 "colData": [ ],
                 "cols": [
                   [
                     {
-                      "type": "slot",
-                      "name": "q"
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
                     }
                   ]
-                ]
+                ],
+                "type": "section"
               }
             ],
-            "pageData": { }
+            "version": 1
           },
           "slots": {
-            "q": {
-              "type": "string",
+            "bucket": {
               "attributes": { },
-              "name": "q",
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
               "labels": {
                 "label": "Query",
                 "labelp": "Queries"
-              }
+              },
+              "name": "q",
+              "type": "string"
             }
           }
         },

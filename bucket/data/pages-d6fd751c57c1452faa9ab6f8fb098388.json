@@ -5,97 +5,142 @@
         "created": "1503607729122",
         "id": "d6fd751c57c1452faa9ab6f8fb098388",
         "layout": {
-          "component_6a1fbea244549d3196dadd7a50cb5237": {
-            "type": "component",
-            "component": "markup",
-            "id": "component_6a1fbea244549d3196dadd7a50cb5237",
-            "name": "component_6a1fbea244549d3196dadd7a50cb5237",
-            "page_loading": false,
-            "needs_subpage_target": false,
-            "attributes": {
-              "markdown": "## AngularExampleServer\n\n``` js\nvar PageComponent = require(\"ds.base/PageComponent\");\n\nvar AngularExampleServer = PageComponent.create({\n        \"/\": function(attributes, vars) {\n                return new StatusResponse('good', {\n                        my_data: \"This is my data\"\n                });\n        },\n        \n        type: \"AngularExampleServer\"\n});\n\nmodule.exports = AngularExampleServer;\n\n\n```",
-              "component": "markup",
-              "html": "",
-              "id": "d1c801104efab56459eb9e9b4f6a7121",
-              "type": "markdown"
-            },
-            "w": "100%",
-            "h": "34%"
-          },
           "__start__": {
-            "type": "container",
-            "w": "100%",
-            "h": "100%",
             "contains": [
-              "component_b7ebfd2951b55bed079092f618889faf",
-              "component_26c89af66713217b6a6efcfc3f0ee00c",
-              "component_6a1fbea244549d3196dadd7a50cb5237"
+              "component_b7ebfd2951b55bed079092f618889faf"
             ],
-            "layout_type": "page_components"
+            "h": "100%",
+            "id": "__start__",
+            "label": "Display",
+            "layout_type": "page_components",
+            "subContainers": [
+              "container_e1083603b4b2ceb6344090634c617dd4",
+              "container_0bf7e45a2272eb669946b0e3b5936d99"
+            ],
+            "type": "container",
+            "w": "100%"
           },
-          "component_26c89af66713217b6a6efcfc3f0ee00c": {
-            "type": "component",
-            "component": "markup",
-            "id": "component_26c89af66713217b6a6efcfc3f0ee00c",
-            "name": "component_26c89af66713217b6a6efcfc3f0ee00c",
-            "page_loading": false,
-            "needs_subpage_target": false,
+          "component_72acc260771d5cf9394400c47bc021a8": {
             "attributes": {
-              "markdown": "## AngularExampleClient\n\n``` js\n<!DOCTYPE f8component>\n\n<definition>\n{\n  id: \"angular_example\",\n  label: \"Example - Angular Example\",\n  className: \"AngularExampleServer\",\n  renderable: \"true\"\n}\n</definition>\n\n<template name=\"angular.test\">\n        <p>Try to change the names.</p>\n\n        <div ng-app=\"myApp\" ng-controller=\"myCtrl\">\n                First Name: <input type=\"text\" ng-model=\"firstName\"><br>\n                Last Name: <input type=\"text\" ng-model=\"lastName\"><br>\n                <br>\n                Full Name: {{firstName + \" \" + lastName}}\n                <br>\n                My data: {{my_data}}\n\t\t</div>\n</template>\n\n<script>\n        exports.component = ComponentUI.create({\n                onLoad: function(data) {\n                        this.template(\"angular.test\", this.container, data, this.attributes);\n\n                        var app = angular.module('myApp', []);\n                        app.controller('myCtrl', function($scope) {\n                            $scope.firstName= \"John\";\n                            $scope.lastName= \"Doe\";\n                            $scope.my_data = data.my_data;\n                        });\n\n                        angular.bootstrap(this.container, ['myApp']);\n                },\n\n                className: \"AngularExampleClient\"\n        });\n</script>\n\n\n```",
               "component": "markup",
               "html": "",
-              "id": "3b8524d381398f7324c1a595d9358a86",
+              "markdown": "## AngularExampleServer\n\n``` js\nvar PageComponent = require(\"ds.base/PageComponent\");\n\nvar AngularExampleServer = PageComponent.create({\n        \"/\": function(attributes, vars) {\n                return new StatusResponse('good', {\n                        my_data: \"This is my data\"\n                });\n        },\n        \n        type: \"AngularExampleServer\"\n});\n\nmodule.exports = AngularExampleServer;\n\n\n```",
               "type": "markdown"
             },
-            "w": "100%",
-            "h": "33%"
+            "component": "markup",
+            "h": "100%",
+            "id": "component_72acc260771d5cf9394400c47bc021a8",
+            "name": "component_72acc260771d5cf9394400c47bc021a8",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "component_a16435956d4e50b777f77ee439f3fe42": {
+            "attributes": {
+              "component": "markup",
+              "html": "",
+              "markdown": "## AngularExampleClient\n\n``` js\n<!DOCTYPE f8component>\n\n<definition>\n{\n  id: \"angular_example\",\n  label: \"Example - Angular Example\",\n  className: \"AngularExampleServer\",\n  renderable: \"true\"\n}\n</definition>\n\n<template name=\"angular.test\">\n        <p>Try to change the names.</p>\n\n        <div ng-app=\"myApp\" ng-controller=\"myCtrl\">\n                First Name: <input type=\"text\" ng-model=\"firstName\"><br>\n                Last Name: <input type=\"text\" ng-model=\"lastName\"><br>\n                <br>\n                Full Name: {{firstName + \" \" + lastName}}\n                <br>\n                My data: {{my_data}}\n\t\t</div>\n</template>\n\n<script>\n        exports.component = ComponentUI.create({\n                onLoad: function(data) {\n                        this.template(\"angular.test\", this.container, data, this.attributes);\n\n                        var app = angular.module('myApp', []);\n                        app.controller('myCtrl', function($scope) {\n                            $scope.firstName= \"John\";\n                            $scope.lastName= \"Doe\";\n                            $scope.my_data = data.my_data;\n                        });\n\n                        angular.bootstrap(this.container, ['myApp']);\n                },\n\n                className: \"AngularExampleClient\"\n        });\n</script>\n\n\n```",
+              "type": "markdown"
+            },
+            "component": "markup",
+            "h": "100%",
+            "id": "component_a16435956d4e50b777f77ee439f3fe42",
+            "name": "component_a16435956d4e50b777f77ee439f3fe42",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
           },
           "component_b7ebfd2951b55bed079092f618889faf": {
-            "type": "component",
-            "component": "angular_example",
-            "id": "component_b7ebfd2951b55bed079092f618889faf",
-            "name": "component_b7ebfd2951b55bed079092f618889faf",
-            "page_loading": false,
-            "needs_subpage_target": false,
             "attributes": {
               "component": "angular_example",
-              "specify_message": false,
-              "hello_message": ""
+              "hello_message": "",
+              "specify_message": false
             },
-            "w": "100%",
-            "h": "33%"
+            "component": "angular_example",
+            "h": "100%",
+            "id": "component_b7ebfd2951b55bed079092f618889faf",
+            "name": "component_b7ebfd2951b55bed079092f618889faf",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "container_0bf7e45a2272eb669946b0e3b5936d99": {
+            "contains": [
+              "component_72acc260771d5cf9394400c47bc021a8"
+            ],
+            "id": "container_0bf7e45a2272eb669946b0e3b5936d99",
+            "label": "Server",
+            "subContainer": true,
+            "type": "container"
+          },
+          "container_e1083603b4b2ceb6344090634c617dd4": {
+            "contains": [
+              "component_a16435956d4e50b777f77ee439f3fe42"
+            ],
+            "id": "container_e1083603b4b2ceb6344090634c617dd4",
+            "label": "Client",
+            "subContainer": true,
+            "type": "container"
           }
         },
         "name": "angular_simple",
         "owner": "c2021f6f7b1f44e89fad7c76730cb671",
         "page_vars": {
           "layout": {
-            "version": 1,
             "layout": [
               {
-                "type": "section",
                 "colData": [ ],
                 "cols": [
                   [
                     {
-                      "type": "slot",
-                      "name": "q"
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
                     }
                   ]
-                ]
+                ],
+                "type": "section"
               }
             ],
-            "pageData": { }
+            "version": 1
           },
           "slots": {
-            "q": {
-              "type": "string",
+            "bucket": {
               "attributes": { },
-              "name": "q",
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
               "labels": {
                 "label": "Query",
                 "labelp": "Queries"
-              }
+              },
+              "name": "q",
+              "type": "string"
             }
           }
         },

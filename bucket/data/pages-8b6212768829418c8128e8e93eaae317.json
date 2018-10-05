@@ -6,96 +6,141 @@
         "id": "8b6212768829418c8128e8e93eaae317",
         "layout": {
           "__start__": {
-            "type": "container",
-            "w": "100%",
-            "h": "100%",
             "contains": [
-              "component_a4ec928a4d3babf24b65c6aeb5904025",
-              "component_d8820a3a3fafb0066895bd0eadef30a9",
-              "component_60ae291bfc9f78ec11d92798884e3003"
+              "component_a4ec928a4d3babf24b65c6aeb5904025"
             ],
-            "layout_type": "page_components"
+            "h": "100%",
+            "id": "__start__",
+            "label": "Display",
+            "layout_type": "page_components",
+            "subContainers": [
+              "container_48ff13a9a92cdba0dc6fb61f784dbb6e",
+              "container_861d8bd0dc43992f5b1ea81eb109241d"
+            ],
+            "type": "container",
+            "w": "100%"
           },
-          "component_a4ec928a4d3babf24b65c6aeb5904025": {
-            "type": "component",
-            "component": "hello_universe",
-            "id": "component_a4ec928a4d3babf24b65c6aeb5904025",
-            "name": "component_a4ec928a4d3babf24b65c6aeb5904025",
-            "page_loading": false,
-            "needs_subpage_target": false,
+          "component_090e25a359eda5999100f8fa6a303cff": {
             "attributes": {
-              "component": "hello_universe",
-              "specify_message": false,
-              "hello_message": ""
-            },
-            "w": "100%",
-            "h": "33%"
-          },
-          "component_60ae291bfc9f78ec11d92798884e3003": {
-            "type": "component",
-            "component": "markup",
-            "id": "component_60ae291bfc9f78ec11d92798884e3003",
-            "name": "component_60ae291bfc9f78ec11d92798884e3003",
-            "page_loading": false,
-            "needs_subpage_target": false,
-            "attributes": {
+              "component": "markup",
+              "html": "",
               "markdown": "## HelloUniverseServer\n\n``` js\nvar PageComponent = require(\"ds.base/PageComponent\");\n\nvar HelloUniverseServer = PageComponent.create({\n\t\"/\": function(attributes, vars) {\n                var helloMessage = \"Hello my universe\";\n\n                if (Object.isTrue(attributes.specify_message)) {\n                        helloMessage = attributes.hello_message;\n                }\n\n                return new StatusResponse('good', {\n                        message: helloMessage\n                });\n\t},\n\t\n\ttype: \"HelloUniverseServer\"\n});\n\nmodule.exports = HelloUniverseServer;\n\n\n```",
-              "component": "markup",
-              "html": "",
-              "type": "markdown",
-              "id": "5f32ab533d6ceaf33f0589a581da12fb"
-            },
-            "w": "100%",
-            "h": "34%"
-          },
-          "component_d8820a3a3fafb0066895bd0eadef30a9": {
-            "type": "component",
-            "component": "markup",
-            "id": "component_d8820a3a3fafb0066895bd0eadef30a9",
-            "name": "component_d8820a3a3fafb0066895bd0eadef30a9",
-            "page_loading": false,
-            "needs_subpage_target": false,
-            "attributes": {
-              "markdown": "## HelloUniverseClient\n\n``` js\n<!DOCTYPE f8component>\n\n<definition>\n{\n  id: \"hello_universe\",\n  label: \"Example - Hello Universe\",\n  className: \"HelloUniverseServer\",\n  renderable: \"true\"\n}\n</definition>\n\n<attributes>\n\t[{\n\t  name: \"specify_message\",\n\t  label: \"Specify hello message\",\n\t  type: \"boolean\",\n\t  attributes: {\n\t  \tdefault: false\n\t  }\n\t},{\n          name: \"hello_message\",\n          label: \"Hello message\",\n          type: \"string\",\n          attributes: {\n                placeholder_text: \"Hello message\"\n          }\n        }]\n</attributes>\n\n<attributes_layout>\n\t[\n\t\t\"specify_message\",\n\t\t\"hello_message\"\n\t]\n</attributes_layout>\n\n<attributes_display_rules>\n[\n\t{\n\t\t\"slot\": \"hello_message\",\n\t\t\"conditions\": {\n\t\t\t\"hidden\": ['specify_message', 'eq', 'false']\n\t\t}\n\t}\n]\n</attributes_display_rules>\n\n<script>\n\texports.component = ComponentUI.create({\n\t\tonLoad: function(data) {\n\t\t\tthis.container.html(\"Message from server HelloUniverseServer: \" + data.message);\n\t\t},\n\n\t\tclassName: \"HelloUniverseClient\"\n\t});\n</script>\n\n\n```",
-              "component": "markup",
-              "html": "",
-              "id": "8a87dd0d34cde3c240d3afdca967e445",
               "type": "markdown"
             },
-            "w": "100%",
-            "h": "33%"
+            "component": "markup",
+            "h": "100%",
+            "id": "component_090e25a359eda5999100f8fa6a303cff",
+            "name": "component_090e25a359eda5999100f8fa6a303cff",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "component_5eba54415dad4618bcb0d6f7157eb201": {
+            "attributes": {
+              "component": "markup",
+              "html": "",
+              "markdown": "## HelloUniverseClient\n\n``` js\n<!DOCTYPE f8component>\n\n<definition>\n{\n  id: \"hello_universe\",\n  label: \"Example - Hello Universe\",\n  className: \"HelloUniverseServer\",\n  renderable: \"true\"\n}\n</definition>\n\n<attributes>\n\t[{\n\t  name: \"specify_message\",\n\t  label: \"Specify hello message\",\n\t  type: \"boolean\",\n\t  attributes: {\n\t  \tdefault: false\n\t  }\n\t},{\n          name: \"hello_message\",\n          label: \"Hello message\",\n          type: \"string\",\n          attributes: {\n                placeholder_text: \"Hello message\"\n          }\n        }]\n</attributes>\n\n<attributes_layout>\n\t[\n\t\t\"specify_message\",\n\t\t\"hello_message\"\n\t]\n</attributes_layout>\n\n<attributes_display_rules>\n[\n\t{\n\t\t\"slot\": \"hello_message\",\n\t\t\"conditions\": {\n\t\t\t\"hidden\": ['specify_message', 'eq', 'false']\n\t\t}\n\t}\n]\n</attributes_display_rules>\n\n<script>\n\texports.component = ComponentUI.create({\n\t\tonLoad: function(data) {\n\t\t\tthis.container.html(\"Message from server HelloUniverseServer: \" + data.message);\n\t\t},\n\n\t\tclassName: \"HelloUniverseClient\"\n\t});\n</script>\n\n\n```",
+              "type": "markdown"
+            },
+            "component": "markup",
+            "h": "100%",
+            "id": "component_5eba54415dad4618bcb0d6f7157eb201",
+            "name": "component_5eba54415dad4618bcb0d6f7157eb201",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "component_a4ec928a4d3babf24b65c6aeb5904025": {
+            "attributes": {
+              "component": "hello_universe",
+              "hello_message": "",
+              "specify_message": false
+            },
+            "component": "hello_universe",
+            "h": "100%",
+            "id": "component_a4ec928a4d3babf24b65c6aeb5904025",
+            "name": "component_a4ec928a4d3babf24b65c6aeb5904025",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "container_48ff13a9a92cdba0dc6fb61f784dbb6e": {
+            "contains": [
+              "component_5eba54415dad4618bcb0d6f7157eb201"
+            ],
+            "id": "container_48ff13a9a92cdba0dc6fb61f784dbb6e",
+            "label": "Client",
+            "subContainer": true,
+            "type": "container"
+          },
+          "container_861d8bd0dc43992f5b1ea81eb109241d": {
+            "contains": [
+              "component_090e25a359eda5999100f8fa6a303cff"
+            ],
+            "id": "container_861d8bd0dc43992f5b1ea81eb109241d",
+            "label": "Server",
+            "subContainer": true,
+            "type": "container"
           }
         },
         "name": "hello_universe",
         "owner": "660abd5d94af4330aa41bd763bcae970",
         "page_vars": {
           "layout": {
-            "version": 1,
             "layout": [
               {
-                "type": "section",
                 "colData": [ ],
                 "cols": [
                   [
                     {
-                      "type": "slot",
-                      "name": "q"
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
                     }
                   ]
-                ]
+                ],
+                "type": "section"
               }
             ],
-            "pageData": { }
+            "version": 1
           },
           "slots": {
-            "q": {
-              "type": "string",
+            "bucket": {
               "attributes": { },
-              "name": "q",
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
               "labels": {
                 "label": "Query",
                 "labelp": "Queries"
-              }
+              },
+              "name": "q",
+              "type": "string"
             }
           }
         },

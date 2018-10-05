@@ -6,94 +6,139 @@
         "id": "685066eb94e04f27995e1761f6a573b7",
         "layout": {
           "__start__": {
-            "type": "container",
-            "w": "100%",
-            "h": "100%",
             "contains": [
-              "component_2368817aec3a0f2ee8d322297e6d5f4e",
-              "component_ead93a9d1679f2aacc5c9b82ae8e75ec",
-              "component_6700f0aa891fce732a02b36303f623ac"
+              "component_2368817aec3a0f2ee8d322297e6d5f4e"
             ],
-            "layout_type": "page_components"
+            "h": "100%",
+            "id": "__start__",
+            "label": "Display",
+            "layout_type": "page_components",
+            "subContainers": [
+              "container_d692bcc8ff995d6b5bd6c37b9e423566",
+              "container_c797d309be2ec11ba2376e373d9f2458"
+            ],
+            "type": "container",
+            "w": "100%"
           },
-          "component_6700f0aa891fce732a02b36303f623ac": {
-            "type": "component",
-            "component": "markup",
-            "id": "component_6700f0aa891fce732a02b36303f623ac",
-            "name": "component_6700f0aa891fce732a02b36303f623ac",
-            "page_loading": false,
-            "needs_subpage_target": false,
+          "component_0eed71bebfac870ef49b6c13c4be31d6": {
             "attributes": {
-              "markdown": "## HelloWorldServer\n\n``` js\n\nvar HelloWorldServer = PageComponent.create({\n        \"/\": function(attributes, vars) {\n                return new StatusResponse('good', {\n                        message: \"Hello my world\"\n                });\n        },\n\n        type: \"HelloWorldServer\"\n});\n\nmodule.exports = HelloWorldServer;\n\n```",
               "component": "markup",
               "html": "",
-              "type": "markdown",
-              "id": "c2964ab9951625aa994b2440226c5254"
+              "markdown": "## HelloWorldClient\n\n``` js\n<!DOCTYPE f8component>\n\n<definition>\n{\n  id: \"hello_world\",\n  label: \"Example - Hello World\",\n  className: \"HelloWorldServer\",\n  renderable: \"true\"\n}\n</definition>\n\n<script>\n\texports.component = ComponentUI.create({\n\t\tonLoad: function(data) {\n\t\t\tthis.container.html(\"Message from HelloWorldServer: \" + data.message);\n\t\t},\n\n\t\tclassName: \"HelloWorldClient\"\n\t});\n</script>\n\n```",
+              "type": "markdown"
             },
-            "w": "100%",
-            "h": "34%"
+            "component": "markup",
+            "h": "100%",
+            "id": "component_0eed71bebfac870ef49b6c13c4be31d6",
+            "name": "component_0eed71bebfac870ef49b6c13c4be31d6",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "component_1f565b6ec8dc3042e29665ef16bd00a9": {
+            "attributes": {
+              "component": "markup",
+              "html": "",
+              "markdown": "## HelloWorldServer\n\n``` js\n\nvar HelloWorldServer = PageComponent.create({\n        \"/\": function(attributes, vars) {\n                return new StatusResponse('good', {\n                        message: \"Hello my world\"\n                });\n        },\n\n        type: \"HelloWorldServer\"\n});\n\nmodule.exports = HelloWorldServer;\n\n```",
+              "type": "markdown"
+            },
+            "component": "markup",
+            "h": "100%",
+            "id": "component_1f565b6ec8dc3042e29665ef16bd00a9",
+            "name": "component_1f565b6ec8dc3042e29665ef16bd00a9",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
           },
           "component_2368817aec3a0f2ee8d322297e6d5f4e": {
-            "type": "component",
-            "component": "hello_world",
-            "id": "component_2368817aec3a0f2ee8d322297e6d5f4e",
-            "name": "component_2368817aec3a0f2ee8d322297e6d5f4e",
-            "page_loading": false,
-            "needs_subpage_target": false,
             "attributes": {
               "component": "hello_world"
             },
-            "w": "100%",
-            "h": "33%"
-          },
-          "component_ead93a9d1679f2aacc5c9b82ae8e75ec": {
-            "type": "component",
-            "component": "markup",
-            "id": "component_ead93a9d1679f2aacc5c9b82ae8e75ec",
-            "name": "component_ead93a9d1679f2aacc5c9b82ae8e75ec",
-            "page_loading": false,
+            "component": "hello_world",
+            "h": "100%",
+            "id": "component_2368817aec3a0f2ee8d322297e6d5f4e",
+            "name": "component_2368817aec3a0f2ee8d322297e6d5f4e",
             "needs_subpage_target": false,
-            "attributes": {
-              "markdown": "## HelloWorldClient\n\n``` js\n<!DOCTYPE f8component>\n\n<definition>\n{\n  id: \"hello_world\",\n  label: \"Example - Hello World\",\n  className: \"HelloWorldServer\",\n  renderable: \"true\"\n}\n</definition>\n\n<script>\n\texports.component = ComponentUI.create({\n\t\tonLoad: function(data) {\n\t\t\tthis.container.html(\"Message from HelloWorldServer: \" + data.message);\n\t\t},\n\n\t\tclassName: \"HelloWorldClient\"\n\t});\n</script>\n\n```",
-              "component": "markup",
-              "html": "",
-              "id": "46d83a7d972c6ec0803f104a0cde50a3",
-              "type": "markdown"
-            },
-            "w": "100%",
-            "h": "33%"
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "container_c797d309be2ec11ba2376e373d9f2458": {
+            "contains": [
+              "component_1f565b6ec8dc3042e29665ef16bd00a9"
+            ],
+            "id": "container_c797d309be2ec11ba2376e373d9f2458",
+            "label": "Server",
+            "subContainer": true,
+            "type": "container"
+          },
+          "container_d692bcc8ff995d6b5bd6c37b9e423566": {
+            "contains": [
+              "component_0eed71bebfac870ef49b6c13c4be31d6"
+            ],
+            "id": "container_d692bcc8ff995d6b5bd6c37b9e423566",
+            "label": "Client",
+            "subContainer": true,
+            "type": "container"
           }
         },
         "name": "hello_world",
         "owner": "660abd5d94af4330aa41bd763bcae970",
         "page_vars": {
           "layout": {
-            "version": 1,
             "layout": [
               {
-                "type": "section",
                 "colData": [ ],
                 "cols": [
                   [
                     {
-                      "type": "slot",
-                      "name": "q"
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
                     }
                   ]
-                ]
+                ],
+                "type": "section"
               }
             ],
-            "pageData": { }
+            "version": 1
           },
           "slots": {
-            "q": {
-              "type": "string",
+            "bucket": {
               "attributes": { },
-              "name": "q",
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
               "labels": {
                 "label": "Query",
                 "labelp": "Queries"
-              }
+              },
+              "name": "q",
+              "type": "string"
             }
           }
         },
