@@ -55,6 +55,7 @@
 <style>
 	div.myFullComponentHeader {
 		padding: 4px;
+		cursor: pointer;
 	}
 
 	div.myFullComponentHeader > h2 {
@@ -67,7 +68,7 @@
 </style>
 
 <template name="header">
-	<div class="myFullComponentHeader"><h2><%= data.header %></h2></div>
+	<div class="myFullComponentHeader" data-idx="<%= data.index %>"><h2><%= data.header %> (<%= data.index %>)</h2></div>
 </template>
 
 <template name="message">
@@ -79,10 +80,23 @@
 		onLoad: function(data) {
 			for(var i = 0; i < this.attributes.rows; i++) {
 				if (Object.isTrue(this.attributes.show_header))
-					this.template('header', this.container, { header: this.attributes.header || "The Header" });
+					this.template('header', this.container, { header: this.attributes.header || "The Header", index: i});
 
 				this.template('message', this.container, { message: data.serverMessage || "The Message" });
+				
+				this.container.find('.myFullComponentHeader').on('click', this._headerClicked.bind(this));
 			}
+		},
+		
+		_headerClicked: function(e) {
+			var target = $(e.currentTarget);
+			var idx = target.data('idx');
+			
+			new Component('my_full_component').ajax('getTheData', { header_idx: idx }).then(function(response) {
+				if (response.status == 'good') {
+					alert('got data: ' + response.data.abc);
+				}			
+			});
 		},
 
 		className: "MyFullComponentClient"

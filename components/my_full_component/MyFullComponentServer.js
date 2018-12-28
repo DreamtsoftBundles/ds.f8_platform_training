@@ -10,9 +10,15 @@ var MyFullComponentServer = PageComponent.create({
 			message = "Hello without header";
 		}
 
-                return new StatusResponse('good', {
-                        serverMessage: message
-                });
+		return new StatusResponse('good', {
+			serverMessage: message
+		});
+	},
+	
+	"/ajax/getTheData": function(vars) {
+		return new StatusResponse('good', {
+			abc: "123 on header " + vars.header_idx
+		});
 	},
 	
 	type: "MyFullComponentServer"
