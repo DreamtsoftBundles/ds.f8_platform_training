@@ -1,22 +1,22 @@
 {
-   "branch" : "master",
-   "bundle_name" : "f8_platform_training",
-   "dependencies" : [
+   "autoload": [ ],
+   "bundle_name": "f8_platform_training",
+   "dependencies": [
       {
-         "id" : "ds.base",
-         "version" : "0.1.0"
+         "id": "ds.base",
+         "version": "1.10.0"
       }
    ],
-   "icon" : "fontawesome:graduation-cap",
-   "icon_color" : "#231f20",
-   "id" : "ds.f8_platform_training",
-   "page_banner" : "",
-   "parametrics_form" : "",
-   "platform_version" : "",
-   "schema_version" : "0",
-   "shell_layout" : "",
-   "theme" : "331e26674a6f4e2d81b9bdc9138a80f5",
-   "title" : "Platform Training",
-   "vendor" : "ds",
-   "version" : "0.1.0"
+   "icon": "fontawesome:graduation-cap",
+   "icon_color": "#231f20",
+   "id": "ds.f8_platform_training",
+   "page_banner": "",
+   "parametrics_form": "",
+   "platform_version": "",
+   "schema_version": "0",
+   "shell_layout": "",
+   "theme": "331e26674a6f4e2d81b9bdc9138a80f5",
+   "title": "Platform training",
+   "vendor": "ds",
+   "version": "0.1.0"
 }
