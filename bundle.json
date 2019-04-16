@@ -4,7 +4,7 @@
    "dependencies": [
       {
          "id": "ds.base",
-         "version": "0.1.0"
+         "version": "1.10.0"
       }
    ],
    "icon": "fontawesome:graduation-cap",
@@ -18,5 +18,5 @@
    "theme": "331e26674a6f4e2d81b9bdc9138a80f5",
    "title": "Platform training",
    "vendor": "ds",
-   "version": "0.1.0"
+   "version": "0.1.1"
 }
