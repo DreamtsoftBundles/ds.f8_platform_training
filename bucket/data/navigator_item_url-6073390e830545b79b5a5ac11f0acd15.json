@@ -1,0 +1,23 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "6073390e830545b79b5a5ac11f0acd15": {
+        "color": "",
+        "created": "1574287063292",
+        "description": "",
+        "icon": "",
+        "id": "6073390e830545b79b5a5ac11f0acd15",
+        "label": "actions",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "0",
+        "owner": "__SYSTEM_USER__",
+        "parent": "1dbda158a65f41ff9760700623e3e435",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "url": "actions"
+      }
+    }
+  }
+}

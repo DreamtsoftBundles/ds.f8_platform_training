@@ -1,0 +1,104 @@
+{
+  "bucket_data": {
+    "pages": {
+      "33b6eb795be3430e9f9ba8aca847b0f0": {
+        "created": "1575487405082",
+        "id": "33b6eb795be3430e9f9ba8aca847b0f0",
+        "layout": {
+          "__start__": {
+            "contains": [
+              "component_58e307c0889f6c87007445a01edaa09d"
+            ],
+            "h": "100%",
+            "id": "__start__",
+            "layout_type": "page_components",
+            "type": "container",
+            "w": "100%"
+          },
+          "component_58e307c0889f6c87007445a01edaa09d": {
+            "attributes": {
+              "component": "markup",
+              "csstags": "",
+              "html": "",
+              "markdown": "# Display Rules\nDisplay rules can be configured via the details component. The following steps show how to access and build a display rule.\n<br>\n\n\n\n\n### Configure the details component\n![Description](download/upload/4b2454d19cdfa380e34466268044ea27/display_rules_0.jpg 'Title' =1333x256)\n<br>\n### Open the display rules page\n![Description](download/upload/92adb37f5ddafd8217b635f4c81f0966/display_rules_1.jpg 'Title' =1333x556)\n<br>\n\n### Select the slot to which you want to apply the rule\n![Description](download/upload/dcfafedb72ecbac4ace76c1cc220763c/display_rules_2.jpg 'Title' =1333x256)\n<br>\n\n### Build the rule type along with a condition, if necessary\n![Description](download/upload/fadbfe13488050ebc8ff075ef2418360/display_rules_3.jpg 'Title' =1333x256)",
+              "type": "markdown"
+            },
+            "component": "markup",
+            "h": "100%",
+            "id": "component_58e307c0889f6c87007445a01edaa09d",
+            "name": "component_58e307c0889f6c87007445a01edaa09d",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          }
+        },
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "display_rules",
+        "owner": "__SYSTEM_USER__",
+        "page_vars": {
+          "layout": {
+            "layout": [
+              {
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
+                    }
+                  ]
+                ],
+                "type": "section"
+              }
+            ],
+            "version": 1
+          },
+          "slots": {
+            "bucket": {
+              "attributes": { },
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              },
+              "name": "q",
+              "type": "string"
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "title": ""
+      }
+    }
+  }
+}

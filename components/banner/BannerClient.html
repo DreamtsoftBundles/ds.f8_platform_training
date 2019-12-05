@@ -1,0 +1,915 @@
+<!DOCTYPE f8component>
+<!--
+	banner component
+-->
+
+<definition>
+{
+	"id": "banner",
+	"label": "Banner",
+	"className": "BannerServer",
+	"shell": {
+		type: "space_shell",
+		defaultAttributes: {
+			__class: "bannerClass"
+		}
+	}
+}
+</definition>
+
+<style>
+	:root {
+	  --user-name-text-color: var(--color-dark);
+	}
+
+	div.bannerBar {
+		width: 100%;
+		border-bottom: var(--border);
+	}
+
+	div.bannerBarContainer {
+		display: flex;
+		width: 100%;
+		background-color: var(--color-lighter);
+	}
+
+	div.headerLogoSimple {
+    	text-align: left;
+
+		margin: 2px 0px 2px 2px;
+		padding: 1px 4px 1px 4px;
+	}
+
+	div.headerLogo {
+		cursor: pointer;
+
+    	text-align: left;
+
+		background: var(--color-light);
+
+		margin: 2px 0px 2px 2px;
+		padding: 1px 4px 1px 4px;
+
+		border-radius: 4px 0 0 4px;
+		border-right: var(--border-darker);
+	}
+
+	div.topActionContainer {
+		text-align: right;
+		display: flex;
+	}
+
+	div.topBarUserMenuClass {
+		display: inline-block;
+
+		border-left: var(--border);
+		padding: 8px 12px;
+
+		margin-left: 8px;
+	}
+
+	div.topBarActionButtons {
+		display: inline-block;
+		border-left: var(--border);
+		padding: 4px;
+	}
+
+	div.topBarActionButtons .btn:first-child {
+		margin-left: 0;
+	}
+
+	div.topBarActionButtons .btn {
+		margin-left: var(--spacing-horizontal-sm);
+	}
+
+	div.navigationPathsScroll {
+		display: none;
+
+		z-index: 1;
+		cursor: pointer;
+
+		margin-top: 2px;
+		margin-bottom: 2px;
+
+		font-size: 0.9em;
+		background-color: var(--color-light);
+
+		padding: 4px 8px 4px 8px;
+
+		line-height: 24px;
+	}
+
+	div.navigationPathsScrollLeft {
+		border-right: var(--border-darker);
+		box-shadow: 6px 0px 8px -4px rgba(0,0,0,0.20);
+	}
+
+	div.navigationPathsScrollRight {
+		border-radius: 0 6px 6px 0;
+		border-right: var(--border-darker);
+		border-left: var(--border-darker);
+
+		box-shadow: -6px 0px 8px -4px rgba(0,0,0,0.20);
+	}
+
+	div.navigationPaths {
+		flex-grow: 1;
+
+		display: flex;
+		text-align: left;
+		background-color: var(--color-lighter);
+
+		overflow: hidden;
+		white-space: nowrap;
+
+		padding-top: 2px;
+		padding-bottom: 2px;
+	}
+
+	div.navigationPaths div {
+		display: inline-block;
+		background-color: var(--color-light);
+	}
+
+	div.navigationPaths div:last-child {
+		background-color: transparent;
+	}
+
+	div.navigationPaths div a {
+		display: inline-block;
+		font-size: 0.9em;
+		font-weight: 600;
+		padding: 8px 12px 8px 12px;
+
+		cursor: pointer;
+		text-decoration: none;
+
+		line-height: 18px;
+		border-radius: 0 30px 30px 0;
+		border-right: var(--border-darker);
+	}
+
+	div.navigationPaths div:last-child a {
+		background-color: var(--color-light);
+	}
+
+	div.navigationPaths div a:hover {
+		text-decoration: underline;
+	}
+
+	div.bundleMenuEntry {
+		display: flex;
+		padding: var(--spacing-lg);
+		cursor: pointer;
+		border-radius: var(--border-radius-lg);
+		text-decoration: none;
+	}
+
+	div.bundleMenuEntry:hover {
+		text-decoration: underline;
+		background-color: var(--color-light);
+	}
+
+	div.bundleMenuEntryTitle {
+		padding: var(--spacing);
+		line-height: 32px;
+		font-size: var(--font-size-xl);
+		margin-left: 8px;
+	}
+
+	div.iconBundle {
+		width: 40px;
+		height: 40px;
+		border-radius: 100px;
+		background-color: var(--bg-secondary);
+		border: 2px solid var(--button-border-color);
+		margin: 0 auto;
+
+		text-align: center;
+	}
+
+	div.iconBundleInner {
+		width: 36px;
+		height: 36px;
+		border-radius: 100px;
+		color: var(--color-lightest);
+		text-decoration: none;
+		border: 1px solid var(--color-lightest);
+		padding-top: 6px;
+	}
+
+	.userDetailsContainer {
+		font-size: var(--font-size-lg);
+	}
+
+	.userName {
+		color: var(--user-name-text-color);
+		text-decoration: none;
+		cursor: pointer;
+		font-weight: 600;
+		font-size: 1.0rem;
+	}
+
+	.dropDownMenu {
+		position: fixed;
+		box-shadow: var(--dropdown-shadow);
+		overflow: auto;
+		white-space: nowrap;
+		text-align: left;
+
+		margin-top: -2px;
+		min-width: 200px;
+		z-index: 1500;
+	}
+
+	li.manageBundles {
+		cursor: pointer;
+		padding: 8px;
+		text-align: center;
+		font-size: var(--font-size-lg);
+		font-weight: 600;
+	}
+
+	li.manageBundles:hover {
+		text-decoration: underline;
+		background-color: var(--color-light);
+	}
+
+	li.component {
+		display: table;
+		margin-left: -10px;
+	}
+
+	li.divider {
+		border-bottom: var(--border);
+	}
+
+	label {
+		font-weight: normal;
+	}
+
+	div.bundleNoPrefs {
+		padding: 24px;
+	}
+</style>
+
+<template name="unauthenticated.banner">
+	<div class="bannerBar">
+		<div class="bannerBarContainer">
+			<div class="headerLogoSimple">
+				<img src="<%= data.siteLogo %>" width="32" height="32" />
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="authenticated.banner">
+	<div class="bannerBar">
+		<div class="bannerBarContainer">
+			<div class="headerLogo" data-menu="bundleMenu">
+				<img src="<%= data.siteLogo %>" width="32" height="32" />
+			</div>
+
+			<div class="navigationPathsScroll navigationPathsScrollLeft"><span class="fa fa-lg fa-arrow-circle-o-left"></span></div>
+			<div class="navigationPaths"></div>
+			<div class="navigationPathsScroll navigationPathsScrollRight"><span class="fa fa-lg fa-arrow-circle-o-right"></span></div>
+
+			<div class="topActionContainer">
+				<div class="topBarUserMenuClass"/>
+				<div class="topBarActionButtons"/>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="user.details">
+	<div class="userDetailsContainer">
+		<div class="userName" data-menu="userMenu">
+			<% if (data.userData.isImpersonating) { %>
+				<span class="fa fa-user-secret"></span>
+			<% } %>
+			<%= data.userData.name %>
+		</div>
+		<div role="navigator" class="containerWrapperBody dropDownMenu userMenu" style="display: none;">
+			<ul class="nav nav-pills nav-stacked">
+				<li>
+					<a href="<%= Configuration.getAuthenticatedPage() %>">
+						<%~ Home %>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</template>
+
+<template name="navigation.title">
+	<% for(var i = 0; i < data.titles.length; i++) {
+		var titleItem = data.titles[i];
+	%>
+
+		<% if (Object.isNil(titleItem.href)) { %>
+			<div class="navigationConfig">
+				<a data-bundle="true" data-menu="configMenu">
+					<% if (data.canEditBundle) { %>
+						<span class="fa fa-fw fa-gear"></span>
+					<% } %>
+
+					<%= titleItem.title %>
+				</a></div>
+		<% } else { %>
+			<div><a href="<%= titleItem.href %>"><%= titleItem.title %></a></div>
+		<% } %>
+	<% } %>
+</template>
+
+<template name="config.menu">
+	<div role="navigator" class="containerWrapperBody dropDownMenu configMenu" style="display: none;">
+		<ul class="nav nav-pills nav-stacked">
+			<li>
+				<a class="homeBundle">
+					<span class="fa fa-fw fa-home"></span>
+					<%~ Home %>
+				</a>
+			</li>
+			<% if (data.canEditBundle) { %>
+				<li class="divider"></li>
+				<li>
+					<a class="editPreferences">
+						<span class="fa fa-fw fa-sliders"></span>
+						<%~ Preferences %>
+					</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a class="editBundle">
+						<span class="fa fa-fw fa-list-alt"></span>
+						<%~ Bundle management %>
+					</a>
+				</li>
+			<% } %>
+		</ul>
+	</div>
+</template>
+
+<template name="bundle.menu">
+	<div role="navigator" class="containerWrapperBody dropDownMenu bundleMenu" style="display: none;">
+		<ul class="nav nav-pills nav-stacked">
+			<% for(var i = 0; i < data.bundles.length; i++) { %>
+				<%== Templates.get('banner/bundle.menu.entry', data.bundles[i]) %>
+			<% } %>
+
+			<% if (data.canManageBundles) { %>
+				<li class="divider"></li>
+				<li class="manageBundles">Bundle setup...</li>
+			<% } %>
+		</ul>
+	</div>
+</template>
+
+<template name="bundle.menu.entry">
+	<li>
+		<div class="bundleMenuEntry" data-app-id="<%= data.value %>" href="javascript:void(0)">
+			<div class="bundleMenuEntryIcon">
+				<% if (data.haveIcon) { %>
+					<img src="bundle/<%= data.bundle_id %>/content/images/bundle_icon.png" alt="" width="40" height="40"/>
+				<% } else { %>
+					<%
+						var icon = "cloud";
+						var iconColor = "#999999";
+
+						if (!Object.isNil(data.icon))
+							icon = data.icon;
+
+						if (!Object.isNil(data.icon_color))
+							iconColor = data.icon_color;
+					%>
+
+					<div class="iconBundle">
+						<div style="background-color: <%= iconColor %>" class="iconBundleInner">
+							<%== IconLibraries.getHTML(icon, { 'classes': 'fa-fw fa-lg' }) %>
+						</div>
+					</div>
+				<% } %>
+			</div>
+			<div class="bundleMenuEntryTitle">
+				<%= TRANSLATE(data.label) %><br/>
+			</div>
+		</div>
+	</li>
+</template>
+
+<template name="link">
+	<li>
+		<a href="<%= data.link %>">
+			<%= data.label %>
+		</a>
+	</li>
+</template>
+
+<template name="divider">
+	<li class="divider"></li>
+</template>
+
+<template name="component">
+	<li class="component">
+		<div></div>
+	</li>
+</template>
+
+<template name="preferences.empty">
+	<div class="bundleNoPrefs">
+		Bundle has no preferences.
+	</div>
+</template>
+
+<script>
+	var PageURL = require('core/PageURL');
+	var Configuration = require('bootstrap/Configuration');
+	var PageCustomizer = require('layout/PageCustomizer');
+	var PageRightPane = require('layout/PageRightPane');
+	var ConditionItemSlot = require('core/ConditionItemSlot');
+	var WindowTitle = require('core/WindowTitle');
+
+	exports.component = ComponentUI.create({
+		onLoad: function(data) {
+			this.data = data;
+
+			var configData = Configuration.toObject();
+			var siteLogo = Configuration.getBundlePreferenceValue('ds.base', 'site_logo');
+
+			if (!Object.isNil(siteLogo)) {
+			    siteLogo = "file/" + siteLogo;
+			} else {
+                siteLogo = "b/ds.base/images/ds_logo.png";
+            }
+
+			if (!Configuration.isLoggedIn()) {
+				this.template("unauthenticated.banner", this.container, $.extend({}, configData, { siteLogo: siteLogo, defaultPage: "/" }), {});
+			    return;
+			}
+
+			this.template("authenticated.banner", this.container, $.extend({}, configData, { siteLogo: siteLogo, defaultPage: "/" }), {});
+
+			// build user menu
+			this._buildTopActionContainer();
+
+			var bannerHeight = this.container.height();
+			var bannerScrollHeight = this.container.prop('scrollHeight');
+
+			// TODO: eventually figure out a better design that doesn't require this
+			// this code prevents the banner from scrolling... Basically always make the
+			// banner as large as it needs to be and ignore the PageLayout height if its scrolling
+
+			if (bannerHeight && bannerScrollHeight && bannerScrollHeight > bannerHeight)
+				this.container.css("height", bannerScrollHeight);
+
+			this.bannerBarNavigation = this.container.find(".navigationPaths");
+            this._updatePagePath(this.getPageObject());
+
+			this.container.on("click", ".userName", $.proxy(this._toggleMenu, this));
+			this.container.on("click", ".userMenu a", $.proxy(this._clickLink, this));
+			this.container.on("click", ".navigationPathsScroll", $.proxy(this._navScrollClicked, this));
+			this.container.on("click", ".headerLogo", $.proxy(this._toggleMenu, this));
+			this.container.on("click", ".bundleMenuEntry",  $.proxy(this._bundleSwitch, this));
+			this.container.on("click", ".manageBundles",  $.proxy(this._bundleManage, this));
+			this.container.on('click', ".navigationPaths div a[data-bundle]", $.proxy(this._toggleMenu, this));
+
+			Client.event("banner.load");
+		},
+
+		onUnload: function () {
+			Client.event("banner.unload");
+		},
+
+		onEvent: function(eventName, eventArgs, extraParms) {
+			if (eventName == "user.logout" || eventName == "user.reset") {
+				this._hideAll();
+			} else if (eventName == "user.change") {
+				this._buildTopActionContainer();
+			} else if (eventName == "body.clicked") {
+				this._bodyClicked(eventArgs);
+			} else if (eventName == "page.loaded") {
+				this._pageLoaded(eventArgs, extraParms);
+			} else if (eventName == "window.resized") {
+			    this._navPathSizeBump();
+			}
+		},
+
+		_buildTopActionContainer: function() {
+			this._buildUserMenu();
+			this._buildUserButtons();
+		},
+
+		_buildUserMenu: function() {
+			this._ensureUserMenu();
+
+			var userDiv = this.container.find('.topBarUserMenuClass');
+			userDiv.empty();
+
+			if (!Configuration.isLoggedIn())
+				return;
+
+			this.template("banner/user.details", userDiv, this.data, {});
+
+			var container = userDiv.find('.userMenu > ul');
+
+			for (var linkNdx = 0; linkNdx < this.data.userMenu.links.length; linkNdx++) {
+				var link = this.data.userMenu.links[linkNdx];
+
+				if (link.type == 'component') {
+					this.template("banner/component", container, {}, {});
+
+					ComponentLoader.loadAndRenderComponent({
+						name: link.component,
+						container: container.find('li > div').last(),
+						pageContainer: this.getParentContainer(),
+						data: {}
+					});
+				} else if (link.type == 'divider') {
+					var linkData = {
+						label: link.label || '',
+					};
+
+					this.template("banner/divider", container, linkData, {});
+				} else {
+					var linkData = {
+						label: link.label || '',
+						link: link.link
+					};
+
+					this.template("banner/link", container, linkData, {});
+				}
+			}
+		},
+
+		_ensureUserMenu: function() {
+			var userDiv = this.container.find('.topBarUserMenuClass');
+
+			if (userDiv.length > 0)
+				return;
+
+			var oldMenuClass = this.container.find(".userMenuClass");
+			oldMenuClass.addClass("topBarUserMenuClass");
+		},
+
+		_ensureUserButtons: function() {
+			var topBarActionButtons = this.container.find('.topBarActionButtons');
+
+			if (topBarActionButtons.length > 0)
+				return;
+
+			var oldDivClass = this.container.find(".topBarButtons");
+			oldDivClass.addClass("topBarActionButtons");
+
+			oldDivClass = this.container.find(".topBarLowerClass");
+			oldDivClass.addClass("topBarActionButtons");
+		},
+
+		_buildUserButtons: function() {
+			this._ensureUserButtons();
+
+			var topBarActionButtons = this.container.find('.topBarActionButtons');
+			topBarActionButtons.empty();
+			topBarActionButtons.hide();
+
+			if (!Configuration.isLoggedIn() || !Configuration.isSuperUser())
+				return;
+
+
+			// display bar actions
+			topBarActionButtons.show();
+
+			var d = $('<button/>', {"class": "btn btn-default help help-sidebar-button", "title": "Help"});
+			d.on('click', $.proxy(this._toggleHelp, this));
+			d.append("<span class='fa fa-question'/>");
+			topBarActionButtons.append(d);
+
+			var d = $('<button/>', {"class": "btn btn-default customizeLayout", "title": "Customize layout"});
+			d.on('click', $.proxy(this._customizeLayout, this));
+			d.append("<span class='fa fa-pencil'/>");
+			topBarActionButtons.append(d);
+		},
+
+		_hideAll: function () {
+		    this._hideAllMenus();
+			this._hideButton('.customizeLayout');
+		},
+
+		_hideAllMenus: function() {
+			this._hide("userMenu");
+			this._hide("configMenu");
+			this._hide("bundleMenu");
+		},
+
+		_bodyClicked: function (e) {
+			var target = $(e.target);
+			var domPath = target.getDomPath();
+
+			if (!domPath.contains('userDetailsContainer'))
+				this._hide("userMenu");
+
+			if (!domPath.contains('navigationConfig'))
+				this._hide("configMenu");
+
+			if (!domPath.contains('headerLogo'))
+				this._hide("bundleMenu");
+		},
+
+		_toggleMenu: function (e) {
+            var t = $(e.currentTarget);
+            var menuName = t.data("menu");
+		    var um = this.container.find("." + menuName);
+
+			if (um.data("shown") == "true") {
+				this._hide(menuName);
+				return;
+			}
+
+			this._show(menuName, t);
+		},
+
+		_show: function (menuName, t) {
+		    var um = this.container.find('.' + menuName);
+
+			if (um.length == 0 || um.data("shown") == "true")
+				return;
+
+			var topPos = t.offset().top + t.outerHeight();
+			var leftPos = t.offset().left;
+			var windowWidth = $(window).width();
+
+			// if its off the window, move it over
+			if ((leftPos + um.outerWidth()) > (windowWidth - 10))
+			    leftPos = (windowWidth - um.outerWidth() - 10);
+
+			um.css("top", topPos);
+			um.css("left", leftPos);
+			um.show('fast', $.proxy(function() { this._menuShown(um); }, this));
+			um.data("shown", "true");
+		},
+
+		_menuShown: function(m) {
+		    var windowHeight = $(window).outerHeight();
+		    var menuHeight = m.offset().top + m.outerHeight();
+
+		    // if menu is larger than window, lets set the bottom so it scrolls
+		    if (menuHeight > windowHeight)
+		        m.css("bottom", "4px");
+		},
+
+		_hide: function (menuName) {
+		    var um = this.container.find('.' + menuName);
+
+			if (um.length == 0 || um.data("shown") == "false")
+				return;
+
+			um.hide('fast');
+			um.data("shown", "false");
+			um.css("bottom", "");
+		},
+
+		_hideButton: function(buttonSelector) {
+			setTimeout($.proxy(function() { this.container.find(buttonSelector).hide(); }, this), 1);
+		},
+
+		_showButton: function(buttonSelector) {
+			setTimeout($.proxy(function() { this.container.find(buttonSelector).show(); }, this), 1);
+		},
+
+		_clickLink: function (e) {
+			// close the menu
+			this._hideAllMenus();
+
+			var clickedTarget = $(e.target);
+			var url = clickedTarget.attr('href');
+
+			// Handle event here, do not let is go any further
+			e.preventDefault();
+			e.stopPropagation();
+
+			// Divider?
+			if (clickedTarget.parent().hasClass('divider'))
+				return;
+
+			this.gotoURL(url);
+		},
+
+		_customizeLayout: function(e) {
+			PageCustomizer.customize();
+		},
+
+		_toggleHelp: function() {
+			require('banner/Help').toggle();
+		},
+
+		_bundleHome: function() {
+			this._hide("configMenu");
+
+			var pageURL = new PageURL();
+			pageURL.setPages(['home']);
+			pageURL.clearParms();
+			PageLoader.navigate(pageURL);
+		},
+
+		_bundlePreferences: function(e) {
+			Server.rest('bundles/ajax/getBundlePreferenceForm', { bundleId: new PageURL().getBundleName() }, {
+				callback: $.proxy(function(response) {
+					if (response && response.status == 'good') {
+					    var prefs = response.data.prefs;
+
+						this._hide("configMenu");
+						this._showPreferenceDialog(prefs);
+					}
+				}, this)
+			});
+		},
+
+		_showPreferenceDialog: function(prefs) {
+		    if (Object.isNil(prefs.form.slots) || Object.isNil(prefs.form.layout)) {
+				var tdialog = new TemplateDialog(TRANSLATE("Preferences"), 'banner', 'preferences.empty');
+				tdialog.button("Cancel", $.proxy(tdialog.destroy, tdialog));
+				tdialog.show({});
+				return;
+			}
+
+			var dialog = new SimpleWidgetDialog(TRANSLATE("Preferences"));
+			dialog.setWidth("95%");
+			dialog.setHeight("95%");
+			dialog.show(prefs.form.slots, prefs.form.layout, prefs.values, this._onBundlePreferenceSave.bind(this));
+		},
+
+		_onBundlePreferenceSave: function(okFlag, data, dialog, callbackData) {
+		    if (!okFlag)
+		        return;
+
+		    dialog.save('bundles/ajax/saveBundlePreferenceValues', { bundleId: new PageURL().getBundleName() },
+				function(response) {
+					if (response && response.status == 'good')
+					    Client.info('Bundle preferences updated');
+				}
+			);
+		},
+
+		_bundleManagement: function(e) {
+			Server.rest('banner/ajax/getConfigURL', { bundleId: new PageURL().getBundleName() }, {
+				callback: $.proxy(function(response) {
+					if (response && response.status == 'good') {
+					    var bundleId = response.data.id;
+
+						var pageURL = new PageURL();
+						pageURL.setPages(['configuration', 'details.default.bundle']);
+						pageURL.clearParms();
+						pageURL.setParms({
+							q: new ConditionItemSlot('id', 'eq', bundleId).toString()
+						});
+
+						PageLoader.navigate(pageURL);
+						this._hide("configMenu");
+					}
+				}, this)
+			});
+		},
+
+		_pageLoaded: function(loadedPage, loaderParms) {
+			var pageURL = new PageURL();
+			var pages = pageURL.getPages();
+			var inConfiguration = (pages[0] == 'configuration');
+			var canCustomizeLayout = false;
+
+			if (inConfiguration) {
+				if (Object.isTrue(Configuration.getSystemValue("development")) && pageURL.getBundleName() == "ds.base") {
+					canCustomizeLayout = true;
+				}
+			} else {
+				canCustomizeLayout = true;
+			}
+
+
+			if (canCustomizeLayout) {
+				this.container.find('.customizeLayout').removeClass('disabled');
+			} else {
+				if (!this.container.find('.customizeLayout').hasClass('disabled')) {
+					this.container.find('.customizeLayout').addClass('disabled');
+					PageCustomizer.hideCustomize();
+				}
+			}
+
+			// now update path
+			if (!Object.isTrue(loaderParms.singlePage) && !Object.isTrue(loaderParms.reloading)) {
+				this._updatePagePath(loadedPage);
+			}
+		},
+
+		_bundleManage: function(e) {
+		    if (!this.bundlesHandler) {
+                ComponentLoader.loadAndRenderComponent({
+                    name: "bundles",
+                    pageContainer: this.getParentContainer(),
+                    onComplete: $.proxy(function (loader, bundlesHandler) {
+                        this.bundlesHandler = bundlesHandler;
+                        this.bundlesHandler.loadBundleSetup();
+                    }, this)
+                });
+            } else {
+				this.bundlesHandler.loadBundleSetup();
+			}
+		},
+
+		_bundleSwitch: function(e) {
+            var t = $(e.currentTarget);
+			var appId = t.data('app-id');
+			var url = new PageURL('').setBundleName(appId).setPages('home');
+			PageLoader.navigate(url);
+			this._hide("bundleMenu");
+		},
+
+		_updatePagePath: function(page) {
+		    // if the page changed, lets make sure all menus are hidden
+		    this._hideAllMenus();
+
+		    if (!this.bannerBarNavigation)
+		        return;
+
+            var titles = [ { title: page.getBundleTitle() }  ].concat(this._buildSubTitles(page));
+			var canEditBundle = Configuration.isLoggedIn() && Configuration.isSuperUser();
+
+            this.bannerBarNavigation.empty();
+            this.template("navigation.title", this.bannerBarNavigation, { canEditBundle: canEditBundle, titles: titles }, {});
+
+            this._navHideScrollActions();
+
+            if (this._isPagePathScrolling())
+			    this._moveNavScroll("right");
+
+			if (this.container.find(".configMenu").length == 0) {
+                this.template("config.menu", this.container, $.extend({}, this.data, { canEditBundle: canEditBundle }), {});
+                this.container.find(".editBundle").on("click", $.proxy(this._bundleManagement, this));
+                this.container.find(".editPreferences").on("click", $.proxy(this._bundlePreferences, this));
+                this.container.find(".homeBundle").on("click", $.proxy(this._bundleHome, this));
+            }
+
+			if (this.container.find(".bundleMenu").length == 0 && this.data.bundles.length > 0) {
+                this.template("bundle.menu", this.container, this.data, {});
+            }
+		},
+
+		_navHideScrollActions: function() {
+		    this.container.find('.navigationPathsScroll').hide();
+		},
+
+		_navPathSizeBump: function() {
+		    if (!this.bannerBarNavigation)
+		        return;
+
+		    this._navHideScrollActions();
+
+            var scrolling = this._isPagePathScrolling();
+
+            if (!scrolling)
+                return;
+
+			if (this.bannerBarNavigation.data("scrolled") == "right") {
+			    this._moveNavScroll("right");
+			} else {
+			    this._moveNavScroll("left");
+			}
+		},
+
+		_moveNavScroll: function(where) {
+			if (where == "right") {
+				this.container.find('.navigationPathsScrollLeft').show();
+				this.container.find('.navigationPathsScrollRight').hide();
+
+	            var scrollDiff = this.bannerBarNavigation.prop('scrollWidth') - this.bannerBarNavigation.outerWidth();
+				this.bannerBarNavigation.scrollLeft(scrollDiff);
+				this.bannerBarNavigation.data("scrolled", "right");
+			} else {
+				this.container.find('.navigationPathsScrollLeft').hide();
+				this.container.find('.navigationPathsScrollRight').show();
+
+				this.bannerBarNavigation.scrollLeft(0);
+				this.bannerBarNavigation.data("scrolled", "left");
+			}
+		},
+
+		_navScrollClicked: function(e) {
+            var t = $(e.currentTarget);
+
+			if (t.hasClass("navigationPathsScrollLeft")) {
+			    this._moveNavScroll("left");
+			} else {
+			    this._moveNavScroll("right");
+			}
+		},
+
+		_isPagePathScrolling: function() {
+			return (this.bannerBarNavigation.prop('scrollWidth') - this.bannerBarNavigation.outerWidth()) > 0;
+		},
+
+		_buildSubTitles: function(page) {
+            return WindowTitle.getPageSubTitles(page).reverse();
+        },
+
+		className: "Banner"
+	});
+</script>

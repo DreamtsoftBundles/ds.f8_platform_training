@@ -1,0 +1,120 @@
+{
+  "bucket_data": {
+    "pages": {
+      "83b3f3c0c9824d8cbd1077b961bfe643": {
+        "created": "1573078378158",
+        "id": "83b3f3c0c9824d8cbd1077b961bfe643",
+        "layout": {
+          "__start__": {
+            "contains": [
+              "component_92fc1f2858f81e30327d374119c9229d"
+            ],
+            "h": "100%",
+            "id": "__start__",
+            "layout_type": "page_components",
+            "subContainers": [ ],
+            "targeting_mode": "disabled",
+            "type": "container",
+            "w": "100%"
+          },
+          "component_92fc1f2858f81e30327d374119c9229d": {
+            "attributes": {
+              "button_height": 60,
+              "button_sizing": "specify",
+              "button_width": 100,
+              "component": "navigator",
+              "csstags": "",
+              "event_name": "",
+              "id": "5c26965138cd5d977ac60e4c4063c4f8",
+              "menu_width": 300,
+              "name": "",
+              "navigator": "7b31c65753f4415c953687c06bafd53b",
+              "type": "tiles"
+            },
+            "component": "navigator",
+            "h": "100%",
+            "id": "component_92fc1f2858f81e30327d374119c9229d",
+            "name": "component_92fc1f2858f81e30327d374119c9229d",
+            "needs_subpage_target": true,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "container_f6e050a624261799f32b1025ae962359": {
+            "contains": [ ],
+            "icon": "fontawesome:file-excel-o",
+            "id": "container_f6e050a624261799f32b1025ae962359",
+            "label": "Example",
+            "subContainer": true,
+            "type": "container"
+          }
+        },
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "actions",
+        "owner": "__SYSTEM_USER__",
+        "page_vars": {
+          "layout": {
+            "layout": [
+              {
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
+                    }
+                  ]
+                ],
+                "type": "section"
+              }
+            ],
+            "version": 1
+          },
+          "slots": {
+            "bucket": {
+              "attributes": { },
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              },
+              "name": "q",
+              "type": "string"
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "title": ""
+      }
+    }
+  }
+}

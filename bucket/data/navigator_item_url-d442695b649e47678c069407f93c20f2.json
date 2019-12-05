@@ -1,0 +1,23 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "d442695b649e47678c069407f93c20f2": {
+        "color": "",
+        "created": "1574285386802",
+        "description": "",
+        "icon": "",
+        "id": "d442695b649e47678c069407f93c20f2",
+        "label": "Test1",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "0",
+        "owner": "__SYSTEM_USER__",
+        "parent": "8f30ae7de9ab4b82aa1a26f99e44144a",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "url": ""
+      }
+    }
+  }
+}

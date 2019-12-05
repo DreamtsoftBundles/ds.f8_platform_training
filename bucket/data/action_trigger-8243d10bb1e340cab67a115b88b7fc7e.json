@@ -1,0 +1,32 @@
+{
+  "bucket_data": {
+    "action_trigger": {
+      "8243d10bb1e340cab67a115b88b7fc7e": {
+        "active": "1",
+        "bucket": "1hcfylls",
+        "condition": [
+          [
+            "manager",
+            "eq",
+            "custom://changed",
+            "being changed"
+          ]
+        ],
+        "created": "1575570235706",
+        "description": "",
+        "flow": "separate_file://bucket/data/action_trigger-8243d10bb1e340cab67a115b88b7fc7e-flow.js",
+        "id": "8243d10bb1e340cab67a115b88b7fc7e",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "Example Trigger",
+        "on": "insert||update",
+        "order": "0",
+        "owner": "__SYSTEM_USER__",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "when": "after"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "3ec52e86a8d24c108a4be173b126e73f": {
+        "color": "",
+        "created": "1572914107333",
+        "description": "Components & Widgets",
+        "icon": "fontawesome:asterisk",
+        "id": "3ec52e86a8d24c108a4be173b126e73f",
+        "label": "UI Elements",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "0",
+        "owner": "__SYSTEM_USER__",
+        "parent": "884794d1fb774ca6906b00e7af48f3c8",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "url": "ui_components_widgets"
+      }
+    }
+  }
+}

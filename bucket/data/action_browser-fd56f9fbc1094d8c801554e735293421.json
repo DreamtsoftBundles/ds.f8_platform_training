@@ -1,0 +1,46 @@
+{
+  "bucket_data": {
+    "action_browser": {
+      "fd56f9fbc1094d8c801554e735293421": {
+        "activate_behavior": "show_hide",
+        "activate_condition": [ ],
+        "activate_row_action_when": "always",
+        "active": "1",
+        "animate_button": "0",
+        "bucket": "1hcfylls",
+        "button_e2e_tag": "",
+        "component": "details",
+        "created": "1574286966230",
+        "description": "",
+        "details_activate_when": "always",
+        "details_only_show_if": "existing_record||details",
+        "enabled_when": "",
+        "existing_record": "1",
+        "group_header": "0",
+        "group_name": "",
+        "icon": "",
+        "id": "fd56f9fbc1094d8c801554e735293421",
+        "key_sequence": "",
+        "label": "Test Button",
+        "list_activate_when": "always",
+        "list_only_show_if": "list",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "Test Button",
+        "new_record": "1",
+        "order": "0",
+        "owner": "__SYSTEM_USER__",
+        "requires_write": "0",
+        "row_action_condition": [ ],
+        "schema_version": "2.0",
+        "scope": "",
+        "symbol": "0",
+        "system_updated": "0",
+        "trigger_from_button": "1",
+        "trigger_from_key": "0",
+        "where": "middle"
+      }
+    }
+  }
+}

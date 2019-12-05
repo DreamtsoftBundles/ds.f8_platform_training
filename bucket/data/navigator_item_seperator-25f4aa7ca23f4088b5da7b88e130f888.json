@@ -1,0 +1,24 @@
+{
+  "bucket_data": {
+    "navigator_item_seperator": {
+      "25f4aa7ca23f4088b5da7b88e130f888": {
+        "collapsible": "",
+        "color": "",
+        "created": "1575497525870",
+        "description": "",
+        "icon": "",
+        "id": "25f4aa7ca23f4088b5da7b88e130f888",
+        "label": "List Separator",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "0",
+        "owner": "__SYSTEM_USER__",
+        "parent": "252a7161131b434aa7328abf32286541",
+        "schema_version": "0.0",
+        "submenu": "0",
+        "system_updated": "0"
+      }
+    }
+  }
+}

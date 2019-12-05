@@ -1,0 +1,133 @@
+{
+  "bucket_data": {
+    "pages": {
+      "67dd9469820243bcb84d9493831a127e": {
+        "created": "1575497527365",
+        "id": "67dd9469820243bcb84d9493831a127e",
+        "layout": {
+          "__start__": {
+            "contains": [
+              "component_f68fb65d1226f7acd4127ef8b2890bbc",
+              "component_70d1bfadd7d2ceee195addb2d1ae6f78"
+            ],
+            "h": "100%",
+            "id": "__start__",
+            "layout_type": "page_components",
+            "type": "container",
+            "w": "100%"
+          },
+          "component_70d1bfadd7d2ceee195addb2d1ae6f78": {
+            "attributes": {
+              "button_height": 60,
+              "button_sizing": "specify",
+              "button_width": 100,
+              "component": "navigator",
+              "csstags": "",
+              "event_name": "",
+              "menu_width": 300,
+              "name": "",
+              "navigator": "c54cc899c6eb483aad738be9fa42d84e",
+              "type": "tiles"
+            },
+            "component": "navigator",
+            "h": "100%",
+            "id": "component_70d1bfadd7d2ceee195addb2d1ae6f78",
+            "name": "component_70d1bfadd7d2ceee195addb2d1ae6f78",
+            "needs_subpage_target": true,
+            "page_loading": false,
+            "type": "component",
+            "w": "50%"
+          },
+          "component_f68fb65d1226f7acd4127ef8b2890bbc": {
+            "attributes": {
+              "button_height": 60,
+              "button_sizing": "specify",
+              "button_width": 100,
+              "component": "navigator",
+              "csstags": "",
+              "event_name": "",
+              "id": "57a6d1891a2bd78261d581222a3c5e40",
+              "menu_width": 300,
+              "name": "",
+              "navigator": "252a7161131b434aa7328abf32286541",
+              "type": "menu"
+            },
+            "component": "navigator",
+            "h": "100%",
+            "id": "component_f68fb65d1226f7acd4127ef8b2890bbc",
+            "name": "component_f68fb65d1226f7acd4127ef8b2890bbc",
+            "needs_subpage_target": true,
+            "page_loading": false,
+            "type": "component",
+            "w": "50%"
+          }
+        },
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "navigation",
+        "owner": "__SYSTEM_USER__",
+        "page_vars": {
+          "layout": {
+            "layout": [
+              {
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
+                    }
+                  ]
+                ],
+                "type": "section"
+              }
+            ],
+            "version": 1
+          },
+          "slots": {
+            "bucket": {
+              "attributes": { },
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              },
+              "name": "q",
+              "type": "string"
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "title": ""
+      }
+    }
+  }
+}

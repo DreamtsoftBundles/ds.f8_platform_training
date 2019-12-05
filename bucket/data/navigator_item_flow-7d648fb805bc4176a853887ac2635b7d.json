@@ -1,0 +1,23 @@
+{
+  "bucket_data": {
+    "navigator_item_flow": {
+      "7d648fb805bc4176a853887ac2635b7d": {
+        "color": "",
+        "created": "1575491323656",
+        "description": "This will display a log statement in the browser console",
+        "flow": "separate_file://bucket/data/navigator_item_flow-7d648fb805bc4176a853887ac2635b7d-flow.js",
+        "icon": "fontawesome:file-code-o",
+        "id": "7d648fb805bc4176a853887ac2635b7d",
+        "label": "Click",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "0",
+        "owner": "__SYSTEM_USER__",
+        "parent": "01267b033ed94de5a14661a8668edb34",
+        "schema_version": "0.0",
+        "system_updated": "0"
+      }
+    }
+  }
+}

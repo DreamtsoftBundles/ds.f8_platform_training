@@ -1,0 +1,28 @@
+{
+  "bucket_data": {
+    "navigator_item_list": {
+      "ff4ecc54812c4ed0b5abcfac76e63fb4": {
+        "bucket": "action_trigger",
+        "color": "",
+        "condition": [ ],
+        "created": "1575486149227",
+        "description": "Workflow based on data changes",
+        "icon": "fontawesome-v5-solid:check-double",
+        "id": "ff4ecc54812c4ed0b5abcfac76e63fb4",
+        "label": "Triggers",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "2",
+        "owner": "__SYSTEM_USER__",
+        "parent": "7b31c65753f4415c953687c06bafd53b",
+        "schema_version": "0.0",
+        "sort_by": "",
+        "sort_direction": "ascending",
+        "subpage": "",
+        "system_updated": "0",
+        "view": ""
+      }
+    }
+  }
+}

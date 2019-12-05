@@ -1,0 +1,28 @@
+{
+  "bucket_data": {
+    "navigator_item_list": {
+      "d77826d798d449d4b70a2dc5db888b74": {
+        "bucket": "user",
+        "color": "",
+        "condition": [ ],
+        "created": "1575497526202",
+        "description": "",
+        "icon": "",
+        "id": "d77826d798d449d4b70a2dc5db888b74",
+        "label": "A list of users",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "1",
+        "owner": "__SYSTEM_USER__",
+        "parent": "252a7161131b434aa7328abf32286541",
+        "schema_version": "0.0",
+        "sort_by": "",
+        "sort_direction": "ascending",
+        "subpage": "",
+        "system_updated": "0",
+        "view": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "bucket_data": {
+    "vj99yvmj": {
+      "bb9d2dc8f81c413dbff08b127fa24093": {
+        "active": "1",
+        "bucket": "1hcfylls",
+        "condition": [ ],
+        "created": "1575570083336",
+        "description": "",
+        "email_template": "66796643be9f49fa8da9a94a73ac96de",
+        "exclude_current_user": "1",
+        "id": "bb9d2dc8f81c413dbff08b127fa24093",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "Example Email Action",
+        "on": "insert||update",
+        "order": "0",
+        "owner": "__SYSTEM_USER__",
+        "schema_version": "0.0",
+        "send_to_groups": "0",
+        "send_to_slots": "1",
+        "send_when": "bucket",
+        "system_updated": "0",
+        "to_groups": "",
+        "to_slots": "manager"
+      }
+    }
+  }
+}

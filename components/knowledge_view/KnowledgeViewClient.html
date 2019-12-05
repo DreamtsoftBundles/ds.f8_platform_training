@@ -1,0 +1,89 @@
+<!DOCTYPE f8component>
+
+<definition>
+{
+	id: "knowledge_view",
+	label: "Knowledge View",
+	className: "KnowledgeViewServer",
+	renderable: true
+}
+</definition>
+
+<style>
+	.kbViewContainer {
+		padding: 20px;
+	}
+	
+	.kbViewHeader {
+		font-size: 2.5em;
+		padding-bottom: 8px;
+	}
+	
+	.kbViewTable tr td {
+		padding: 2px;
+	}
+	
+	.kbViewTable tr td.kbField {
+		text-align: right;
+		font-weight: 500;
+	}
+	
+	.kbViewTable tr td.kbValue {
+		margin-left: 4px;
+	}
+	
+	.kbViewRuler {
+		margin-top: 6px;
+		margin-bottom: 6px;
+	}
+	
+	.kbContent {
+	}
+</style>
+
+<template name="view.container">
+	<div class="kbViewContainer">
+		<div class="kbViewHeader">
+			<%= data.article.title.value %>
+		</div>
+		<div class="kbViewField">
+			<table class="kbViewTable">
+				<tr>
+					<td class="kbField"><%~ Category %>:</td>
+					<td class="kbValue"><%= data.article.category.display %></td>
+				</tr>
+				<tr>
+					<td class="kbField"><%~ Author %>:</td>
+					<td class="kbValue"><%= data.article.author.display %></td>
+				</tr>
+			</table>
+		</div>
+		<hr class="kbViewRuler"/>
+
+		<div class="kbContent">
+		</div>
+	</div>
+</template>
+		
+<script>
+	exports.component = ComponentUI.create({
+		onLoad: function(data) {
+			this.template('view.container', this.container, data, this.attributes);
+			
+			if (data.article.type.value == "html") {
+				$(this.container).find(".kbContent").html(data.article.html.value);
+			} else {
+				require('component/markup', function () {
+					require('markup/MarkDownRender', function (MarkDownRender) {
+						var text = data.article.markdown.value;
+						var md = new MarkDownRender();
+						var mdText = md.render(text);
+						$(this.container).find(".kbContent").html(mdText);
+					}.bind(this));
+				}.bind(this));
+			}
+		},
+
+		className: "KnowledgeView"
+	});
+</script>

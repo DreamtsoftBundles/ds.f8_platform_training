@@ -1,0 +1,23 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "d6d03931fe3a4fb9a6badb5339a7a754": {
+        "color": "",
+        "created": "1572915385402",
+        "description": "Create workflow",
+        "icon": "fontawesome:video-camera",
+        "id": "d6d03931fe3a4fb9a6badb5339a7a754",
+        "label": "Actions",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "0",
+        "owner": "__SYSTEM_USER__",
+        "parent": "0eb08b48e8214d3e872314c519e672ef",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "url": "actions"
+      }
+    }
+  }
+}

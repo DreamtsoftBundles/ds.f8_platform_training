@@ -1,0 +1,28 @@
+{
+  "mappings": ";;;;;;;;;;;;AAAA,IAAMA,QAAQC,QAAQ,OAAR,CAAd;AACA,IAAMC,WAAWD,QAAQ,WAAR,CAAjB;;AAEA,IAAME,mBAAmBF,QAAQ,6BAAR,CAAzB;AACA,IAAMG,kBAAkBH,QAAQ,8BAAR,CAAxB;AACA,IAAMI,oBAAoBJ,QAAQ,gCAAR,CAA1B;;IAEMK,W;;;AACL,sBAAYC,KAAZ,EAAmB;AAAA;;AAAA,mHACZA,KADY;AAElB;;;;2BAEW;AACL,UACL;AAAA;AAAA,MAAK,WAAU,wBAAf;AACC,wBAAC,iBAAD,IAAmB,qBAAqB,KAAKC,KAAL,CAAWC,aAAnD,EAAkE,qBAAqB,KAAKC,YAAL,CAAkBC,IAAlB,CAAuB,IAAvB,CAAvF,GADD;AAEC,wBAAC,eAAD,IAAiB,qBAAqB,KAAKH,KAAL,CAAWC,aAAjD;AAFD,IADK;AAMH;;;iCAEW;AACd,QAAKG,QAAL,CAAc,EAAEH,eAAe,CAAC,KAAKD,KAAL,CAAWC,aAA7B,EAAd;AACA;;;;EAhBwBN,gB;;AAmB1BU,OAAOC,OAAP,GAAiBR,WAAjB",
+  "file": "unknown",
+  "names": [
+    "React",
+    "require",
+    "ReactDOM",
+    "F8ReactComponent",
+    "SimpleReactBody",
+    "SimpleReactHeader",
+    "SimpleReact",
+    "props",
+    "state",
+    "toggleDetails",
+    "stateUpdater",
+    "bind",
+    "setState",
+    "module",
+    "exports"
+  ],
+  "sources": [
+    "modules/SimpleReact.es6.js"
+  ],
+  "sourcesContent": [
+    "const React = require('react');\nconst ReactDOM = require('react-dom');\n\nconst F8ReactComponent = require('react-core/F8ReactComponent');\nconst SimpleReactBody = require(\"simple_react/SimpleReactBody\");\nconst SimpleReactHeader = require(\"simple_react/SimpleReactHeader\");\n\nclass SimpleReact extends F8ReactComponent {\n\tconstructor(props) {\n\t\tsuper(props);\t\t\n\t}\n\n    render() {\n        return (\n\t\t\t<div className=\"simple-react-container\">\n\t\t\t\t<SimpleReactHeader shouldToggleDetails={this.state.toggleDetails} stateUpdateFunction={this.stateUpdater.bind(this)} />\n\t\t\t\t<SimpleReactBody shouldToggleDetails={this.state.toggleDetails}/>\n\t\t\t</div>\n        );\n    }\n\t\n\tstateUpdater() {\n\t\tthis.setState({ toggleDetails: !this.state.toggleDetails });\n\t}\n}\n\nmodule.exports = SimpleReact;\n"
+  ],
+  "version": 3
+}

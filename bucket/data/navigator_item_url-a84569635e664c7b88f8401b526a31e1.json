@@ -1,0 +1,23 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "a84569635e664c7b88f8401b526a31e1": {
+        "color": "",
+        "created": "1575490956491",
+        "description": "Debug workflow in the browser console",
+        "icon": "fontawesome:bug",
+        "id": "a84569635e664c7b88f8401b526a31e1",
+        "label": "Debugging",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "3",
+        "owner": "__SYSTEM_USER__",
+        "parent": "0eb08b48e8214d3e872314c519e672ef",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "url": "debugging"
+      }
+    }
+  }
+}

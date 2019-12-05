@@ -1,0 +1,23 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "7642bdd693bf4f30a4d0f86113bd82cc": {
+        "color": "",
+        "created": "1574285520524",
+        "description": "",
+        "icon": "fontawesome:battery-empty",
+        "id": "7642bdd693bf4f30a4d0f86113bd82cc",
+        "label": "Test1",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "0",
+        "owner": "__SYSTEM_USER__",
+        "parent": "71eed021945946139f3596b7af826f9c",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "url": ""
+      }
+    }
+  }
+}

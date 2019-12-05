@@ -1,0 +1,22 @@
+{
+  "bucket_data": {
+    "yx3rwfgp": {
+      "66796643be9f49fa8da9a94a73ac96de": {
+        "bucket": "1hcfylls",
+        "created": "1575570017165",
+        "html": "separate_file://bucket/data/email_template-66796643be9f49fa8da9a94a73ac96de-html.html",
+        "id": "66796643be9f49fa8da9a94a73ac96de",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "Example Template",
+        "owner": "__SYSTEM_USER__",
+        "plain_text": "",
+        "schema_version": "0.0",
+        "subject": "A record for ${first_name} ${last_name} has been updated",
+        "system_updated": "0",
+        "type": "bucket"
+      }
+    }
+  }
+}

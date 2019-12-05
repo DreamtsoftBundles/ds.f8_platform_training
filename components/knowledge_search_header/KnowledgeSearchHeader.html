@@ -1,0 +1,123 @@
+<!DOCTYPE f8component>
+
+<definition>
+{
+	id: "knowledge_search_header",
+	label: "Knowledge Search Header",
+	renderable: true
+}
+</definition>
+
+<attributes>
+[
+	{
+		"name": "header_text",
+		"label": "Header text",
+		"type": "string",
+		"attributes": {
+			default: "How can we help?"
+		}
+	},
+	{
+		"name": "search_label",
+		"label": "Search label",
+		"type": "string",
+		"attributes": {	
+			default: "Search Knowledge"
+		}	
+	},
+	{
+		"name": "search_placeholder",
+		"label": "Search placeholder text",
+		"type": "string",
+		"attributes": {	
+			default: "Search by keyword"
+		}
+	},
+	{
+		"name": "target_page",
+		"label": "Target page",
+		"type": "string",
+		"attributes": {	
+			default: "knowledge_search"
+		}
+	}]
+</attributes>
+
+<style>
+	.searchOuterContainer {
+		display: flex;
+		align-items: center;
+    	justify-content: center;
+		
+		background-color: var(--color-darker);
+		color: var(--color-lighter);
+	}
+	
+	.searchInnerContainer {
+	    padding: 60px 0px;
+	    width: 600px;
+	}
+	
+	.searchHeader {
+		text-align: center;
+		font-size: 2.5em;
+		margin-bottom: 8px;
+	}
+</style>
+
+<template name="search.container">
+	<div class="searchOuterContainer">
+		<div class="searchInnerContainer">
+			<div class="searchHeader">
+				<%= attributes.header_text %>
+			</div>
+
+			<div class="searchTitle">
+				<%= attributes.search_label %>
+			</div>
+
+			<div class="searchInput"></div>
+		</div>
+	</div>
+</template>
+
+<script>
+	var PageURL = require('core/PageURL');
+	
+	exports.component = ComponentUI.create({
+		onLoad: function(data) {			
+			this.template('search.container', this.container, data, this.attributes);
+			this._loadWidgets();
+		},
+		
+		_loadWidgets: function() {
+			var input = this.container.find('.searchInput');
+			var inputDef = { name: 'text', type: 'string', attributes: { placeholder_text: this.attributes.search_placeholder, size: 80, onEnter: this._onEnter.bind(this) } };
+			
+			this.widgetManager = new WidgetManager();
+			var widget = this.widgetManager.newWidget(inputDef);
+			widget.addDecorationButton("Search", "fa fa-book", this._onEnter.bind(this));
+			widget.append(input);
+		},
+		
+		_onEnter: function(e) {
+			var targetPath = this.attributes.target_page;
+			
+			var pageURL = new PageURL("");
+			pageURL.setBundleName(this.getPageObject().getBundleName());
+			pageURL.setPages(this.getParentContainer().getPagePath());
+			pageURL.addLastPage(targetPath);
+			pageURL.clearParms();
+			pageURL.setParm("search", this._getSearchText());
+
+			this.navigate(pageURL.toString());
+		},
+		
+		_getSearchText: function() {
+			return this.widgetManager.getValue('text');
+		},
+
+		className: "KnowledgeSearchHeader"
+	});
+</script>

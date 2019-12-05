@@ -1,0 +1,106 @@
+{
+  "bucket_data": {
+    "pages": {
+      "9c6f95fdc5554fed9932878df23b2c29": {
+        "created": "1575495347618",
+        "id": "9c6f95fdc5554fed9932878df23b2c29",
+        "layout": {
+          "__start__": {
+            "contains": [
+              "component_4976cb4a1a1c4d5c0d77654581e801d1"
+            ],
+            "h": "100%",
+            "id": "__start__",
+            "type": "container",
+            "w": "100%"
+          },
+          "component_4976cb4a1a1c4d5c0d77654581e801d1": {
+            "attributes": {
+              "bucket": "bundle_content",
+              "component": "tree_bucket",
+              "csstags": "",
+              "dnd": true,
+              "id": "a49788e61b92bdda383892a7be1c098b",
+              "instructions": "<html>\n<div class=\"containerWrapperTitle\" style=\"height: 100%\">\n      <div class=\"containerTitleHeaderLabel\">\n         <div>Bundle Content</div>\n      </div>\n   </div>\n</html>",
+              "show_tree_lines": false,
+              "tree_definition": "{\n   \"tree\": [{\n      \"type\": \"bucket\",\n      \"label\": \"%{$record.name}\",\n      \"open\": [[\"name\",\"eq\",\"content\"],\"OR\",[\"name\",\"eq\",\"modules\"],\"OR\",[\"name\",\"eq\",\"unload\"]],\n      \"condition\": \"\",\n      \"async\": true,\n      \"sort_by\": \"name\",\n      \"no_children\": [\"type\",\"eq\",\"file\"],\n      \"page\": \"\",\n      \"children\": [{ \n         \"type\": \"related\",\n         \"bucket_node\": false,\n         \"child\": \"bundle_content.parent\",\n         \"condition\": \"\",\n         \"open\": false,\n         \"async\": true,\n         \"recurse\": true,\n\t      \"no_children\": [\"type\",\"eq\",\"file\"],\n\t      \"page\": \"\",\n         \"children\": []\n      }]\n   }],\n   \"tags\": {\n      \"folder\": {\n         \"bucket\": \"bundle_content\",\n         \"condition\": [\"type\",\"eq\",\"folder\"], \n         \"icon\": \"fontawesome:folder-o\",\n         \"drag\": true,\n         \"drop\": [\"folder\",\"system\"]\n      },\n      \"unload\": {\n         \"bucket\": \"bundle_content\",\n         \"condition\": [[\"path\",\"begins\",\"/bucket/unload/\"], [\"type\",\"eq\",\"file\"]],\n         \"icon\": \"fontawesome:file-code-o\"\n      },\n      \"file\": {\n         \"bucket\": \"bundle_content\",\n         \"condition\": [\"type\",\"eq\",\"file\"],\n         \"icon\": \"fontawesome:file-o\",\n         \"drag\": true,\n         \"drop\": [\"folder\",\"system\"]\n      },\n      \"locked\": {\n         \"bucket\": \"bundle_content\",\n         \"condition\": [\"type\",\"eq\",\"locked\"],\n         \"icon\": \"fontawesome:lock\"\n      },\n      \"system\": {\n         \"bucket\": \"bundle_content\",\n         \"condition\": [\"type\",\"eq\",\"system\"],\n         \"icon\": \"fontawesome:folder\"\n      }\n   }\n}",
+              "tree_renderer": "jstree"
+            },
+            "component": "tree_bucket",
+            "h": "100%",
+            "id": "component_4976cb4a1a1c4d5c0d77654581e801d1",
+            "name": "component_4976cb4a1a1c4d5c0d77654581e801d1",
+            "needs_subpage_target": true,
+            "type": "component",
+            "w": "100%"
+          }
+        },
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "bundle_administration",
+        "owner": "__SYSTEM_USER__",
+        "page_vars": {
+          "layout": {
+            "layout": [
+              {
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
+                    }
+                  ]
+                ],
+                "type": "section"
+              }
+            ],
+            "version": 1
+          },
+          "slots": {
+            "bucket": {
+              "attributes": { },
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              },
+              "name": "q",
+              "type": "string"
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "title": "Bundle administration"
+      }
+    }
+  }
+}

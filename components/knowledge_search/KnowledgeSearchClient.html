@@ -1,0 +1,150 @@
+<!DOCTYPE f8component>
+
+<definition>
+{
+	id: "knowledge_search",
+	label: "Knowledge Search",
+	className: "KnowledgeSearchServer",
+	renderable: true
+}
+</definition>
+
+<attributes>
+[
+	{
+		"name": "mode",
+		"label": "View mode",
+		"type": "choice",
+		"attributes": {
+			default: "condition",
+			choices: [
+				{ value: "condition", label: "By condition" },
+				{ value: "search", label: "By search" }
+			]
+		}
+	},
+	{
+		"name": "search_text",
+		"label": "Search text",
+		"type": "string",
+		"attributes": {
+			"mapping_enabled": true
+		}
+	},
+	{
+		"name": "title",
+		"label": "Title",
+		"type": "string",
+		"attributes": {
+		}
+	},
+	{
+		"name": "condition",
+		"label": "Condition",
+		"type": "condition",
+		"attributes": {
+			"bucket_name": "knowledge"
+		}
+	}
+]
+</attributes>
+
+<attributes_display_rules>
+	[
+		{
+			"slot": "search_text",
+			"conditions": {
+				"hidden": "[[[\"mode\",\"ne\",\"search\",\"By search\"]]]"
+			}
+		},
+		{
+			"slot": "condition",
+			"conditions": {
+				"hidden": "[[[\"mode\",\"ne\",\"condition\",\"By condition\"]]]"
+			}
+		}	
+	]
+</attributes_display_rules>
+
+<style>
+	.kbContainer {
+		padding: 10px 40px;
+	}
+	
+	.kbArticle {
+		margin-left: 10px;
+		padding: 6px;
+		border-bottom: 1px solid #eee;
+	}
+	
+	.kbArticle a {
+		text-decoration: none;
+		font-size: 1.4em;
+	}
+	
+	.kbArticle a:hover {
+		text-decoration: underline;
+	}
+	
+	.kbArticleText {
+		margin-left: 10px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 1500px;
+		font-style: italic;
+		
+	}
+</style>
+
+<template name="condition.container">
+	<div class="kbContainer">
+		<h2><%= attributes.title %></h2>
+		
+		<% if (data.articles.length == 0) { %>
+			No recent articles
+		<% } %>
+		   
+		<% for(var i = 0; i < data.articles.length; i++) {%>
+			<div class="kbArticle">
+				<a href='knowledge_view?id=<%= data.articles[i].id %>'><%= data.articles[i].title %></a>
+				<div class='kbArticleText'>
+					<%= data.articles[i].text %>
+				</div>
+			</div>
+		<% } %>
+	</div>
+</template>
+
+<template name="search.container">
+	<div class="kbContainer">
+		<h2><%= attributes.title %> - <%= attributes.search_text %></h2>
+
+		<% if (data.articles.length == 0) { %>
+			No matches found
+		<% } %>
+			
+		<% for(var i = 0; i < data.articles.length; i++) {%>
+			<div class="kbArticle">
+				<a href='knowledge_view?id=<%= data.articles[i].id %>'><%= data.articles[i].title %></a>
+				<div class='kbArticleText'>
+					<%= data.articles[i].text %>
+				</div>
+			</div>
+		<% } %>
+	</div>
+</template>
+		
+<script>
+	exports.component = ComponentUI.create({
+		onLoad: function(data) {
+			if (this.attributes.mode == 'condition') {
+				this.template('condition.container', this.container, data, this.attributes);
+			} else {
+				this.template('search.container', this.container, data, this.attributes);
+			}
+		},
+
+		className: "KnowledgeSearch"
+	});
+</script>

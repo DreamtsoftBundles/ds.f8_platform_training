@@ -1,0 +1,235 @@
+{
+  "bucket_data": {
+    "pages": {
+      "f361553212d140959707bb0d1e543037": {
+        "created": "1575496652369",
+        "id": "f361553212d140959707bb0d1e543037",
+        "layout": {
+          "__start__": {
+            "contains": [
+              "component_a56e2c46057bd503d5b25fae8971322f"
+            ],
+            "h": "100%",
+            "id": "__start__",
+            "layout_type": "page_components",
+            "subContainers": [
+              "container_d552f7d9992a34df31563e8f44cdbd76",
+              "container_2117c77eee9711890f7ab96d3d2a6af9",
+              "container_341e4549652ec2ccbef3dea59feb9dcb",
+              "container_778ca55ecb6d28bd583575aef32f0f4f"
+            ],
+            "type": "container",
+            "w": "100%"
+          },
+          "component_2ddb9468f6299ed4d8dc458e5b0883da": {
+            "attributes": {
+              "component": "markup",
+              "csstags": "",
+              "html": "",
+              "id": "481aa246eb789a3e5d9931d61892e9b8",
+              "markdown": "``` js\nvar PageComponent = require(\"ds.base/PageComponent\");\nvar Knowledge = require(\"ds.f8_platform_training/knowledge/Knowledge\");\n\nmodule.exports = PageComponent.create({\n\t\"/\": function(attributes, vars) {\n\t\tvar k = new Knowledge();\n\t\t\n\t\tif (attributes.mode == \"search\")\n\t\t\treturn new StatusResponse('good', { articles: k.getArticlesBySearch(attributes.search_text) });\t\t\n\t\t\n\t\treturn new StatusResponse('good', { articles: k.getRecentArticles(10, attributes.condition) });\t\t\n\t}\n});\n```",
+              "type": "markdown"
+            },
+            "component": "markup",
+            "h": "100%",
+            "id": "component_2ddb9468f6299ed4d8dc458e5b0883da",
+            "name": "component_2ddb9468f6299ed4d8dc458e5b0883da",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "component_677c2b3413300a6950d6dd730e0f3be2": {
+            "attributes": {
+              "component": "markup",
+              "csstags": "",
+              "html": "",
+              "id": "1506ba8bc502f41f84d6ee03165156e5",
+              "markdown": "```\t js\nmodule.exports = Class.create({\n\tgetArticlesById: function(id) {\n\t\tvar fr = new FRecord('knowledge');\n\t\tfr.setSecurityChecks(true);\n\t\tif (!Object.isNil(id) && fr.getRecord(id))\n\t\t\treturn fr.unload({ ignore_internal: true, resolve_all_display: true, treat_json_map_as_object: true });\n\t\t\n\t\treturn {};\n\t},\n\t\n\tgetRecentArticles: function(limit, query) {\n\t\tvar results = [];\n\t\tvar l = limit || 10;\n\t\t\n\t\tvar fr = new FRecord('knowledge');\n\t\tfr.setSecurityChecks(true);\n\t\tfr.setLimit(l);\n\t\t\n\t\tif (query)\n\t\t\tfr.addEncodedSearch(query);\n\t\t\n\t\tfr.addSearch('status', 'published');\n\t\tfr.addSort('updated', true);\n\t\tfr.search();\n\t\t\n\t\twhile(fr.next()) {\n\t\t\tresults.push({ title: fr.title.toString(), text: fr.text.toString(), id: fr.id.toString() });\n\t\t}\n\t\t\n\t\treturn results;\n\t},\n\t\n\tgetArticlesBySearch: function(text) {\n\t\tvar results = [];\t\t\n\t\t\n\t\tif (Object.isNil(text))\n\t\t\treturn results;\n\t\t\t\t\n\t\tvar fr = new FRecord('globalindex');\n\t\tfr.addSearch('bucket', 'knowledge');\n\t\tfr.addSearch('query', text)\n\t\tfr.addSearch('status', 'published');\n\t\tfr.search();\n\t\t\n\t\twhile (fr.next()) {\n\t\t\tvar kbfr = new FRecord('knowledge');\n\t\t\t\n\t\t\tif (kbfr.getRecord(fr.ref_id))\n\t\t\t\tresults.push({ title: kbfr.title.toString(), text: kbfr.text.toString(), id: fr.ref_id });\n\t\t}\n\t\t\n\t\treturn results;\n\t},\n\t\n\tcreateTextFromArticle: function(fr) {\n\t\tif (fr.type == \"markdown\")\n\t\t\treturn fr.markdown.toString();\n\t\t\n\t\tvar tvjs = require(\"ds.it4it/textversionjs/textversion\");\n\t\treturn tvjs(fr.html.toString());\t\n\t}\n});\n```",
+              "type": "markdown"
+            },
+            "component": "markup",
+            "h": "100%",
+            "id": "component_677c2b3413300a6950d6dd730e0f3be2",
+            "name": "component_677c2b3413300a6950d6dd730e0f3be2",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "component_7200edbd0bd3f67b0eb8f84face5e75e": {
+            "attributes": {
+              "component": "markup",
+              "csstags": "",
+              "html": "",
+              "id": "5cb835b74de496aebd462ce898989f38",
+              "markdown": "``` js\n<!DOCTYPE f8component>\n\n<definition>\n{\n\tid: \"knowledge_search\",\n\tlabel: \"Knowledge Search\",\n\tclassName: \"KnowledgeSearchServer\",\n\trenderable: true\n}\n</definition>\n\n<attributes>\n[\n\t{\n\t\t\"name\": \"mode\",\n\t\t\"label\": \"View mode\",\n\t\t\"type\": \"choice\",\n\t\t\"attributes\": {\n\t\t\tdefault: \"condition\",\n\t\t\tchoices: [\n\t\t\t\t{ value: \"condition\", label: \"By condition\" },\n\t\t\t\t{ value: \"search\", label: \"By search\" }\n\t\t\t]\n\t\t}\n\t},\n\t{\n\t\t\"name\": \"search_text\",\n\t\t\"label\": \"Search text\",\n\t\t\"type\": \"string\",\n\t\t\"attributes\": {\n\t\t\t\"mapping_enabled\": true\n\t\t}\n\t},\n\t{\n\t\t\"name\": \"title\",\n\t\t\"label\": \"Title\",\n\t\t\"type\": \"string\",\n\t\t\"attributes\": {\n\t\t}\n\t},\n\t{\n\t\t\"name\": \"condition\",\n\t\t\"label\": \"Condition\",\n\t\t\"type\": \"condition\",\n\t\t\"attributes\": {\n\t\t\t\"bucket_name\": \"knowledge\"\n\t\t}\n\t}\n]\n</attributes>\n\n<attributes_display_rules>\n\t[\n\t\t{\n\t\t\t\"slot\": \"search_text\",\n\t\t\t\"conditions\": {\n\t\t\t\t\"hidden\": \"[[[\\\"mode\\\",\\\"ne\\\",\\\"search\\\",\\\"By search\\\"]]]\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"slot\": \"condition\",\n\t\t\t\"conditions\": {\n\t\t\t\t\"hidden\": \"[[[\\\"mode\\\",\\\"ne\\\",\\\"condition\\\",\\\"By condition\\\"]]]\"\n\t\t\t}\n\t\t}\t\n\t]\n</attributes_display_rules>\n\n<style>\n\t.kbContainer {\n\t\tpadding: 10px 40px;\n\t}\n\t\n\t.kbArticle {\n\t\tmargin-left: 10px;\n\t\tpadding: 6px;\n\t\tborder-bottom: 1px solid #eee;\n\t}\n\t\n\t.kbArticle a {\n\t\ttext-decoration: none;\n\t\tfont-size: 1.4em;\n\t}\n\t\n\t.kbArticle a:hover {\n\t\ttext-decoration: underline;\n\t}\n\t\n\t.kbArticleText {\n\t\tmargin-left: 10px;\n\t\toverflow: hidden;\n\t\twhite-space: nowrap;\n\t\ttext-overflow: ellipsis;\n\t\tmax-width: 1500px;\n\t\tfont-style: italic;\n\t\t\n\t}\n</style>\n\n<template name=\"condition.container\">\n\t<div class=\"kbContainer\">\n\t\t<h2><%= attributes.title %></h2>\n\t\t\n\t\t<% if (data.articles.length == 0) { %>\n\t\t\tNo recent articles\n\t\t<% } %>\n\t\t   \n\t\t<% for(var i = 0; i < data.articles.length; i++) {%>\n\t\t\t<div class=\"kbArticle\">\n\t\t\t\t<a href='knowledge_view?id=<%= data.articles[i].id %>'><%= data.articles[i].title %></a>\n\t\t\t\t<div class='kbArticleText'>\n\t\t\t\t\t<%= data.articles[i].text %>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t<% } %>\n\t</div>\n</template>\n\n<template name=\"search.container\">\n\t<div class=\"kbContainer\">\n\t\t<h2><%= attributes.title %> - <%= attributes.search_text %></h2>\n\n\t\t<% if (data.articles.length == 0) { %>\n\t\t\tNo matches found\n\t\t<% } %>\n\t\t\t\n\t\t<% for(var i = 0; i < data.articles.length; i++) {%>\n\t\t\t<div class=\"kbArticle\">\n\t\t\t\t<a href='knowledge_view?id=<%= data.articles[i].id %>'><%= data.articles[i].title %></a>\n\t\t\t\t<div class='kbArticleText'>\n\t\t\t\t\t<%= data.articles[i].text %>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t<% } %>\n\t</div>\n</template>\n\t\t\n<script>\n\texports.component = ComponentUI.create({\n\t\tonLoad: function(data) {\n\t\t\tif (this.attributes.mode == 'condition') {\n\t\t\t\tthis.template('condition.container', this.container, data, this.attributes);\n\t\t\t} else {\n\t\t\t\tthis.template('search.container', this.container, data, this.attributes);\n\t\t\t}\n\t\t},\n\n\t\tclassName: \"KnowledgeSearch\"\n\t});\n</script>\n\n```",
+              "type": "markdown"
+            },
+            "component": "markup",
+            "h": "100%",
+            "id": "component_7200edbd0bd3f67b0eb8f84face5e75e",
+            "name": "component_7200edbd0bd3f67b0eb8f84face5e75e",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "component_a56e2c46057bd503d5b25fae8971322f": {
+            "attributes": {
+              "component": "knowledge_search_header",
+              "csstags": "",
+              "header_text": "How can we help?",
+              "search_label": "Search Knowledge",
+              "search_placeholder": "Search by keyword",
+              "target_page": "knowledge_search"
+            },
+            "component": "knowledge_search_header",
+            "h": "100%",
+            "id": "component_a56e2c46057bd503d5b25fae8971322f",
+            "name": "component_a56e2c46057bd503d5b25fae8971322f",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "component_aa3296508a6516a2820359a0d6eb286a": {
+            "attributes": {
+              "component": "markup",
+              "csstags": "",
+              "html": "",
+              "id": "447f22df67d14fd6957ee2f49345af03",
+              "markdown": "``` js\n<!DOCTYPE f8component>\n\n<definition>\n{\n\tid: \"knowledge_search_header\",\n\tlabel: \"Knowledge Search Header\",\n\trenderable: true\n}\n</definition>\n\n<attributes>\n[\n\t{\n\t\t\"name\": \"header_text\",\n\t\t\"label\": \"Header text\",\n\t\t\"type\": \"string\",\n\t\t\"attributes\": {\n\t\t\tdefault: \"How can we help?\"\n\t\t}\n\t},\n\t{\n\t\t\"name\": \"search_label\",\n\t\t\"label\": \"Search label\",\n\t\t\"type\": \"string\",\n\t\t\"attributes\": {\t\n\t\t\tdefault: \"Search Knowledge\"\n\t\t}\t\n\t},\n\t{\n\t\t\"name\": \"search_placeholder\",\n\t\t\"label\": \"Search placeholder text\",\n\t\t\"type\": \"string\",\n\t\t\"attributes\": {\t\n\t\t\tdefault: \"Search by keyword\"\n\t\t}\n\t},\n\t{\n\t\t\"name\": \"target_page\",\n\t\t\"label\": \"Target page\",\n\t\t\"type\": \"string\",\n\t\t\"attributes\": {\t\n\t\t\tdefault: \"knowledge_search\"\n\t\t}\n\t}]\n</attributes>\n\n<style>\n\t.searchOuterContainer {\n\t\tdisplay: flex;\n\t\talign-items: center;\n    \tjustify-content: center;\n\t\t\n\t\tbackground-color: var(--color-darker);\n\t\tcolor: var(--color-lighter);\n\t}\n\t\n\t.searchInnerContainer {\n\t    padding: 60px 0px;\n\t    width: 600px;\n\t}\n\t\n\t.searchHeader {\n\t\ttext-align: center;\n\t\tfont-size: 2.5em;\n\t\tmargin-bottom: 8px;\n\t}\n</style>\n\n<template name=\"search.container\">\n\t<div class=\"searchOuterContainer\">\n\t\t<div class=\"searchInnerContainer\">\n\t\t\t<div class=\"searchHeader\">\n\t\t\t\t<%= attributes.header_text %>\n\t\t\t</div>\n\n\t\t\t<div class=\"searchTitle\">\n\t\t\t\t<%= attributes.search_label %>\n\t\t\t</div>\n\n\t\t\t<div class=\"searchInput\"></div>\n\t\t</div>\n\t</div>\n</template>\n\n<script>\n\tvar PageURL = require('core/PageURL');\n\t\n\texports.component = ComponentUI.create({\n\t\tonLoad: function(data) {\t\t\t\n\t\t\tthis.template('search.container', this.container, data, this.attributes);\n\t\t\tthis._loadWidgets();\n\t\t},\n\t\t\n\t\t_loadWidgets: function() {\n\t\t\tvar input = this.container.find('.searchInput');\n\t\t\tvar inputDef = { name: 'text', type: 'string', attributes: { placeholder_text: this.attributes.search_placeholder, size: 80, onEnter: this._onEnter.bind(this) } };\n\t\t\t\n\t\t\tthis.widgetManager = new WidgetManager();\n\t\t\tvar widget = this.widgetManager.newWidget(inputDef);\n\t\t\twidget.addDecorationButton(\"Search\", \"fa fa-book\", this._onEnter.bind(this));\n\t\t\twidget.append(input);\n\t\t},\n\t\t\n\t\t_onEnter: function(e) {\n\t\t\tvar targetPath = this.attributes.target_page;\n\t\t\t\n\t\t\tvar pageURL = new PageURL(\"\");\n\t\t\tpageURL.setBundleName(this.getPageObject().getBundleName());\n\t\t\tpageURL.setPages(this.getParentContainer().getPagePath());\n\t\t\tpageURL.addLastPage(targetPath);\n\t\t\tpageURL.clearParms();\n\t\t\tpageURL.setParm(\"search\", this._getSearchText());\n\n\t\t\tthis.navigate(pageURL.toString());\n\t\t},\n\t\t\n\t\t_getSearchText: function() {\n\t\t\treturn this.widgetManager.getValue('text');\n\t\t},\n\n\t\tclassName: \"KnowledgeSearchHeader\"\n\t});\n</script>\n\n```",
+              "type": "markdown"
+            },
+            "component": "markup",
+            "h": "100%",
+            "id": "component_aa3296508a6516a2820359a0d6eb286a",
+            "name": "component_aa3296508a6516a2820359a0d6eb286a",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "container_2117c77eee9711890f7ab96d3d2a6af9": {
+            "contains": [
+              "component_7200edbd0bd3f67b0eb8f84face5e75e"
+            ],
+            "id": "container_2117c77eee9711890f7ab96d3d2a6af9",
+            "label": "Results Client",
+            "subContainer": true,
+            "type": "container"
+          },
+          "container_341e4549652ec2ccbef3dea59feb9dcb": {
+            "contains": [
+              "component_2ddb9468f6299ed4d8dc458e5b0883da"
+            ],
+            "id": "container_341e4549652ec2ccbef3dea59feb9dcb",
+            "label": "Results Server",
+            "subContainer": true,
+            "type": "container"
+          },
+          "container_778ca55ecb6d28bd583575aef32f0f4f": {
+            "contains": [
+              "component_677c2b3413300a6950d6dd730e0f3be2"
+            ],
+            "id": "container_778ca55ecb6d28bd583575aef32f0f4f",
+            "label": "Module",
+            "subContainer": true,
+            "type": "container"
+          },
+          "container_85d10c51e20c20dd758b12241b70b50b": {
+            "contains": [ ],
+            "icon": "",
+            "id": "container_85d10c51e20c20dd758b12241b70b50b",
+            "label": "Search Header Server",
+            "subContainer": true,
+            "type": "container"
+          },
+          "container_d1dd74b957e35a36b432835aef9e4178": {
+            "contains": [ ],
+            "id": "container_d1dd74b957e35a36b432835aef9e4178",
+            "label": "Module",
+            "subContainer": true,
+            "type": "container"
+          },
+          "container_d552f7d9992a34df31563e8f44cdbd76": {
+            "contains": [
+              "component_aa3296508a6516a2820359a0d6eb286a"
+            ],
+            "icon": "",
+            "id": "container_d552f7d9992a34df31563e8f44cdbd76",
+            "label": "Search Header Client",
+            "subContainer": true,
+            "type": "container"
+          }
+        },
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "knowledge",
+        "owner": "__SYSTEM_USER__",
+        "page_vars": {
+          "layout": {
+            "layout": [
+              {
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
+                    }
+                  ]
+                ],
+                "type": "section"
+              }
+            ],
+            "version": 1
+          },
+          "slots": {
+            "bucket": {
+              "attributes": { },
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              },
+              "name": "q",
+              "type": "string"
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "title": ""
+      }
+    }
+  }
+}

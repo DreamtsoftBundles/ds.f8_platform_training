@@ -1,0 +1,28 @@
+<!DOCTYPE f8component>
+
+<definition>
+{
+	"id": "simple_react",
+	"label": "Simple React",
+	"className": "SimpleReactServer",
+	renderable: true,
+	dependencies: ["react-core"]
+}
+</definition>
+
+<attributes>
+[
+
+]
+</attributes>
+
+<style>
+
+
+</style>
+
+
+<script>
+    const SimpleReact = require('simple_react/SimpleReact');
+    exports.component = ComponentUI.createReactComponent(SimpleReact);
+</script>

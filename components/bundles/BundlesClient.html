@@ -1,0 +1,456 @@
+
+<!DOCTYPE f8component>
+
+<definition>
+{
+	id: "bundles",
+	label: "Bundles",
+	className: "BundlesServer",
+	
+	scriptables: [
+  	 	{
+  	 		name: "BundleScriptable",
+  	 		className: "f8.bundles.BundleScriptable"
+  	 	}
+ 	]
+}
+</definition>
+
+<template name="bundle.box">
+		<div class="bundle-box" data-app-id="<%= data.value %>">
+			<div class="bundle-box-icon">
+				<% if (data.haveIcon) { %>
+					<a><img src="bundle/<%= data.bundle_id %>/content/images/bundle_icon.png"/></a>
+				<% } else { %>
+					<%
+						var icon = "cloud";
+						var iconColor = "#999999";
+						var divID = "NOBUNDLEIDAVAILABLE";
+						
+						if (!Object.isNil(data.icon))
+							icon = data.icon;
+							
+						if (!Object.isNil(data.value))
+							divID = data.value;
+							
+						if (!Object.isNil(data.icon_color))
+							iconColor = data.icon_color;
+							
+					%>
+					
+					<div id="<%= divID %>" class="icon-bundle">
+						<div style="background-color: <%= iconColor %>" class="icon-bundle-inner">
+							<%== IconLibraries.getHTML(icon, { 'classes': 'fa-5x' }) %>
+						</div>
+					</div>
+					
+				<% } %>
+			</div>
+			<div class="bundle-box-title">
+				<%= TRANSLATE(data.label) %><br>
+			</div>
+		</div>
+</template>
+
+<template name="bundles.list">
+	<%== Templates.get("core/action.buttons", data) %>
+	
+	<div class="bundles">
+		<% if (data.bundles.length == 0) {%>
+			<div class='alert alert-warning'><%~ You have no bundle access! %></div>
+		<% } else {%>
+			<% for(var i = 0; i < data.bundles.length; i++) {
+					var bundleDef = data.bundles[i];
+			%>
+				<%== Templates.get('bundles/bundle.box', bundleDef) %>
+				
+			<% } %>
+		<% } %>
+	</div>
+</template>
+
+<template name="bundle.setup.dialog">
+	<div class="list-group">
+		<a href="javascript:void(0)" class="list-group-item bundle-setup-load-item bundle-setup-load-from-store">
+			<span class='fa fa-cart-arrow-down fa-picker'/><%~ Load a bundle from the store %>
+		</a>
+		<a href="javascript:void(0)" class="list-group-item bundle-setup-load-item bundle-setup-load-from-remote">
+			<span class='fa fa-cloud fa-picker'/><%~ Load a bundle from a URL %>
+		</a>
+		<a href="javascript:void(0)" class="list-group-item bundle-setup-load-item bundle-setup-create-new">
+			<span class='fa fa-plus-circle fa-picker'/><%~ Create a new bundle %>
+		</a>
+	</div>
+</template>
+
+<style>
+	:root {
+		--bundle-inner-color: var(--color-lightest);
+	}
+	
+	div.bundles {
+		padding: var(--spacing-lg);
+		text-align: center;
+	}
+	
+	div.bundle-box:hover {
+        transform: scale(1.1);
+	}
+	
+	div.bundle-box {
+		display: inline-block;
+		padding: var(--spacing-lg);
+		text-align: center;
+		cursor: pointer;
+		width: 180px;
+		vertical-align: top;
+		border-radius: var(--border-radius-lg);
+	}
+	
+	div.bundle-box-title {
+		padding: var(--spacing);
+		text-align: center;
+		font-weight: bold;
+	}
+	
+	div.icon-bundle {
+		width: 140px;
+		height: 140px;
+		border-radius: 100px;
+		background-color: var(--bg-secondary);
+		border: 2px solid var(--button-border-color);
+		margin: 0 auto;
+	}
+	
+	div.icon-bundle-inner {
+		padding-top: 30px;
+		width: 136px;
+		height: 136px;
+		border-radius: 100px;
+		color: var(--bundle-inner-color);
+		text-decoration: none;
+		border: 4px solid var(--bundle-inner-color);
+	}
+	
+	.bundle-setup-load-item {
+		font-size: var(--font-size-xl);
+	}
+	
+	.fa-picker {
+		padding-right: var(--spacing-horizontal-lg);
+		min-width: 30px;
+		text-align: center;
+	}
+	
+	.update-badge {
+	   position:relative;
+	}
+	
+	.update-badge[badge-data]:after{
+	    content:attr(badge-data);
+	    /*
+		font-size:.7em;
+		width:18px;height:18px;
+		line-height:18px;
+		border-radius:50%;
+		box-shadow:0 0 1px #333;
+		*/
+		
+		position: absolute;
+	    right:-10px;
+	    top:-5px;
+	    background:red;
+	    text-align: center;
+	    border-radius: 30px 30px 30px 30px;
+	    color:white;
+	    padding:5px 10px;
+	    font-weight: bold;
+	}
+</style>
+
+<script>
+	var ActionHeader = require('core/ActionHeader');
+	var BundleBrowserDialog = require('bundles/BundleBrowserDialog');
+	var Configuration = require('bootstrap/Configuration');
+	
+	exports.component = ComponentUI.create({
+		onAfterLoad: function(data) {
+			this.actionHeader = new ActionHeader(this.getParentContainer().getContainerDiv());
+			this.actionHeader.add("back", TRANSLATE("Go back"), "&#8617;", function() { history.back(); });
+			
+			if (Object.isTrue(data.canSetup))
+				this.actionHeader.addMiddle("load", "", TRANSLATE("Bundle setup"), $.proxy(function() { this.loadBundleSetup(data) }, this));
+			if (Configuration.isSuperUser())
+				this._loadBadges(data);
+		},
+	
+		onLoad: function(data) {
+			var container = this.container;
+			var attributes = this.attributes;
+			
+			if (Object.isNil(attributes.include_actions))
+				attributes.include_actions = true;
+
+			this.template('core/container.wrapper', container, $.extend({}, data, {
+				bodyTemplate: "bundles/bundles.list"
+			}), attributes);
+			
+			var bundleBox = container.find('.bundle-box');
+			bundleBox.on('click', function(e) {
+				var t = $(e.currentTarget);
+				var appId = t.data('app-id');
+				var url = new PageURL('').setBundleName(appId).setPages('home');
+				PageLoader.navigate(url);
+			});
+		},
+		
+		showBundleBrowser: function(data) {
+			var dialog = new BundleBrowserDialog();
+			dialog.show($.proxy(this.loadGitBundle, this));
+		},
+		
+		loadBundleSetup: function(data) {
+			var tdialog = new TemplateDialog(TRANSLATE('Bundle setup'), 'bundles', 'bundle.setup.dialog');
+			tdialog.setHandler(this);
+			tdialog.setFull(true);
+			tdialog.button(TRANSLATE("Cancel"), $.proxy(tdialog.destroy, tdialog));
+			var container = tdialog.show();
+			
+			container.find('.bundle-setup-load-from-store').on('click', $.proxy(function() {
+				tdialog.destroy();
+				this.showBundleBrowser(data); 
+			}, this));
+			
+			container.find('.bundle-setup-load-from-remote').on('click', $.proxy(function() {
+				tdialog.destroy();
+				this.gitBundleDialog();
+			}, this));
+			
+			container.find('.bundle-setup-create-new').on('click', $.proxy(function() {
+				tdialog.destroy();
+				this.createBundleDialog();
+			}, this));
+		},
+		
+		gitBundleDialog: function() {
+			var wdialog = new WidgetDialog(TRANSLATE('Load remote GIT bundle'));
+			wdialog.setHandler(this);
+			wdialog.setFull(true);
+			wdialog.button(TRANSLATE("Cancel"), $.proxy(wdialog.destroy, wdialog));
+			wdialog.button(TRANSLATE("OK"), $.proxy(this.invokeLoadRemoteGitBundle, this));
+			
+			wdialog.addDisplayRules([
+   				{ slot: 'url', conditions: { mandatory: "mandatory:eq:1" } },
+				{ slot: 'credential', conditions: {
+					hidden: 'use_existing_credential:eq:false',
+					mandatory: 'use_existing_credential:eq:true' } },
+				{ slot: 'credential_type', conditions: {
+					hidden: 'use_existing_credential:eq:true' } },
+				{ slot: 'credential_label', conditions: {
+					hidden: ['use_existing_credential', 'eq', 'true'],
+					mandatory: ['use_existing_credential', 'eq', 'false'] } },
+				{ slot: 'sshkey', conditions: {
+					hidden: [['credential_type', 'ne', 'sshkey'], 'OR', ['use_existing_credential', 'eq', 'true']],
+					mandatory: [['credential_type', 'eq', 'sshkey'], 'AND', ['use_existing_credential', 'eq', 'false']] } },
+				{ slot: 'passphrase', conditions: {
+					hidden: [['credential_type', 'ne', 'sshkey'], 'OR', ['use_existing_credential', 'eq', 'true']],
+					mandatory: [['credential_type', 'eq', 'sshkey'], 'AND', ['use_existing_credential', 'eq', 'false']] } },
+				{ slot: 'username', conditions: {
+					hidden: [['credential_type', 'ne', 'userpass'], 'OR', ['use_existing_credential', 'eq', 'true']],
+					mandatory: [['credential_type', 'eq', 'userpass'], 'AND', ['use_existing_credential', 'eq', 'false']] } },
+				{ slot: 'password', conditions: {
+					hidden: [['credential_type', 'ne', 'userpass'], 'OR', ['use_existing_credential', 'eq', 'true']],
+					mandatory: [['credential_type', 'eq', 'userpass'], 'AND', ['use_existing_credential', 'eq', 'false']] } }
+			]);
+
+			// hack to set default value
+			wdialog.setValues({use_existing_credential: '0'});
+
+			wdialog.show({
+							credential: {
+								name: 'credential',
+								label: TRANSLATE('Credential'),
+								'Credential': "",
+								type: 'choice',
+								attributes: {
+									choice_type: "dropdown",
+									bucket_name: "credential"
+								}
+							},
+							url: {
+								name: 'url',
+								label: TRANSLATE('URL'),
+								type: 'string'
+							},
+							use_existing_credential: {
+								name: 'use_existing_credential',
+								label: TRANSLATE('Use existing credential'),
+								type: 'boolean'
+							},
+							credential_type: {
+								name: 'credential_type',
+								label: TRANSLATE('Credential type'),
+								type: 'choice',
+								attributes: {
+									choices: [{
+										label: TRANSLATE('Username/Password'),
+										value: 'userpass'
+									}, {
+										label: TRANSLATE('SSH Private Key'),
+										value: 'sshkey'
+									}]
+								}
+							},
+							credential_label: {
+								name: 'credential_label',
+								label: TRANSLATE('Label'),
+								type: 'string'
+							},
+							sshkey: {
+								name: 'sshkey',
+								label: TRANSLATE('SSH Key'),
+								type: 'big_string'
+							},
+							passphrase: {
+								name: 'passphrase',
+								label: TRANSLATE('Passphrase'),
+								type: 'password'
+							},
+							username: {
+								name: 'username',
+								label: TRANSLATE('Username'),
+								type: 'string'
+							},
+							password: {
+								name: 'password',
+								label: TRANSLATE('Password'),
+								'Password': "",
+								type: 'password'
+							}
+						}, ['url', 'use_existing_credential',
+							'credential_type', 'credential', 'credential_label', 'sshkey',
+							'passphrase', 'username', 'password' ]);
+		},
+
+		invokeLoadRemoteGitBundle: function(dialog) {
+			if (!dialog.getWidgetManager().validate())
+				return;
+
+			var values = dialog.getWidgetManager().toValueMap();
+
+			this.loadGitBundle(values);
+		},
+		
+		createBundleDialog: function() {
+			var wdialog = new WidgetDialog('New bundle');
+			wdialog.setHandler(this);
+			wdialog.setFull(true);
+			wdialog.button(TRANSLATE("Cancel"), $.proxy(wdialog.destroy, wdialog));
+			wdialog.button(TRANSLATE("OK"), $.proxy(this.invokeCreateBundle, this));
+			
+			wdialog.addDisplayRules([
+				{ slot: 'bundle_name', conditions: { mandatory: "mandatory:eq:1:true" } },
+				{ slot: 'title', conditions: { mandatory: "mandatory:eq:1:true" } }
+			]);
+			
+			wdialog.show({
+							bundle_name: {
+								name: 'bundle_name',
+								label: TRANSLATE('Bundle Name'),
+								type: 'string',
+						    	attributes: {
+						    		only_alphanum: true,
+			          				pattern_validation: "1",
+			          				pattern_value: "^[a-z0-9_]+$",
+			          				placeholder_text: TRANSLATE("Only lowercase alphanumeric or _ allowed"),
+			          				internal: true,
+						            insert_only: true
+			        			}
+							},
+							title: {
+								name: 'title',
+								label: TRANSLATE('Title'),
+								type: 'string'
+							}
+						}, [ 'title', 'bundle_name' ]);
+		},
+		
+		invokeCreateBundle: function(dialog) {
+			if (!dialog.getWidgetManager().validate())
+				return;
+
+			var values = dialog.getWidgetManager().toValueMap();
+			
+			Server.rest('bundles/ajax/createBundle', values,
+					{
+						callback: $.proxy(function(response) {
+							if (response && response.status == 'good') {
+								Client.reload(true);
+								return;
+							}
+							
+							Client.error(TRANSLATE('Problem creating bundle: %{message}', { message: response.status_message}));
+						}, this)
+					});
+
+			dialog.destroy();
+		},
+		
+		loadGitBundle: function(values) {
+			Server.rest('bundles/ajax/loadRemoteGitBundle', values,
+					{
+						noEcho: ["password"],
+						callback: $.proxy(function(response) {
+							if (response && response.status == 'good') {
+								Client.reload(true);
+								return;
+							}
+							
+							Client.error(TRANSLATE('Unable to load bundle: %{message}', { message: response.status_message}));
+						}, this)
+					});
+		},
+		
+		toData: function() {
+			var data = {};
+			var container = $(this.getParentContainer().getContainerDiv());
+			var items = container.find('.bundle-box');
+			
+			for(var i = 0; i < items.length; i++) {
+				var item = $(items[i]);
+				var itemId = item.attr('data-app-id');
+				data[itemId] = { loading: Object.isTrue(item.attr('data-loading')) };
+			}
+			
+			return data;
+		},
+		
+		_loadBadges: function(data) {
+			Server.rest('bundles/ajax/getBundleUpdateCounts', data,
+				{
+					hideLoading: true,
+					callback: $.proxy(function(response) {
+						if (Object.isNil(response) || response.status != 'good') 
+							return;
+	
+						var bundlesWithUpdatesObject = response.data.bundlesWithUpdates;
+						
+						//Iterate through and create the badges if needed
+						for (var key in bundlesWithUpdatesObject) {
+							var bundleId = key;
+							var bundleUpdateCount = bundlesWithUpdatesObject[key];
+							if (bundleUpdateCount > 0) {
+								var selectorName = '#' + bundleId.replace('.', '\\.')
+								var item = $(selectorName);
+								item.addClass('update-badge');
+								item.attr('badge-data', bundleUpdateCount);
+							}
+						}
+						
+					}, this)
+				});
+		},
+		
+		className: "BundlesUI"
+	});
+</script>

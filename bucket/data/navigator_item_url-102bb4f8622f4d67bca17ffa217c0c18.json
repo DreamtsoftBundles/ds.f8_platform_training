@@ -1,0 +1,23 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "102bb4f8622f4d67bca17ffa217c0c18": {
+        "color": "",
+        "created": "1572915385657",
+        "description": "Mandatory, Visible, Read-Only",
+        "icon": "fontawesome:picture-o",
+        "id": "102bb4f8622f4d67bca17ffa217c0c18",
+        "label": "Display Rules",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "2",
+        "owner": "__SYSTEM_USER__",
+        "parent": "0eb08b48e8214d3e872314c519e672ef",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "url": "display_rules"
+      }
+    }
+  }
+}

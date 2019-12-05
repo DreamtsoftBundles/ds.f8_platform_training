@@ -1,0 +1,23 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "93beed309baa40a48336627a3cb43f90": {
+        "color": "",
+        "created": "1575497526592",
+        "description": "",
+        "icon": "",
+        "id": "93beed309baa40a48336627a3cb43f90",
+        "label": "www.google.com",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "2",
+        "owner": "__SYSTEM_USER__",
+        "parent": "252a7161131b434aa7328abf32286541",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "url": "www.google.com"
+      }
+    }
+  }
+}

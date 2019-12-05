@@ -1,0 +1,28 @@
+{
+  "bucket_data": {
+    "navigator_item_list": {
+      "db054abc15c847e488402a40ef1bd053": {
+        "bucket": "vj99yvmj",
+        "color": "",
+        "condition": [ ],
+        "created": "1575486148466",
+        "description": "Sending a notification",
+        "icon": "fontawesome:envelope",
+        "id": "db054abc15c847e488402a40ef1bd053",
+        "label": "Notification Actions",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "1",
+        "owner": "__SYSTEM_USER__",
+        "parent": "7b31c65753f4415c953687c06bafd53b",
+        "schema_version": "0.0",
+        "sort_by": "",
+        "sort_direction": "ascending",
+        "subpage": "",
+        "system_updated": "0",
+        "view": ""
+      }
+    }
+  }
+}

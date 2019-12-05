@@ -1,0 +1,205 @@
+
+<!DOCTYPE f8component>
+
+<definition>
+{
+	"id": "before_pictures",
+	"label": "Before Pictures",
+	"className": "BeforePicturesServer",
+	renderable: true
+}
+</definition>
+
+<attributes>
+[
+	{
+		name: "images_only",
+		label: "Images only",
+		type: "boolean"
+	}
+]
+</attributes>
+
+<style>
+	 .attachmentsContainer {
+		min-height: 300px;
+	 }
+	 
+	 .attachmentItem {
+	 	display: inline-block;
+	 	text-align: center;
+	 	vertical-align: top;
+	 	cursor: pointer;
+		border: var(--border);
+	 	margin-left: var(--spacing-horizontal);
+	 	margin-top: var(--spacing-vertical);
+	 	padding: var(--spacing);
+	 }
+	 
+	 .attachmentItemIcon {
+	 	font-size: 6.5em;
+	 	width: 140px;
+	 	height: 140px;
+	 }
+	 
+	 .attachmentItemName {
+	    width: 140px;
+	    text-overflow: ellipsis;
+	    overflow: hidden;
+	    white-space: nowrap;
+	 }
+	 
+	 .attachmentItemImageUpload {
+		color: black;
+	 }
+</style>
+
+<template name="attachment.browser">
+	<div class="attachmentsContainer">
+	</div>
+</template>
+
+<template name="attachment.item">
+	<div class="attachmentItem">
+		<div class="attachmentItemIcon"></div>
+		<div class="attachmentItemName"></div>
+	</div>
+</template>
+
+<template name="attachment.imageview">
+	<div>
+		<img src='<%= data.attachment.url %>'/>
+	</div>
+</template>
+
+<script>
+	exports.component = ComponentUI.create({
+		onBeforeLoad: function(data, attributes) {
+			this.parentBucket = data.parentBucket;
+			this.parentId = data.parentId;
+			this.imagesOnly = true;
+		},
+		
+		onLoad: function(data) {
+			var container = this.container;
+			var attributes = this.attributes;
+			
+			this.template('core/container.wrapper', container, $.extend({}, data, {
+				bodyTemplate: "attachments/attachment.browser"
+			}), attributes);
+			
+			this._showAttachments(container, data.attachments);
+		},
+		
+		_showAttachments: function(container, attachments) {
+			this._addUploadImage(container);
+			
+			for(var i = 0; i < attachments.length; i++) {
+				var attachment = attachments[i];
+				
+				if (this.imagesOnly && !attachment.type.startsWith('image/'))
+					continue;
+				
+				this._renderAttachmentItem(container, attachments[i]);
+			}
+		},
+		
+		_renderAttachmentItem: function(container, attachment) {
+			var attachmentBox = $(Templates.get("attachments/attachment.item", {}, {}));
+			attachmentBox.data('attachment', attachment);
+
+			if (attachment.type.startsWith('image/')) {
+				var imgIcon = $('<img/>', { "src": attachment.url, width: "120px", height: "120px" });
+				
+				attachmentBox.find('.attachmentItemIcon').append(imgIcon);
+				attachmentBox.on('click', $.proxy(this._imagePreview, this));
+				
+				attachmentBox.find('.attachmentItemName').append(attachment.name);
+			} else {
+				var aHrefName = $('<a/>', { "href": attachment.url, "target": "_blank" });
+				aHrefName.css("text-decoration", "none");
+				aHrefName.text(attachment.name);
+
+				var faIcon = "fa-file-o";
+				
+				if (attachment.type == "application/pdf")
+					faIcon = "fa-file-pdf-o";
+				else if (attachment.type == "application/zip")
+					faIcon = "fa-file-archive-o";
+				else if (attachment.name.endsWith(".txt") || attachment.name.endsWith(".patch"))
+					faIcon = "fa-file-text-o";
+				
+				var iconSpan = $('<span/>', { "class": "fa " + faIcon });
+				
+				var aHrefImg = $('<a/>', { "href": attachment.url, "target": "_blank" });
+				aHrefImg.append(iconSpan);
+				
+				attachmentBox.find('.attachmentItemIcon').append(aHrefImg);
+				attachmentBox.find('.attachmentItemName').append(aHrefName);
+			}
+
+			container.find('.attachmentsContainer').append(attachmentBox);
+		},
+		
+		_imagePreview: function(e) {
+			var attachment = $(e.delegateTarget).data('attachment');
+			
+			var tdialog = new TemplateDialog(TRANSLATE('Image'), 'attachments', 'attachment.imageview');
+			tdialog.setFull(true);
+			tdialog.button(TRANSLATE('Cancel'), function() { tdialog.cancel() });
+			tdialog.button(TRANSLATE('OK'), function() { tdialog.ok(); });
+			tdialog.show({ attachment: attachment });
+		},
+		
+		_addUploadImage: function(container) {
+			var t = $(Templates.get("attachments/attachment.item", {}, {}));
+			
+			var span = $('<span/>', { "class": "fa fa-upload"});
+			t.addClass("attachmentItemImageUpload");
+			t.on('click', $.proxy(this._uploadClickEvent, this));
+			t.find('.attachmentItemIcon').append(span);
+			
+			container.find('.attachmentsContainer').append(t);
+			t.find('.attachmentItemName').append(TRANSLATE("Upload a file..."));
+		},
+		
+		_uploadClickEvent: function(e) {
+			var d = $('<input/>', {
+				id:"upload_before" + Client.guid(),
+				type: "file", "multiple": true,
+				accept: (this.imagesOnly? "image/*" : "*/*"),
+				"capture": "camera"
+			});
+			
+			d.css("visibility", "hidden");
+			d.css("position", "absolute");
+			d.css("left", "0px");
+			d.css("top", "0px");
+			d.on('change', $.proxy(this._incomingAttachments, this));
+			d.appendTo(document.body);
+			
+			d.click();
+		},
+		
+		_incomingAttachments: function(e) {
+			var filesToUpload = [];
+			
+			for(var i = 0; i < e.target.files.length; i++) {
+				var file = e.target.files[i];
+				filesToUpload.push({ fileObject: file, data: { bucketName: this.parentBucket, recordId: this.parentId }});
+			}
+			
+			Server.uploads(filesToUpload, $.proxy(this._incomingAttachmentDone, this), $.proxy(this._incomingAttachmentsDone, this));
+		},
+		
+		_incomingAttachmentDone: function(e) {
+		},
+		
+		_incomingAttachmentsDone: function() {
+			this.reload();
+		},
+
+		className: "BeforePicturesClient"
+	});
+
+</script>

@@ -1,0 +1,23 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "6dcdc8b548724475a9cb744e1fbb2136": {
+        "color": "",
+        "created": "1575486342443",
+        "description": "Reusable blocks of script",
+        "icon": "fontawesome:object-ungroup",
+        "id": "6dcdc8b548724475a9cb744e1fbb2136",
+        "label": "Modules",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "1",
+        "owner": "__SYSTEM_USER__",
+        "parent": "0eb08b48e8214d3e872314c519e672ef",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "url": "bundle_administration?tree_q=%5b\"parent\",\"eq\",\"ds.f8_platform_training\"%5d"
+      }
+    }
+  }
+}

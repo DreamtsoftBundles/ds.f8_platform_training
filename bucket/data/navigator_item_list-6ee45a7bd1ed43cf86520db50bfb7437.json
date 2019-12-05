@@ -1,0 +1,28 @@
+{
+  "bucket_data": {
+    "navigator_item_list": {
+      "6ee45a7bd1ed43cf86520db50bfb7437": {
+        "bucket": "action_browser",
+        "color": "",
+        "condition": [ ],
+        "created": "1575486147958",
+        "description": "Buttons",
+        "icon": "fontawesome:mouse-pointer",
+        "id": "6ee45a7bd1ed43cf86520db50bfb7437",
+        "label": "Browser Actions",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "0",
+        "owner": "__SYSTEM_USER__",
+        "parent": "7b31c65753f4415c953687c06bafd53b",
+        "schema_version": "0.0",
+        "sort_by": "",
+        "sort_direction": "ascending",
+        "subpage": "",
+        "system_updated": "0",
+        "view": ""
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "bucket_data": {
+    "navigator_item_flow": {
+      "92ec3d3e0c204f668604b61aba8c3e4d": {
+        "color": "",
+        "created": "1575497527071",
+        "description": "",
+        "flow": "separate_file://bucket/data/navigator_item_flow-92ec3d3e0c204f668604b61aba8c3e4d-flow.js",
+        "icon": "",
+        "id": "92ec3d3e0c204f668604b61aba8c3e4d",
+        "label": "Workflow",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "3",
+        "owner": "__SYSTEM_USER__",
+        "parent": "252a7161131b434aa7328abf32286541",
+        "schema_version": "0.0",
+        "system_updated": "0"
+      }
+    }
+  }
+}

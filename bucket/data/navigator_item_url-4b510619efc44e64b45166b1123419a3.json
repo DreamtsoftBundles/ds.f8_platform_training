@@ -1,0 +1,23 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "4b510619efc44e64b45166b1123419a3": {
+        "color": "",
+        "created": "1572913475050",
+        "description": "Buckets, slots, mappers, extenders, APIs, etc",
+        "icon": "fontawesome:database",
+        "id": "4b510619efc44e64b45166b1123419a3",
+        "label": "Data Service",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "2",
+        "owner": "__SYSTEM_USER__",
+        "parent": "9a04c24118f5494cb5deaf2ee13ea163",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "url": "data_service"
+      }
+    }
+  }
+}

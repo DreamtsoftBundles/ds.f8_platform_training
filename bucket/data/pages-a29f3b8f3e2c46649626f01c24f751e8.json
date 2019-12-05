@@ -1,0 +1,123 @@
+{
+  "bucket_data": {
+    "pages": {
+      "a29f3b8f3e2c46649626f01c24f751e8": {
+        "created": "1574285996933",
+        "id": "a29f3b8f3e2c46649626f01c24f751e8",
+        "layout": {
+          "__start__": {
+            "contains": [
+              "component_22afc6b7762c0593b7ad3bde9fec4fe0"
+            ],
+            "h": "100%",
+            "id": "__start__",
+            "type": "container",
+            "w": "100%"
+          },
+          "component_22afc6b7762c0593b7ad3bde9fec4fe0": {
+            "attributes": {
+              "allow_sorting": "true",
+              "bucket": "1hcfylls",
+              "columns": [
+                "first_name",
+                "last_name",
+                "company",
+                "city",
+                "description"
+              ],
+              "component": "list",
+              "csstags": "",
+              "details_layout": "",
+              "force_condition": "[]",
+              "height": 300,
+              "height_option": "",
+              "id": "1540078944c0bae191bc7216050bc806",
+              "inline_details": false,
+              "list_spacing": "",
+              "refresh_interval": 0,
+              "show_subtenant_data": false,
+              "skip_url_changes": false,
+              "sort_descending": "0",
+              "sort_slot": "",
+              "title": "",
+              "use_details": "false",
+              "view": "default"
+            },
+            "component": "list",
+            "h": "100%",
+            "id": "component_22afc6b7762c0593b7ad3bde9fec4fe0",
+            "name": "component_22afc6b7762c0593b7ad3bde9fec4fe0",
+            "needs_subpage_target": false,
+            "type": "component",
+            "w": "100%"
+          }
+        },
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "list.default.training",
+        "owner": "__SYSTEM_USER__",
+        "page_vars": {
+          "layout": {
+            "layout": [
+              {
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
+                    }
+                  ]
+                ],
+                "type": "section"
+              }
+            ],
+            "version": 1
+          },
+          "slots": {
+            "bucket": {
+              "attributes": { },
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              },
+              "name": "q",
+              "type": "string"
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "title": ""
+      }
+    }
+  }
+}

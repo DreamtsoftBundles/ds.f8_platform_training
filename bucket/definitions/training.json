@@ -1,0 +1,105 @@
+{
+    "bucket_definition": {
+        "1hcfylls": {
+            "attributes": { },
+            "id": "1hcfylls",
+            "labels": {
+                "label": "Training",
+                "labelp": "Trainings"
+            },
+            "name": "training",
+            "schema_tag": "",
+            "slots": [
+                {
+                    "attributes": {
+                        "bucket_name": "user",
+                        "buckets": "false",
+                        "buckets_use_both": "false",
+                        "choice_type": "typeahead",
+                        "hide_jumpto": "false",
+                        "multiple": "false",
+                        "none_option": "false",
+                        "slot_types": "false",
+                        "slots": "false",
+                        "sort_choices": "0",
+                        "use_parent_bucket": "false"
+                    },
+                    "labels": {
+                        "label": "Manager",
+                        "labelp": "Managers"
+                    },
+                    "name": "manager",
+                    "type": "choice"
+                },
+                {
+                    "attributes": {
+                        "maxlength": "0",
+                        "only_alphanum": "false",
+                        "only_uppercase": "false",
+                        "pattern_validation": "0"
+                    },
+                    "labels": {
+                        "label": "City",
+                        "labelp": "Cities"
+                    },
+                    "name": "city",
+                    "type": "string"
+                },
+                {
+                    "attributes": {
+                        "default_rows": "4"
+                    },
+                    "labels": {
+                        "label": "Description",
+                        "labelp": "Descriptions"
+                    },
+                    "name": "description",
+                    "type": "big_string"
+                },
+                {
+                    "attributes": {
+                        "maxlength": "0",
+                        "only_alphanum": "false",
+                        "only_uppercase": "false",
+                        "pattern_validation": "0"
+                    },
+                    "labels": {
+                        "label": "Last Name",
+                        "labelp": "Last Names"
+                    },
+                    "name": "last_name",
+                    "type": "string"
+                },
+                {
+                    "attributes": {
+                        "maxlength": "0",
+                        "only_alphanum": "false",
+                        "only_uppercase": "false",
+                        "pattern_validation": "0"
+                    },
+                    "labels": {
+                        "label": "Company",
+                        "labelp": "Companies"
+                    },
+                    "name": "company",
+                    "type": "string"
+                },
+                {
+                    "attributes": {
+                        "maxlength": "0",
+                        "only_alphanum": "false",
+                        "only_uppercase": "false",
+                        "pattern_validation": "0"
+                    },
+                    "labels": {
+                        "label": "First Name",
+                        "labelp": "First Names"
+                    },
+                    "name": "first_name",
+                    "type": "string"
+                }
+            ],
+            "type": "records"
+        }
+    }
+}

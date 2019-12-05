@@ -1,0 +1,22 @@
+{
+  "mappings": ";;;;;;;;;;;;AAAA,IAAMA,QAAQC,QAAQ,OAAR,CAAd;;IAEMC,e;;;;;;;;;;;2BACI;AACR,OAAIC,gBAAJ;;AAEA,OAAI,KAAKC,KAAL,CAAWC,mBAAf,EAAoC;AACnCF,cACC;AAAA;AAAA,OAAK,WAAU,8BAAf;AACC;AAAA;AAAA;AAAA;AAAA,MADD;AAEC;AAAA;AAAA;AAAA;AAAA,MAFD;AAGC;AAAA;AAAA;AAAA;AAAA,MAHD;AAIC;AAAA;AAAA;AAAA;AAAA,MAJD;AAKC;AAAA;AAAA;AAAA;AAAA;AALD,KADD;AASA,IAVD,MAUO;AACNA,cACC;AAAA;AAAA;AAAA;AAAA,KADD;AAKA;;AAED,UACC;AAAA;AAAA,MAAK,WAAU,mBAAf;AACEA;AADF,IADD;AAKA;;;;EA3B4BH,MAAMM,S;;AA8BpCC,OAAOC,OAAP,GAAiBN,eAAjB",
+  "file": "unknown",
+  "names": [
+    "React",
+    "require",
+    "SimpleReactBody",
+    "details",
+    "props",
+    "shouldToggleDetails",
+    "Component",
+    "module",
+    "exports"
+  ],
+  "sources": [
+    "modules/SimpleReactBody.es6.js"
+  ],
+  "sourcesContent": [
+    "const React = require('react');\n\nclass SimpleReactBody extends React.Component {\n\trender() {\n\t\tlet details;\n\t\t\n\t\tif (this.props.shouldToggleDetails) {\n\t\t\tdetails = (\n\t\t\t\t<div className=\"simple-react-body-details-on\">\n\t\t\t\t\t<p>My details 1</p>\n\t\t\t\t\t<p>My details 2</p>\n\t\t\t\t\t<p>My details 3</p>\n\t\t\t\t\t<p>My details 4</p>\n\t\t\t\t\t<p>My details 5</p>\n\t\t\t\t</div>\n\t\t\t)\n\t\t} else {\n\t\t\tdetails = (\n\t\t\t\t<div>\n\t\t\t\t\tDetails turned off\n\t\t\t\t</div>\n\t\t\t)\n\t\t}\n\t\t\n\t\treturn (\n\t\t\t<div className=\"simple-react-body\">\n\t\t\t\t{details}\n\t\t\t</div>\n\t\t);\n\t}\n}\n\nmodule.exports = SimpleReactBody;"
+  ],
+  "version": 3
+}

@@ -1,0 +1,23 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "d6cd5c0cc0994c1594f0f9ef377b5414": {
+        "color": "",
+        "created": "1572914107765",
+        "description": "CSS, icons, logos, colors, etc",
+        "icon": "fontawesome:paint-brush",
+        "id": "d6cd5c0cc0994c1594f0f9ef377b5414",
+        "label": "Theming & styling",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "1",
+        "owner": "__SYSTEM_USER__",
+        "parent": "884794d1fb774ca6906b00e7af48f3c8",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "url": ""
+      }
+    }
+  }
+}

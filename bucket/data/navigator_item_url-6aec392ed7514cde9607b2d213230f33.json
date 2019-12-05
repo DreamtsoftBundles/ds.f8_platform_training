@@ -1,0 +1,23 @@
+{
+  "bucket_data": {
+    "navigator_item_url": {
+      "6aec392ed7514cde9607b2d213230f33": {
+        "color": "",
+        "created": "1572913099910",
+        "description": "Pages, components, widgets, navigation, and other UI-related features ",
+        "icon": "fontawesome:picture-o",
+        "id": "6aec392ed7514cde9607b2d213230f33",
+        "label": "UI",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "1",
+        "owner": "__SYSTEM_USER__",
+        "parent": "9a04c24118f5494cb5deaf2ee13ea163",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "url": "ui"
+      }
+    }
+  }
+}
