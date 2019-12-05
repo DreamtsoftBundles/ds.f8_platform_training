@@ -6,67 +6,97 @@
         "id": "34ccf8f2e4ed4b68bf6aba353d060d08",
         "layout": {
           "__start__": {
-            "type": "container",
-            "w": "100%",
-            "h": "100%",
             "contains": [
               "component_bf313a0bdc9f1702df183bde6e54a9aa"
             ],
-            "layout_type": "page_components"
+            "h": "100%",
+            "id": "__start__",
+            "layout_type": "page_components",
+            "type": "container",
+            "w": "100%"
           },
           "component_bf313a0bdc9f1702df183bde6e54a9aa": {
-            "type": "component",
-            "component": "navigator",
-            "id": "component_bf313a0bdc9f1702df183bde6e54a9aa",
-            "name": "component_bf313a0bdc9f1702df183bde6e54a9aa",
-            "page_loading": false,
-            "needs_subpage_target": true,
             "attributes": {
-              "component": "navigator",
-              "button_width": 100,
               "button_height": 60,
               "button_sizing": "specify",
+              "button_width": 100,
+              "component": "navigator",
+              "csstags": "",
+              "event_name": "",
+              "id": "0ec7dc05f7a60dce6cc7f7bfed75de3a",
+              "menu_width": 300,
               "name": "",
               "navigator": "ab1096b95a224e3a9caba59ed9cb0a10",
-              "event_name": "",
-              "type": "circles",
-              "menu_width": 300,
-              "id": "0ec7dc05f7a60dce6cc7f7bfed75de3a"
+              "type": "tiles"
             },
-            "w": "100%",
-            "h": "100%"
+            "component": "navigator",
+            "h": "100%",
+            "id": "component_bf313a0bdc9f1702df183bde6e54a9aa",
+            "name": "component_bf313a0bdc9f1702df183bde6e54a9aa",
+            "needs_subpage_target": true,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
           }
         },
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
         "name": "ui_widgets",
         "owner": "3b0921ab64d94b40abc3298579438c87",
         "page_vars": {
           "layout": {
-            "version": 1,
             "layout": [
               {
-                "type": "section",
                 "colData": [ ],
                 "cols": [
                   [
                     {
-                      "type": "slot",
-                      "name": "q"
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
                     }
                   ]
-                ]
+                ],
+                "type": "section"
               }
             ],
-            "pageData": { }
+            "version": 1
           },
           "slots": {
-            "q": {
-              "type": "string",
+            "bucket": {
               "attributes": { },
-              "name": "q",
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
               "labels": {
                 "label": "Query",
                 "labelp": "Queries"
-              }
+              },
+              "name": "q",
+              "type": "string"
             }
           }
         },

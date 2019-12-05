@@ -1,63 +1,129 @@
 {
-  "bucket_data" : {
-    "pages" : {
-      "141c134a1fc0417cbbf73a8a340f67cd" : {
-        "created" : "1497374864051",
-        "id" : "141c134a1fc0417cbbf73a8a340f67cd",
-        "layout" : {
-          "component_608b0a66b096b6f5a3298417f04bf714" : {
-            "type" : "component",
-            "component" : "navigator",
-            "id" : "component_608b0a66b096b6f5a3298417f04bf714",
-            "name" : "component_608b0a66b096b6f5a3298417f04bf714",
-            "page_loading" : false,
-            "needs_subpage_target" : true,
-            "attributes" : {
-              "component" : "navigator",
-              "button_width" : 100,
-              "menu_icon" : "",
-              "button_height" : 60,
-              "name" : "",
-              "navigator" : "9f50e13c882242ff93db747f7d8f39ee",
-              "event_name" : "",
-              "id" : "8c1c7800bc0e69b3da9897062043fa3b",
-              "type" : "menu",
-              "menu_width" : 300
-            },
-            "w" : "20%",
-            "h" : "100%"
-          },
-          "component_972f6080087dcf55dc70b15cfa912f69" : {
-            "type" : "component",
-            "component" : "markup",
-            "id" : "component_972f6080087dcf55dc70b15cfa912f69",
-            "name" : "component_972f6080087dcf55dc70b15cfa912f69",
-            "page_loading" : false,
-            "needs_subpage_target" : false,
-            "attributes" : {
-              "component" : "markup",
-              "type" : "markdown",
-              "html" : ""
-            },
-            "h" : "100%",
-            "w" : "80%"
-          },
-          "__start__" : {
-            "type" : "container",
-            "w" : "100%",
-            "h" : "100%",
-            "contains" : [
+  "bucket_data": {
+    "pages": {
+      "141c134a1fc0417cbbf73a8a340f67cd": {
+        "created": "1497374864051",
+        "id": "141c134a1fc0417cbbf73a8a340f67cd",
+        "layout": {
+          "__start__": {
+            "contains": [
               "component_608b0a66b096b6f5a3298417f04bf714",
               "component_972f6080087dcf55dc70b15cfa912f69"
             ],
-            "layout_type" : "page_components"
+            "h": "100%",
+            "id": "__start__",
+            "layout_type": "page_components",
+            "type": "container",
+            "w": "100%"
+          },
+          "component_608b0a66b096b6f5a3298417f04bf714": {
+            "attributes": {
+              "button_height": 60,
+              "button_sizing": "specify",
+              "button_width": 100,
+              "component": "navigator",
+              "csstags": "",
+              "event_name": "",
+              "id": "8c1c7800bc0e69b3da9897062043fa3b",
+              "menu_icon": "",
+              "menu_width": 300,
+              "name": "",
+              "navigator": "9f50e13c882242ff93db747f7d8f39ee",
+              "type": "tiles"
+            },
+            "component": "navigator",
+            "h": "100%",
+            "id": "component_608b0a66b096b6f5a3298417f04bf714",
+            "name": "component_608b0a66b096b6f5a3298417f04bf714",
+            "needs_subpage_target": true,
+            "page_loading": false,
+            "type": "component",
+            "w": "20%"
+          },
+          "component_972f6080087dcf55dc70b15cfa912f69": {
+            "attributes": {
+              "component": "markup",
+              "csstags": "",
+              "html": "",
+              "id": "2d14ba7790e4c20eb53593bfdf3934fc",
+              "markdown": "# Data Service\n- Dreamtsoft can map data from any data source and display the data in a standard list and from view.\n- Use the menu on the left to browse the elements used to map a Google spreadsheet to a Dreamtsoft bucket.\n\n",
+              "type": "markdown"
+            },
+            "component": "markup",
+            "h": "100%",
+            "id": "component_972f6080087dcf55dc70b15cfa912f69",
+            "name": "component_972f6080087dcf55dc70b15cfa912f69",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "80%"
           }
         },
-        "name" : "data_service",
-        "owner" : "660abd5d94af4330aa41bd763bcae970",
-        "public" : "0",
-        "schema_version" : "0",
-        "system_updated" : "0"
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "data_service",
+        "owner": "660abd5d94af4330aa41bd763bcae970",
+        "page_vars": {
+          "layout": {
+            "layout": [
+              {
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
+                    }
+                  ]
+                ],
+                "type": "section"
+              }
+            ],
+            "version": 1
+          },
+          "slots": {
+            "bucket": {
+              "attributes": { },
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              },
+              "name": "q",
+              "type": "string"
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "title": ""
       }
     }
   }

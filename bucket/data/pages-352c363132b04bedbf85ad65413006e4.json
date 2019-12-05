@@ -21,13 +21,14 @@
               "button_sizing": "specify",
               "button_width": 100,
               "component": "navigator",
+              "csstags": "",
               "event_name": "",
               "id": "6a46bcccf6cd6413dea69d12bb359ec8",
               "menu_icon": "",
               "menu_width": 300,
               "name": "",
               "navigator": "7f2f2692baf743059642bfaac918b7d9",
-              "type": "circles"
+              "type": "tiles"
             },
             "component": "navigator",
             "h": "100%",
@@ -39,6 +40,9 @@
             "w": "100%"
           }
         },
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
         "name": "ui_components",
         "owner": "660abd5d94af4330aa41bd763bcae970",
         "page_vars": {

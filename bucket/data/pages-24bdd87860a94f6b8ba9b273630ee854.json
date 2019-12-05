@@ -6,58 +6,148 @@
         "id": "24bdd87860a94f6b8ba9b273630ee854",
         "layout": {
           "__start__": {
-            "type": "container",
-            "w": "100%",
-            "h": "100%",
             "contains": [
-              "component_d7e12036680d9cfc19780256310e1246"
+              "component_a278d26590d0dc7fb905594714f509f7"
             ],
-            "layout_type": "page_components"
+            "h": "100%",
+            "icon": "",
+            "id": "__start__",
+            "label": "Display",
+            "layout_type": "page_components",
+            "subContainers": [
+              "container_41631cd7bd0f28b41f6592739730a3b6",
+              "container_e6f5ca61b4e2a87e9ae0c5e131dac5a6"
+            ],
+            "type": "container",
+            "w": "100%"
           },
-          "component_d7e12036680d9cfc19780256310e1246": {
-            "type": "component",
-            "component": "movie_viewer",
-            "id": "component_d7e12036680d9cfc19780256310e1246",
-            "name": "component_d7e12036680d9cfc19780256310e1246",
-            "page_loading": false,
-            "needs_subpage_target": false,
+          "component_1af2a9087a3a8c0033278f629305d198": {
             "attributes": {
-              "component": "movie_viewer"
+              "component": "markup",
+              "csstags": "",
+              "html": "",
+              "id": "6d8fb0de0fefa7f632a5ffdf796ea792",
+              "markdown": "``` js\n//\n// attachments component class\n//\nvar PageComponent = require(\"ds.base/PageComponent\");\n\nvar SimpleReactServer = PageComponent.create({\n\t\"/\": function(attributes, vars, containerList) {\n\n\t\treturn new StatusResponse('good', {\n\n\t\t});\n\t},\n\n\t\n\ttype: \"SimpleReactServer\"\n});\n\nmodule.exports = SimpleReactServer;\n\n```",
+              "type": "markdown"
             },
-            "w": "100%",
-            "h": "100%"
+            "component": "markup",
+            "h": "100%",
+            "id": "component_1af2a9087a3a8c0033278f629305d198",
+            "name": "component_1af2a9087a3a8c0033278f629305d198",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "component_a278d26590d0dc7fb905594714f509f7": {
+            "attributes": {
+              "component": "simple_react",
+              "csstags": ""
+            },
+            "component": "simple_react",
+            "h": "100%",
+            "id": "component_a278d26590d0dc7fb905594714f509f7",
+            "name": "component_a278d26590d0dc7fb905594714f509f7",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "component_db8261b465f74a440a85a934c332f8aa": {
+            "attributes": {
+              "component": "markup",
+              "csstags": "",
+              "html": "",
+              "id": "9721bb6033085c4d4670c6b64c80c03b",
+              "markdown": "``` js\n<!DOCTYPE f8component>\n\n<definition>\n{\n\t\"id\": \"simple_react\",\n\t\"label\": \"Simple React\",\n\t\"className\": \"SimpleReactServer\",\n\trenderable: true,\n\tdependencies: [\"react-core\"]\n}\n</definition>\n\n<attributes>\n[\n\n]\n</attributes>\n\n<style>\n\n\n</style>\n\n\n<script>\n    const SimpleReact = require('simple_react/SimpleReact');\n    exports.component = ComponentUI.createReactComponent(SimpleReact);\n</script>\n```",
+              "type": "markdown"
+            },
+            "component": "markup",
+            "h": "100%",
+            "id": "component_db8261b465f74a440a85a934c332f8aa",
+            "name": "component_db8261b465f74a440a85a934c332f8aa",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "container_41631cd7bd0f28b41f6592739730a3b6": {
+            "contains": [
+              "component_db8261b465f74a440a85a934c332f8aa"
+            ],
+            "id": "container_41631cd7bd0f28b41f6592739730a3b6",
+            "label": "Client",
+            "subContainer": true,
+            "type": "container"
+          },
+          "container_e6f5ca61b4e2a87e9ae0c5e131dac5a6": {
+            "contains": [
+              "component_1af2a9087a3a8c0033278f629305d198"
+            ],
+            "id": "container_e6f5ca61b4e2a87e9ae0c5e131dac5a6",
+            "label": "Server",
+            "subContainer": true,
+            "type": "container"
           }
         },
-        "name": "react_movie_viewer",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "react_simple",
         "owner": "3b0921ab64d94b40abc3298579438c87",
         "page_vars": {
           "layout": {
-            "version": 1,
             "layout": [
               {
-                "type": "section",
                 "colData": [ ],
                 "cols": [
                   [
                     {
-                      "type": "slot",
-                      "name": "q"
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
                     }
                   ]
-                ]
+                ],
+                "type": "section"
               }
             ],
-            "pageData": { }
+            "version": 1
           },
           "slots": {
-            "q": {
-              "type": "string",
+            "bucket": {
               "attributes": { },
-              "name": "q",
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
               "labels": {
                 "label": "Query",
                 "labelp": "Queries"
-              }
+              },
+              "name": "q",
+              "type": "string"
             }
           }
         },

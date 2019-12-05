@@ -5,41 +5,102 @@
         "created": "1497296362803",
         "id": "f02ec41f44774f3cb5ece9be0d6e7b05",
         "layout": {
-          "component_10177fbc2fc24cd130fb4457cdcdd429": {
-            "type": "component",
-            "component": "navigator",
-            "id": "component_10177fbc2fc24cd130fb4457cdcdd429",
-            "name": "component_10177fbc2fc24cd130fb4457cdcdd429",
-            "needs_subpage_target": true,
-            "attributes": {
-              "component": "navigator",
-              "button_width": 100,
-              "menu_icon": "",
-              "button_height": 60,
-              "button_sizing": "specify",
-              "name": "",
-              "navigator": "69edf6f5f7c140698a18959f5ad26847",
-              "event_name": "",
-              "id": "b19ec07218212be1c05d79016835943e",
-              "type": "circles",
-              "menu_width": 300
-            },
-            "w": "100%",
-            "h": "100%",
-            "page_loading": true
-          },
           "__start__": {
-            "type": "container",
-            "w": "100%",
-            "h": "100%",
             "contains": [
               "component_10177fbc2fc24cd130fb4457cdcdd429"
             ],
-            "layout_type": "page_components"
+            "h": "100%",
+            "id": "__start__",
+            "layout_type": "page_components",
+            "type": "container",
+            "w": "100%"
+          },
+          "component_10177fbc2fc24cd130fb4457cdcdd429": {
+            "attributes": {
+              "button_height": 60,
+              "button_sizing": "specify",
+              "button_width": 100,
+              "component": "navigator",
+              "csstags": "",
+              "event_name": "",
+              "id": "b19ec07218212be1c05d79016835943e",
+              "menu_icon": "",
+              "menu_width": 300,
+              "name": "",
+              "navigator": "69edf6f5f7c140698a18959f5ad26847",
+              "type": "tiles"
+            },
+            "component": "navigator",
+            "h": "100%",
+            "id": "component_10177fbc2fc24cd130fb4457cdcdd429",
+            "name": "component_10177fbc2fc24cd130fb4457cdcdd429",
+            "needs_subpage_target": true,
+            "page_loading": true,
+            "type": "component",
+            "w": "100%"
           }
         },
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
         "name": "custom_components",
         "owner": "660abd5d94af4330aa41bd763bcae970",
+        "page_vars": {
+          "layout": {
+            "layout": [
+              {
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
+                    }
+                  ]
+                ],
+                "type": "section"
+              }
+            ],
+            "version": 1
+          },
+          "slots": {
+            "bucket": {
+              "attributes": { },
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              },
+              "name": "q",
+              "type": "string"
+            }
+          }
+        },
         "public": "0",
         "schema_version": "0",
         "system_updated": "0",

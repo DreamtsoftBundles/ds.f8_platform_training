@@ -5,68 +5,98 @@
         "created": "1497315149801",
         "id": "846adaaffd28496bb9140b5775a5aff7",
         "layout": {
-          "component_1bf683ea334f162534fd857de4013239": {
-            "type": "component",
-            "component": "navigator",
-            "id": "component_1bf683ea334f162534fd857de4013239",
-            "name": "component_1bf683ea334f162534fd857de4013239",
-            "page_loading": false,
-            "needs_subpage_target": true,
-            "attributes": {
-              "component": "navigator",
-              "button_width": 100,
-              "button_height": 60,
-              "button_sizing": "specify",
-              "name": "",
-              "navigator": "b5ed51a68aec466eadf5cbf40a0b9f43",
-              "event_name": "",
-              "id": "9fbc6bf60820ef44e53e550f8a3fc111",
-              "type": "circles",
-              "menu_width": 300
-            },
-            "w": "100%",
-            "h": "100%"
-          },
           "__start__": {
-            "type": "container",
-            "w": "100%",
-            "h": "100%",
             "contains": [
               "component_1bf683ea334f162534fd857de4013239"
             ],
-            "layout_type": "page_components"
+            "h": "100%",
+            "id": "__start__",
+            "layout_type": "page_components",
+            "type": "container",
+            "w": "100%"
+          },
+          "component_1bf683ea334f162534fd857de4013239": {
+            "attributes": {
+              "button_height": 60,
+              "button_sizing": "specify",
+              "button_width": 100,
+              "component": "navigator",
+              "csstags": "",
+              "event_name": "",
+              "id": "9fbc6bf60820ef44e53e550f8a3fc111",
+              "menu_width": 300,
+              "name": "",
+              "navigator": "b5ed51a68aec466eadf5cbf40a0b9f43",
+              "type": "tiles"
+            },
+            "component": "navigator",
+            "h": "100%",
+            "id": "component_1bf683ea334f162534fd857de4013239",
+            "name": "component_1bf683ea334f162534fd857de4013239",
+            "needs_subpage_target": true,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
           }
         },
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
         "name": "custom_widgets",
         "owner": "660abd5d94af4330aa41bd763bcae970",
         "page_vars": {
           "layout": {
-            "version": 1,
             "layout": [
               {
-                "type": "section",
                 "colData": [ ],
                 "cols": [
                   [
                     {
-                      "type": "slot",
-                      "name": "q"
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
                     }
                   ]
-                ]
+                ],
+                "type": "section"
               }
             ],
-            "pageData": { }
+            "version": 1
           },
           "slots": {
-            "q": {
-              "type": "string",
+            "bucket": {
               "attributes": { },
-              "name": "q",
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
               "labels": {
                 "label": "Query",
                 "labelp": "Queries"
-              }
+              },
+              "name": "q",
+              "type": "string"
             }
           }
         },

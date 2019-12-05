@@ -2,10 +2,15 @@
   "bucket_data": {
     "navigator_item_url": {
       "d3a8825055724043a8ca60264dc73906": {
+        "color": "",
         "created": "1497306912431",
+        "description": "",
         "icon": "fontawesome:asterisk",
         "id": "d3a8825055724043a8ca60264dc73906",
-        "label": "My Full Component",
+        "label": "Full Demo Component",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
         "order": "3",
         "owner": "660abd5d94af4330aa41bd763bcae970",
         "parent": "69edf6f5f7c140698a18959f5ad26847",

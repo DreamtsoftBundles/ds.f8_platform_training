@@ -1,63 +1,109 @@
 {
-  "bucket_data" : {
-    "pages" : {
-      "f3151d7cae2d442e82647fb1c886745f" : {
-        "created" : "1497316501636",
-        "id" : "f3151d7cae2d442e82647fb1c886745f",
-        "layout" : {
-          "component_2c79c61c71f3b41cdf5fa6d8967812fa" : {
-            "type" : "component",
-            "component" : "navigator",
-            "id" : "component_2c79c61c71f3b41cdf5fa6d8967812fa",
-            "name" : "component_2c79c61c71f3b41cdf5fa6d8967812fa",
-            "page_loading" : false,
-            "needs_subpage_target" : true,
-            "attributes" : {
-              "component" : "navigator",
-              "button_width" : 100,
-              "menu_icon" : "",
-              "button_height" : 60,
-              "name" : "",
-              "navigator" : "3314fef6d35c40ea903505e2e8cb4827",
-              "event_name" : "",
-              "type" : "horizontal-tabs",
-              "menu_width" : 300,
-              "id" : "fdd39613adca10b34d5e4232e38f578f"
-            },
-            "w" : "100%",
-            "h" : "50%"
-          },
-          "component_65462d477b977b4d5f1eedba3967410e" : {
-            "type" : "component",
-            "component" : "markup",
-            "id" : "component_65462d477b977b4d5f1eedba3967410e",
-            "name" : "component_65462d477b977b4d5f1eedba3967410e",
-            "page_loading" : false,
-            "needs_subpage_target" : false,
-            "attributes" : {
-              "component" : "markup",
-              "type" : "markdown",
-              "html" : ""
-            },
-            "w" : "100%",
-            "h" : "50%"
-          },
-          "__start__" : {
-            "type" : "container",
-            "w" : "100%",
-            "h" : "100%",
-            "contains" : [
-              "component_2c79c61c71f3b41cdf5fa6d8967812fa",
-              "component_65462d477b977b4d5f1eedba3967410e"
+  "bucket_data": {
+    "pages": {
+      "f3151d7cae2d442e82647fb1c886745f": {
+        "created": "1497316501636",
+        "id": "f3151d7cae2d442e82647fb1c886745f",
+        "layout": {
+          "__start__": {
+            "contains": [
+              "component_9384506a7a8a635a7a7f237468296328"
             ],
-            "layout_type" : "page_components"
+            "h": "100%",
+            "id": "__start__",
+            "layout_type": "page_components",
+            "type": "container",
+            "w": "100%"
+          },
+          "component_9384506a7a8a635a7a7f237468296328": {
+            "attributes": {
+              "button_height": 60,
+              "button_sizing": "specify",
+              "button_width": 100,
+              "component": "navigator",
+              "csstags": "",
+              "event_name": "",
+              "id": "56ded135f6a92fecb5e04f04f2bb419b",
+              "menu_width": 300,
+              "name": "",
+              "navigator": "0eb08b48e8214d3e872314c519e672ef",
+              "type": "tiles"
+            },
+            "component": "navigator",
+            "h": "100%",
+            "id": "component_9384506a7a8a635a7a7f237468296328",
+            "name": "component_9384506a7a8a635a7a7f237468296328",
+            "needs_subpage_target": true,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
           }
         },
-        "name" : "logic",
-        "owner" : "660abd5d94af4330aa41bd763bcae970",
-        "public" : "0",
-        "schema_version" : "0",
-        "system_updated" : "0"
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "logic",
+        "owner": "660abd5d94af4330aa41bd763bcae970",
+        "page_vars": {
+          "layout": {
+            "layout": [
+              {
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
+                    }
+                  ]
+                ],
+                "type": "section"
+              }
+            ],
+            "version": 1
+          },
+          "slots": {
+            "bucket": {
+              "attributes": { },
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              },
+              "name": "q",
+              "type": "string"
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "title": ""
       }
     }
   }

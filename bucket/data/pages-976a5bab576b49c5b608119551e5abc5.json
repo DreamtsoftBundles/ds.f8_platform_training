@@ -1,45 +1,107 @@
 {
-  "bucket_data" : {
-    "pages" : {
-      "976a5bab576b49c5b608119551e5abc5" : {
-        "created" : "1496424857238",
-        "id" : "976a5bab576b49c5b608119551e5abc5",
-        "layout" : {
-          "__start__" : {
-            "type" : "container",
-            "w" : "100%",
-            "h" : "100%",
-            "contains" : [
+  "bucket_data": {
+    "pages": {
+      "976a5bab576b49c5b608119551e5abc5": {
+        "created": "1496424857238",
+        "id": "976a5bab576b49c5b608119551e5abc5",
+        "layout": {
+          "__start__": {
+            "contains": [
               "component_dcff963d267fdebb002a75eedab4800b"
             ],
-            "layout_type" : "page_components"
+            "h": "100%",
+            "id": "__start__",
+            "layout_type": "page_components",
+            "type": "container",
+            "w": "100%"
           },
-          "component_dcff963d267fdebb002a75eedab4800b" : {
-            "type" : "component",
-            "component" : "tree_bucket",
-            "id" : "component_dcff963d267fdebb002a75eedab4800b",
-            "name" : "component_dcff963d267fdebb002a75eedab4800b",
-            "page_loading" : false,
-            "needs_subpage_target" : true,
-            "attributes" : {
-              "bucket" : "third_party_license",
-              "instructions" : "<html>\n<div class=\"containerWrapperTitle\" style=\"height: 100%\">\n      <div class=\"containerTitleHeaderLabel\">\n         <div>Spaces and Tenants</div>\n      </div>\n   </div>\n</html>",
-              "tree_renderer" : "d3",
-              "component" : "tree_bucket",
-              "show_tree_lines" : false,
-              "dnd" : "0",
-              "id" : "b12cfa027c618b24af878558153ca560",
-              "tree_definition" : "{\n   \"tree\": [{\n      \"type\": \"bucket\",\n      \"label\": \"%{$record.name}\",\n      \"open\": true,\n      \"condition\": [\"id\", \"eq\", \"custom://7b7026efc9084708affe9f6d0afccfb3\"],\n      \"async\": false,\n      \"sort_by\": \"tenant\",\n      \"drag\": false,\n      \"page\": \"\",\n      \"clusterId\": \"tenant\",\n      \"children\": [{\n         \"type\": \"related\",\n         \"bucket_node\": false,\n         \"child\": \"space.parent\",\n         \"condition\": \"\",\n         \"open\": true,\n         \"async\": false,\n         \"drag\": false,\n         \"recurse\": true,\n         \"page\": \"\",\n         \"clusterId\": \"tenant\",\n         \"sort_by\": \"tenant\",\n         \"children\": []\n      }]\n   }]\n}"
+          "component_dcff963d267fdebb002a75eedab4800b": {
+            "attributes": {
+              "bucket": "space",
+              "component": "tree_bucket",
+              "csstags": "",
+              "dnd": "0",
+              "id": "b12cfa027c618b24af878558153ca560",
+              "instructions": "<html>\n<div class=\"containerWrapperTitle\" style=\"height: 100%\">\n      <div class=\"containerTitleHeaderLabel\">\n         <div>Spaces and Tenants</div>\n      </div>\n   </div>\n</html>",
+              "show_tree_lines": false,
+              "tree_definition": "{\n   \"tree\": [{\n      \"type\": \"bucket\",\n      \"label\": \"%{$record.name}\",\n      \"open\": true,\n      \"condition\": [\"id\", \"eq\", \"custom://7b7026efc9084708affe9f6d0afccfb3\"],\n      \"async\": false,\n      \"sort_by\": \"tenant\",\n      \"drag\": false,\n      \"page\": \"\",\n      \"clusterId\": \"tenant\",\n      \"children\": [{\n         \"type\": \"related\",\n         \"bucket_node\": false,\n         \"child\": \"space.parent\",\n         \"condition\": \"\",\n         \"open\": true,\n         \"async\": false,\n         \"drag\": false,\n         \"recurse\": true,\n         \"page\": \"\",\n         \"clusterId\": \"tenant\",\n         \"sort_by\": \"tenant\",\n         \"children\": []\n      }]\n   }]\n}",
+              "tree_renderer": "d3"
             },
-            "w" : "100%",
-            "h" : "100%"
+            "component": "tree_bucket",
+            "h": "100%",
+            "id": "component_dcff963d267fdebb002a75eedab4800b",
+            "name": "component_dcff963d267fdebb002a75eedab4800b",
+            "needs_subpage_target": true,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
           }
         },
-        "name" : "tenancy",
-        "owner" : "1d193579a6d1458f9f0ac49f8cb96687",
-        "public" : "0",
-        "schema_version" : "0",
-        "system_updated" : "0"
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "tenancy",
+        "owner": "1d193579a6d1458f9f0ac49f8cb96687",
+        "page_vars": {
+          "layout": {
+            "layout": [
+              {
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
+                    }
+                  ]
+                ],
+                "type": "section"
+              }
+            ],
+            "version": 1
+          },
+          "slots": {
+            "bucket": {
+              "attributes": { },
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              },
+              "name": "q",
+              "type": "string"
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "title": ""
       }
     }
   }

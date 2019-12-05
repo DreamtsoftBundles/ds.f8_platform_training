@@ -1,17 +1,22 @@
 {
-  "bucket_data" : {
-    "navigator_item_url" : {
-      "9c14c8265d3843d884ae82e6ebd95675" : {
-        "created" : "1497375261451",
-        "icon" : "",
-        "id" : "9c14c8265d3843d884ae82e6ebd95675",
-        "label" : "Google Spreadsheet",
-        "order" : "4",
-        "owner" : "660abd5d94af4330aa41bd763bcae970",
-        "parent" : "9f50e13c882242ff93db747f7d8f39ee",
-        "schema_version" : "0",
-        "system_updated" : "0",
-        "url" : "google_spreadsheet_contractors"
+  "bucket_data": {
+    "navigator_item_url": {
+      "9c14c8265d3843d884ae82e6ebd95675": {
+        "color": "",
+        "created": "1497375261451",
+        "description": "A component that displays a Google Sheet",
+        "icon": "",
+        "id": "9c14c8265d3843d884ae82e6ebd95675",
+        "label": "Google Spreadsheet",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "order": "4",
+        "owner": "660abd5d94af4330aa41bd763bcae970",
+        "parent": "9f50e13c882242ff93db747f7d8f39ee",
+        "schema_version": "0",
+        "system_updated": "0",
+        "url": "google_spreadsheet_contractors"
       }
     }
   }

@@ -5,53 +5,171 @@
         "created": "1497296292605",
         "id": "0081599f676a4be2a1d4f485f88838e2",
         "layout": {
-          "component_b081970dc6b0caa357eaf8dad7f0866a": {
-            "type": "component",
-            "component": "image_slider",
-            "id": "component_b081970dc6b0caa357eaf8dad7f0866a",
-            "name": "component_b081970dc6b0caa357eaf8dad7f0866a",
-            "page_loading": false,
-            "needs_subpage_target": false,
-            "attributes": {
-              "bucket": "upload",
-              "component": "image_slider",
-              "id": "40d5b0bdd9887b9ac09a090c05cfff7e",
-              "suffix": "all",
-              "demo_mode": true
-            },
-            "w": "100%",
-            "h": "50%"
-          },
-          "component_e80ffa55344927d1d90657832a3e0573": {
-            "type": "component",
-            "component": "google_map",
-            "id": "component_e80ffa55344927d1d90657832a3e0573",
-            "name": "component_e80ffa55344927d1d90657832a3e0573",
-            "page_loading": false,
-            "needs_subpage_target": false,
-            "attributes": {
-              "google_maps_api_key": "",
-              "component": "google_map",
-              "geolocate": false,
-              "starting_address": "",
-              "id": "7b96057135ca55934ef149f5122368bf"
-            },
-            "w": "100%",
-            "h": "50%"
-          },
           "__start__": {
-            "type": "container",
-            "w": "100%",
-            "h": "100%",
             "contains": [
               "component_e80ffa55344927d1d90657832a3e0573",
               "component_b081970dc6b0caa357eaf8dad7f0866a"
             ],
-            "layout_type": "page_components"
+            "h": "100%",
+            "id": "__start__",
+            "layout_type": "page_components",
+            "subContainers": [
+              "container_fe5b8e294048945f74640c193d7e5f35",
+              "container_fa3cd4b23b8d4f6ab24cd0c964044560"
+            ],
+            "type": "container",
+            "w": "100%"
+          },
+          "component_287cde811cf7eedf2d71948cba2eb7cc": {
+            "attributes": {
+              "component": "markup",
+              "csstags": "",
+              "html": "",
+              "id": "8b87ec95ddb5f23ed884ec95087d5947",
+              "markdown": "``` js\nvar PageComponent = require(\"ds.base/PageComponent\");\n\nvar ImageSliderServer = PageComponent.create({\n\t\"/\": function(attributes, vars, containerList) {\n\t\tvar urlArray = [];\n\n\t\t//Search for all upload records\n\t\tvar fr = new FRecord(attributes.bucket);\n\t\tfr.addSearchStartsWith('type', 'image/');\n\t\tfr.search();\n\t\twhile (fr.next()) {\n\t\t\t//Check to see if we need to match a suffix\n\t\t\tif (attributes.suffix != 'all') {\n\t\t\t\t//Check to see if the suffix matches\n\t\t\t\tif (fr.name.indexOf(attributes.suffix) >= 0) {\n\t\t\t\t\t//Add the url to the list\n\t\t\t\t\turlArray.push(fr.url.getURL());\n \t\t\t\t}\n\t\t\t} else {\n\t\t\t\t//Pushing all urls\n\t\t\t\turlArray.push(fr.url.getURL());\n\t\t\t}\t\t\n\t\t}\n\t\t\n\t\tconsole.log('URL ARRAY - ' + urlArray);\n\t\t\n\t\treturn new StatusResponse('good', {\n\t\t\tbucket: attributes.bucket,\n\t\t\tlabel: fr.getLabel(),\n\t\t\turls: urlArray\n\t\t});\n\t},\n\t\n\ttype: \"ImageSliderServer\"\n});\n\nmodule.exports = ImageSliderServer;\n\n```",
+              "type": "markdown"
+            },
+            "component": "markup",
+            "h": "100%",
+            "id": "component_287cde811cf7eedf2d71948cba2eb7cc",
+            "name": "component_287cde811cf7eedf2d71948cba2eb7cc",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "component_b081970dc6b0caa357eaf8dad7f0866a": {
+            "attributes": {
+              "bucket": "upload",
+              "component": "image_slider",
+              "demo_mode": true,
+              "id": "40d5b0bdd9887b9ac09a090c05cfff7e",
+              "suffix": "all"
+            },
+            "component": "image_slider",
+            "h": "50%",
+            "id": "component_b081970dc6b0caa357eaf8dad7f0866a",
+            "name": "component_b081970dc6b0caa357eaf8dad7f0866a",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "component_e1cbfb2118e81b88fda7f4dec7bb93a8": {
+            "attributes": {
+              "component": "markup",
+              "csstags": "",
+              "html": "",
+              "id": "e7d11c83102fe208d289fa542ed71288",
+              "markdown": "``` js\n<!DOCTYPE f8component>\n\n<definition>\n{\n  id:\"image_slider\",\n  label:\"Image Slider\",\n  className:\"ImageSliderServer\"\n}\n</definition>\n\n<attributes>\n[\n\t{\n\t\tname: \"demo_mode\",\n\t\tlabel: \"Demo mode\",\n\t\ttype: \"boolean\",\n\t\tattributes: {\n\t\t\tdefault: false\n\t\t}\n\t},{\n\t\tname: \"bucket\",\n\t\tlabel: \"Bucket\",\n\t\ttype: \"choice\",\n\t\tattributes: {\n\t\t\t\"choice_type\": \"dropdown\",\n\t\t\t\"buckets\": \"true\",\n\t\t\t\"none_option\": true\n\t\t}\n\t},{\n\t\tname: \"suffix\",\n\t\tlabel: \"Suffix\",\n\t\ttype: \"choice\",\n\t\tattributes: {\n                       \"choice_type\": \"dropdown\",\n                       \"default\": \"png\",\n                       \"choices\": [\n\t\t\t\t\t{ label: 'All images', value: 'all' },\n\t\t\t\t\t{ label: 'PNG', value: 'png' },\n\t\t\t\t\t{ label: 'JPG', value: 'jpg' },\n\t\t\t\t\t{ label: 'GIF', value: 'gif' }\n\t\t\t]\n\t\t}\n\t}\n]\n</attributes>\n\n<attributes_layout>\n\t[ \"demo_mode\", \"bucket\", \"suffix\" ]\n</attributes_layout>\n\n<attributes_display_rules>\n[\n\t{\n\t\t\"slot\": \"bucket\",\n\t\t\"conditions\": {\n\t\t\t\"hidden\": '[[\"demo_mode\",\"eq\",\"true\"]]'\n\t\t}\n\t},{\n\t\t\"slot\": \"suffix\",\n\t\t\"conditions\": {\n\t\t\t\"hidden\": '[[[[\"bucket\",\"eq\",\"\"]],\"OR\",[[\"demo_mode\",\"eq\",\"true\"]]]]'\n\t\t\t\n\t\t}\n\t}\n]\n</attributes_display_rules>\n\n<style>\n    .image_viewer {\n        width: 100%;\n        height: 500px;\n    }\n</style>\n\n<script>\n\tvar Guid = require('core/Guid');\n\n\texports.component = ComponentUI.create({\n\t\tonLoad: function(data) {\n\t\t\tvar container = this.container;\n\t\t\tvar attributes = this.attributes;\n\t\t\t\n\t\t\tvar w = container.width();\n\t\t\tvar h = container.height() || 400;\n\t\t\tthis.id = 'uniqueImageSliderID' + Guid.guid();\n\t\t\t//this.id = \"slider\";\n            var primaryDiv = $('<div id=\"' + this.id + '\"></div>');\n            var go = false;\n            \n            if (Object.isTrue(attributes.demo_mode)) {\n            \t//Demo mode...just throw the demo images in there\n            \tprimaryDiv.append('<img src=\"images/image-slider-1.jpg\" alt=\"\">');\n    \t\t\tprimaryDiv.append('<img src=\"images/image-slider-2.jpg\" alt=\"\">');\n    \t\t\tprimaryDiv.append('<img src=\"images/image-slider-3.jpg\" alt=\"\">');\n    \t\t\tprimaryDiv.append('<img src=\"images/image-slider-4.jpg\" alt=\"\">');\n    \t\t\tprimaryDiv.append('<img src=\"images/image-slider-5.jpg\" alt=\"\">');\n    \t\t\tprimaryDiv.append('<img src=\"images/1.jpg\" alt=\"\">');\n    \t\t\tprimaryDiv.append('<img src=\"images/2.jpg\" alt=\"\">');\n    \t\t\tprimaryDiv.append('<img src=\"images/3.jpg\" alt=\"\">');\n    \t\t\tprimaryDiv.append('<img src=\"images/4.jpg\" alt=\"\">');\n    \t\t\tgo = true;\n    \t\t\t\n            } else if (data.urls.length > 0) {\n            \t//Go through the URLs provided and add them to the slider\n\t\t\t\tfor(var i = 0; i < data.urls.length; i++) {\n\t\t\t\t\tvar urlVar = data.urls[i];\n\t\t\t\t\tvar imgTag = '<img src=\"' + urlVar + '\" alt=\"\">';\n\t\t\t\t\tprimaryDiv.append(imgTag);\n\t\t\t\t}\n\t\t\t\t\n\t\t\t\tgo = true;\n            }\n            \n            if (Object.isTrue(go)) {\n\t\t\t\tcontainer.append(primaryDiv);\n                \n                this.slider = new IdealImageSlider.Slider({\n                \tselector: '#' + this.id,\n                \theight: 400, // Required but can be set by CSS\n                \tinterval: 4000\n                });\n                \n              \t//this.slider.addBulletNav();\n              \t//this.slider.addCaptions();\n                this.slider.start();\n                \n            } else {\n\t\t\t\tprimaryDiv.append(TRANSLATE('The %{label} bucket has no images to display', { label: data.label }));\n\t\t\t\tcontainer.append(primaryDiv);\n\t\t\t}\n\t\t},\n\n\t\tonUnload: function() {\n\t\t    if (!this.slider)\n\t\t        return;\n\n\t\t\tthis.slider.destroy();\n\t\t\tthis.slider = undefined;\n\t\t},\n\n\t\tclassName: \"ImageSliderClient\"\n\t});\n</script>\n```",
+              "type": "markdown"
+            },
+            "component": "markup",
+            "h": "100%",
+            "id": "component_e1cbfb2118e81b88fda7f4dec7bb93a8",
+            "name": "component_e1cbfb2118e81b88fda7f4dec7bb93a8",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "component_e80ffa55344927d1d90657832a3e0573": {
+            "attributes": {
+              "component": "google_map",
+              "geolocate": false,
+              "google_maps_api_key": "",
+              "id": "7b96057135ca55934ef149f5122368bf",
+              "starting_address": ""
+            },
+            "component": "google_map",
+            "h": "50%",
+            "id": "component_e80ffa55344927d1d90657832a3e0573",
+            "name": "component_e80ffa55344927d1d90657832a3e0573",
+            "needs_subpage_target": false,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
+          },
+          "container_fa3cd4b23b8d4f6ab24cd0c964044560": {
+            "contains": [
+              "component_287cde811cf7eedf2d71948cba2eb7cc"
+            ],
+            "id": "container_fa3cd4b23b8d4f6ab24cd0c964044560",
+            "label": "Server",
+            "subContainer": true,
+            "type": "container"
+          },
+          "container_fe5b8e294048945f74640c193d7e5f35": {
+            "contains": [
+              "component_e1cbfb2118e81b88fda7f4dec7bb93a8"
+            ],
+            "id": "container_fe5b8e294048945f74640c193d7e5f35",
+            "label": "Client",
+            "subContainer": true,
+            "type": "container"
           }
         },
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
         "name": "unique_components",
         "owner": "660abd5d94af4330aa41bd763bcae970",
+        "page_vars": {
+          "layout": {
+            "layout": [
+              {
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
+                    }
+                  ]
+                ],
+                "type": "section"
+              }
+            ],
+            "version": 1
+          },
+          "slots": {
+            "bucket": {
+              "attributes": { },
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              },
+              "name": "q",
+              "type": "string"
+            }
+          }
+        },
         "public": "0",
         "schema_version": "0",
         "system_updated": "0",

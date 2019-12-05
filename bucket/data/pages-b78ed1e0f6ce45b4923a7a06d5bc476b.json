@@ -1,40 +1,110 @@
 {
-  "bucket_data" : {
-    "pages" : {
-      "b78ed1e0f6ce45b4923a7a06d5bc476b" : {
-        "created" : "1496951280843",
-        "id" : "b78ed1e0f6ce45b4923a7a06d5bc476b",
-        "layout" : {
-          "__start__" : {
-            "type" : "container",
-            "w" : "100%",
-            "h" : "100%",
-            "contains" : [
-              "component_2aaf418ae0b1187c1741487a65d28bf9"
+  "bucket_data": {
+    "pages": {
+      "b78ed1e0f6ce45b4923a7a06d5bc476b": {
+        "created": "1496951280843",
+        "id": "b78ed1e0f6ce45b4923a7a06d5bc476b",
+        "layout": {
+          "__start__": {
+            "contains": [
+              "component_a8bb345d23a8ec1e7b84b97356c98704"
             ],
-            "layout_type" : "page_components"
+            "h": "100%",
+            "id": "__start__",
+            "layout_type": "page_components",
+            "targeting_mode": "disabled",
+            "type": "container",
+            "w": "100%"
           },
-          "component_2aaf418ae0b1187c1741487a65d28bf9" : {
-            "type" : "component",
-            "component" : "tiles",
-            "id" : "component_2aaf418ae0b1187c1741487a65d28bf9",
-            "name" : "component_2aaf418ae0b1187c1741487a65d28bf9",
-            "page_loading" : false,
-            "needs_subpage_target" : false,
-            "attributes" : {
-              "component" : "tiles",
-              "tile_group" : "34e584883be64c259a04314e5c0b2c65",
-              "tiles_per_row" : "4"
+          "component_a8bb345d23a8ec1e7b84b97356c98704": {
+            "attributes": {
+              "button_height": 60,
+              "button_sizing": "specify",
+              "button_width": 100,
+              "component": "navigator",
+              "csstags": "",
+              "event_name": "",
+              "id": "39ea98fb21dd53ea3c68bcd484cfd081",
+              "menu_width": 300,
+              "name": "",
+              "navigator": "884794d1fb774ca6906b00e7af48f3c8",
+              "type": "tiles"
             },
-            "w" : "100%",
-            "h" : "100%"
+            "component": "navigator",
+            "h": "100%",
+            "id": "component_a8bb345d23a8ec1e7b84b97356c98704",
+            "name": "component_a8bb345d23a8ec1e7b84b97356c98704",
+            "needs_subpage_target": true,
+            "page_loading": false,
+            "type": "component",
+            "w": "100%"
           }
         },
-        "name" : "ui",
-        "owner" : "660abd5d94af4330aa41bd763bcae970",
-        "public" : "0",
-        "schema_version" : "0",
-        "system_updated" : "0"
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "ui",
+        "owner": "660abd5d94af4330aa41bd763bcae970",
+        "page_vars": {
+          "layout": {
+            "layout": [
+              {
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
+                    }
+                  ]
+                ],
+                "type": "section"
+              }
+            ],
+            "version": 1
+          },
+          "slots": {
+            "bucket": {
+              "attributes": { },
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              },
+              "name": "q",
+              "type": "string"
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0",
+        "system_updated": "0",
+        "title": ""
       }
     }
   }

@@ -55,10 +55,11 @@
           "component_9e06a25cc2f765d3323904c8b4a5fcbd": {
             "attributes": {
               "component": "my_full_component",
+              "csstags": "",
               "header": "This is me typing",
               "id": "066b5ced9126b47f7123357446cbcb19",
               "rows": 2,
-              "show_header": "true"
+              "show_header": true
             },
             "component": "my_full_component",
             "h": "100%",
@@ -88,6 +89,9 @@
             "type": "container"
           }
         },
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
         "name": "my_full_component",
         "owner": "660abd5d94af4330aa41bd763bcae970",
         "page_vars": {
