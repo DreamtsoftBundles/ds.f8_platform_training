@@ -4,7 +4,7 @@
    "dependencies": [
       {
          "id": "ds.base",
-         "version": "1.12.0"
+         "version": "1.14.0"
       }
    ],
    "icon": "fontawesome:graduation-cap",

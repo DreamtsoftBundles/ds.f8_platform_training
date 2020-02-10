@@ -1,0 +1,155 @@
+{
+  "bucket_data": {
+    "pages": {
+      "deeda30985f2448ea1ec494052f96341": {
+        "created": "1581361625466",
+        "id": "deeda30985f2448ea1ec494052f96341",
+        "layout": {
+          "__start__": {
+            "contains": [
+              "component_90149531a8b10b19c9271bcfc4495504"
+            ],
+            "h": "100%",
+            "id": "__start__",
+            "type": "container",
+            "w": "100%"
+          },
+          "component_90149531a8b10b19c9271bcfc4495504": {
+            "attributes": {
+              "auto_save": false,
+              "bucket": "w8pl3km7",
+              "component": "details",
+              "csstags": "",
+              "id": "6c98a41bb7a746b9a0562bbbcb009006",
+              "include_actions": "1",
+              "layout": {
+                "layout": {
+                  "layout": [
+                    {
+                      "colData": [
+                        {
+                          "column": 0
+                        },
+                        {
+                          "column": 1
+                        }
+                      ],
+                      "cols": [
+                        [
+                          {
+                            "name": "first_name",
+                            "type": "slot"
+                          },
+                          {
+                            "name": "last_name",
+                            "type": "slot"
+                          }
+                        ],
+                        [
+                          {
+                            "name": "company",
+                            "type": "slot"
+                          },
+                          {
+                            "name": "email",
+                            "type": "slot"
+                          },
+                          {
+                            "name": "phone",
+                            "type": "slot"
+                          }
+                        ]
+                      ],
+                      "columns": 2,
+                      "guid": "sflzu7",
+                      "type": "section"
+                    }
+                  ],
+                  "pageData": { },
+                  "version": 1
+                }
+              },
+              "new_record": "false",
+              "new_record_values": "[]",
+              "query": "%{pageVars.q}",
+              "read_only": "false",
+              "view": "default"
+            },
+            "component": "details",
+            "h": "100%",
+            "id": "component_90149531a8b10b19c9271bcfc4495504",
+            "name": "component_90149531a8b10b19c9271bcfc4495504",
+            "needs_subpage_target": false,
+            "type": "component",
+            "w": "100%"
+          }
+        },
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "details.default.contractors",
+        "owner": "__SYSTEM_USER__",
+        "page_vars": {
+          "layout": {
+            "layout": [
+              {
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
+                    }
+                  ]
+                ],
+                "type": "section"
+              }
+            ],
+            "version": 1
+          },
+          "slots": {
+            "bucket": {
+              "attributes": { },
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              },
+              "name": "q",
+              "type": "string"
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "title": ""
+      }
+    }
+  }
+}
