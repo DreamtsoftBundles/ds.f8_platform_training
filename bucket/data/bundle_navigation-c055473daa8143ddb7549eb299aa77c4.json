@@ -1,0 +1,51 @@
+{
+  "bucket_data": {
+    "4dzwltxn": {
+      "c055473daa8143ddb7549eb299aa77c4": {
+        "area": "",
+        "created": "1581407633710",
+        "icon": "",
+        "id": "c055473daa8143ddb7549eb299aa77c4",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "",
+        "nav": {
+          "bundle": "ds.f8_platform_training",
+          "id": "",
+          "items": [
+            {
+              "bucket": "third_party_license",
+              "collapsible": "",
+              "color": "",
+              "condition": "[]",
+              "description": "",
+              "flow": "",
+              "group": "",
+              "icon": "fontawesome:home",
+              "id": "",
+              "label": "Home",
+              "menu_name": "",
+              "newId": "667341a59a58fd70d657bca68ae820a1",
+              "sort_by": "",
+              "sort_direction": "ascending",
+              "submenu": "0",
+              "subpage": "",
+              "type": "navigator_item_url",
+              "url": "home",
+              "view": "",
+              "visibility": "admins"
+            }
+          ],
+          "specify_access": true
+        },
+        "nav_type": "default",
+        "owner": "__SYSTEM_USER__",
+        "position": "0",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "top_level_menu": "0"
+      }
+    }
+  }
+}

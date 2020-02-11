@@ -1,14 +1,17 @@
 {
-  "bucket_data" : {
-    "script_mapper" : {
-      "330af86bc94d45449f2fb72ac34c3a19" : {
-        "created" : "1497374967313",
-        "id" : "330af86bc94d45449f2fb72ac34c3a19",
-        "name" : "GoogleSpreadsheetMapper",
-        "owner" : "660abd5d94af4330aa41bd763bcae970",
-        "schema_version" : "0",
-        "script" : "separate_file://bucket/data/script_mapper-330af86bc94d45449f2fb72ac34c3a19-script.js",
-        "system_updated" : "0"
+  "bucket_data": {
+    "script_mapper": {
+      "330af86bc94d45449f2fb72ac34c3a19": {
+        "created": "1497374967313",
+        "id": "330af86bc94d45449f2fb72ac34c3a19",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "GoogleSpreadsheetMapper",
+        "owner": "660abd5d94af4330aa41bd763bcae970",
+        "schema_version": "0",
+        "script": "separate_file://bucket/data/script_mapper-330af86bc94d45449f2fb72ac34c3a19-script.js",
+        "system_updated": "0"
       }
     }
   }

@@ -1,0 +1,18 @@
+{
+  "bucket_data": {
+    "script_mapper": {
+      "fce2fc83fe1f42b4adda2b1373073ea7": {
+        "created": "1581407442357",
+        "id": "fce2fc83fe1f42b4adda2b1373073ea7",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "SimpleMapper",
+        "owner": "__SYSTEM_USER__",
+        "schema_version": "0.0",
+        "script": "separate_file://bucket/data/script_mapper-fce2fc83fe1f42b4adda2b1373073ea7-script.js",
+        "system_updated": "0"
+      }
+    }
+  }
+}

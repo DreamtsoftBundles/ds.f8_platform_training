@@ -1,0 +1,47 @@
+{
+    "bucket_definition": {
+        "wcpzpd47": {
+            "attributes": {
+                "mapper": "SimpleMapper"
+            },
+            "id": "wcpzpd47",
+            "labels": {
+                "label": "Simple Mapper",
+                "labelp": "Simple Mappers"
+            },
+            "name": "simple_mapper",
+            "schema_tag": "",
+            "slots": [
+                {
+                    "attributes": {
+                        "maxlength": "0",
+                        "only_alphanum": "false",
+                        "only_uppercase": "false",
+                        "pattern_validation": "0"
+                    },
+                    "labels": {
+                        "label": "Last Name",
+                        "labelp": "Last Names"
+                    },
+                    "name": "last_name",
+                    "type": "string"
+                },
+                {
+                    "attributes": {
+                        "maxlength": "0",
+                        "only_alphanum": "false",
+                        "only_uppercase": "false",
+                        "pattern_validation": "0"
+                    },
+                    "labels": {
+                        "label": "First Name",
+                        "labelp": "First Names"
+                    },
+                    "name": "first_name",
+                    "type": "string"
+                }
+            ],
+            "type": "script"
+        }
+    }
+}
