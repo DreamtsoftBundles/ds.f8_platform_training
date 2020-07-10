@@ -1,0 +1,50 @@
+{
+  "bucket_data": {
+    "action_browser": {
+      "9e95cbe0552147f3bfa4f53c552dfb43": {
+        "activate_behavior": "show_hide",
+        "activate_condition": [ ],
+        "activate_row_action_when": "always",
+        "active": "1",
+        "animate_button": "0",
+        "bucket": "",
+        "button_e2e_tag": "",
+        "component": "details",
+        "condition": "",
+        "created": "1594403435884",
+        "description": "",
+        "details_activate_when": "always",
+        "details_only_show_if": "existing_record||details",
+        "enabled_condition": "",
+        "enabled_when": "",
+        "existing_record": "1",
+        "flow": "separate_file://bucket/data/action_browser-9e95cbe0552147f3bfa4f53c552dfb43-flow.js",
+        "group_header": "0",
+        "group_name": "",
+        "icon": "",
+        "id": "9e95cbe0552147f3bfa4f53c552dfb43",
+        "key_sequence": "alt+l",
+        "label": "",
+        "list_activate_when": "always",
+        "list_only_show_if": "list",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "Soundboard",
+        "new_record": "1",
+        "order": "0",
+        "owner": "b0343cfff6f645adaa9c86a992c93165",
+        "ref_display": "Soundboard",
+        "requires_write": "0",
+        "row_action_condition": [ ],
+        "schema_version": "2.0",
+        "scope": "",
+        "symbol": "0",
+        "system_updated": "0",
+        "trigger_from_button": "0",
+        "trigger_from_key": "1",
+        "where": "middle"
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "bucket_data": {
+    "pages": {
+      "c4d7492710aa41cd89313839a3e694e8": {
+        "created": "1594403682194",
+        "id": "c4d7492710aa41cd89313839a3e694e8",
+        "layout": {
+          "config": {
+            "desktop": {
+              "label": "Desktop"
+            }
+          },
+          "layouts": {
+            "desktop": {
+              "__start__": {
+                "contains": [
+                  "component_10c52ce0038f6474f798aeb601023a46"
+                ],
+                "h": "100%",
+                "id": "__start__",
+                "layout_type": "page_components",
+                "type": "container",
+                "w": "100%"
+              },
+              "component_10c52ce0038f6474f798aeb601023a46": {
+                "attributes": {
+                  "component": "sound_board"
+                },
+                "component": "sound_board",
+                "h": "100%",
+                "id": "component_10c52ce0038f6474f798aeb601023a46",
+                "name": "component_10c52ce0038f6474f798aeb601023a46",
+                "needs_subpage_target": false,
+                "page_loading": false,
+                "type": "component",
+                "w": "100%"
+              }
+            }
+          },
+          "meta": {
+            "format": "multiple_layout",
+            "version": 1
+          }
+        },
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "name": "soundboard",
+        "owner": "b0343cfff6f645adaa9c86a992c93165",
+        "page_vars": {
+          "layout": {
+            "layout": [
+              {
+                "colData": [ ],
+                "cols": [
+                  [
+                    {
+                      "name": "q",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "bucket",
+                      "type": "slot"
+                    },
+                    {
+                      "name": "id",
+                      "type": "slot"
+                    }
+                  ]
+                ],
+                "type": "section"
+              }
+            ],
+            "version": 1
+          },
+          "slots": {
+            "bucket": {
+              "attributes": { },
+              "labels": {
+                "label": "Bucket",
+                "labelp": "Buckets"
+              },
+              "name": "bucket",
+              "type": "string"
+            },
+            "id": {
+              "attributes": { },
+              "labels": {
+                "label": "Id",
+                "labelp": "Ids"
+              },
+              "name": "id",
+              "type": "string"
+            },
+            "q": {
+              "attributes": { },
+              "labels": {
+                "label": "Query",
+                "labelp": "Queries"
+              },
+              "name": "q",
+              "type": "string"
+            }
+          }
+        },
+        "public": "0",
+        "schema_version": "0.0",
+        "system_updated": "0",
+        "title": ""
+      }
+    }
+  }
+}

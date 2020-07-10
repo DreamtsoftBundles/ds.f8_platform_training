@@ -1,0 +1,18 @@
+{
+  "bucket_data": {
+    "911nr2fm": {
+      "e70507a9d60f4719b36f5199267d1736": {
+        "content_type": "default-src",
+        "created": "1594406976921",
+        "host": "www.myinstants.com",
+        "id": "e70507a9d60f4719b36f5199267d1736",
+        "meta_classification": "",
+        "meta_datatag": "",
+        "meta_schema": "",
+        "owner": "b0343cfff6f645adaa9c86a992c93165",
+        "schema_version": "0.0",
+        "system_updated": "0"
+      }
+    }
+  }
+}

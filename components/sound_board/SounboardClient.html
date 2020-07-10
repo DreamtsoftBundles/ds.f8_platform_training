@@ -1,0 +1,37 @@
+<!DOCTYPE f8component>
+
+<definition>
+	{
+		"id": "sound_board",
+		"label": "Soundboard",
+		"renderable": "true",
+		"className": "SoundBoardServer",
+	    "dependencies": ["vue"]
+	}
+</definition>
+
+<style>
+	.sounds {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.sound-item:hover {
+		transform: scale(1.1);
+		cursor: pointer;
+		box-shadow: 0px 0px 30px -11px rgba(0,0,0,0.54);
+	}
+	
+	.sound-item {
+		padding: 20px;
+		border: var(--border);
+		margin: 10px;
+		width: 200px;
+		text-align: center;
+	}
+</style>
+
+<script>
+    const SoundBoardComponent = require('sound_board/SoundBoardComponent');
+    exports.component = ComponentUI.createVueComponent(SoundBoardComponent, 4);
+</script>
